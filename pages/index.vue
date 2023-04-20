@@ -1,7 +1,4 @@
-<script lang="ts">
-definePageMeta({
-  layout: 'default',
-})
+<script lang="ts" setup>
 useHead({
   title: 'Valeo',
 })

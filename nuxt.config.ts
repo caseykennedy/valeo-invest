@@ -21,7 +21,7 @@ export default defineNuxtConfig({
       'composables/**',
     ],
   },
-  components: [{ path: '~/components', pathPrefix: false }, { path: '~/components/icons', pathPrefix: false }],
+  components: [{ path: '~/components', pathPrefix: false }],
 
   // uncomment to disable SSR. This will basically make the app a SPA, like a normal Vue app, but with all the Nuxt goodies
   // ssr: false,

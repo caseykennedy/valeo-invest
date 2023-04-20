@@ -1,21 +1,15 @@
 <script lang="ts" setup>
-const { t } = useI18n()
-
-definePageMeta({
-  layout: 'default',
-})
-
 useHead({
   title: 'ecosystem • Valeo',
 })
 
-const data = [
-  {
-    title: '',
-    content: '',
-    icon: 'icon',
-  },
-]
+// const data = [
+//   {
+//     title: '',
+//     content: '',
+//     icon: 'icon',
+//   },
+// ]
 </script>
 
 <template>
