@@ -55,7 +55,7 @@ useHead({
 
       <Collapse>
         <template #icon>
-          <DexIcon />
+          <Dex />
         </template>
         <template #title>
           A decentralized exchange (DEX)

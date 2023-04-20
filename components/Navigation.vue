@@ -6,7 +6,7 @@ const routes = [
   },
   {
     title: 'ecosystem',
-    path: 'about',
+    path: 'ecosystem',
   },
   // {
   //   title: 'market',

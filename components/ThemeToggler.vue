@@ -43,9 +43,6 @@ watch(theme, () => {
 <style lang="scss">
 :root {
   --theme-toggler-height: 22px;
-}
-
-[data-theme="light"] {
   --theme-toggler-color-bg: var(--color-bg-dark);
 }
 
