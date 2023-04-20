@@ -1,0 +1,25 @@
+// @use "base" as * with (
+//   $breakpoints: (
+//     xs: 32rem,
+//     // ~512px
+//     sm: 52rem,
+//     // ~768px
+//     md: 60rem,
+//     // ~1024px
+//     lg: 80rem,
+//     // ~1280px
+//     xl: 90rem // ~1440px
+//   ),
+//   // $grid-columns: 12
+// );
+
+@import "theme";
+
+html {
+  // background: var(--color-bg-dark);
+  overflow-y: auto;
+}
+
+body {
+  background: var(--color-bg);
+}

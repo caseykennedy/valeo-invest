@@ -26,7 +26,6 @@ It features the necessary tools to get you started immediately on your next proj
 - [Vite](https://vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [ESLint](https://eslint.org/)
-- [UnoCSS](https://uno.antfu.me)
 - [Iconify](https://iconify.design/)
 - [Pinia](https://pinia.vuejs.org)
 - [Nuxt i18n](https://v8.i18n.nuxtjs.org/)

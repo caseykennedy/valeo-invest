@@ -1,8 +1,41 @@
 <template>
-  <div class="h-screen">
+  <div class="app">
     <Header />
-    <div class="h-full flex-center gap-5">
+    <Navigation />
+    <div class="content">
       <slot />
     </div>
+    <Footer />
   </div>
 </template>
+
+<style lang="scss">
+.app {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 auto;
+  max-height: 100%;
+  /* max-width: var(--site-width-max); */
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+</style>

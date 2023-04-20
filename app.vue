@@ -10,7 +10,7 @@ tryOnBeforeMount(() => {
 </script>
 
 <template>
-  <div font="text">
+  <div>
     <NuxtLoadingIndicator />
     <NuxtLayout>
       <NuxtPage />

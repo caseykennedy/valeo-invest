@@ -1,0 +1,66 @@
+@use "../base" as *;
+
+:root {
+  --form-control-font-size: var(--text-base-size);
+  --form-control-padding-x: var(--space-md);
+  --form-control-padding-y: var(--space-lg);
+  --form-control-radius: var(--radius-sm);
+
+  @include breakpoint(sm) {
+    --form-control-padding-y: var(--space-lg);
+  }
+}
+
+.form-control {
+  background: transparent;
+  border: var(--border);
+  border-radius: var(--form-control-radius);
+
+  color: var(--color-text);
+  line-height: 1.2;
+
+  padding: var(--form-control-padding-y) var(--form-control-padding-x);
+  transition: var(--transition-all);
+
+  &::placeholder {
+    opacity: 1;
+    color: alpha(var(--color-text-muted), 75%);
+  }
+
+  &:focus,
+  &:focus-within {
+    background: var(--color-bg);
+    border-color: var(--color-primary-light);
+    outline: none;
+  }
+}
+
+.form-control--disabled,
+.form-control[disabled],
+.form-control[readonly] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-control[aria-invalid="true"],
+.form-control.form-control--error {
+  box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0),
+    0px 0px 0px 2px var(--color-error);
+
+  &:focus,
+  &:focus-within {
+    box-shadow: inset 0px 0px 0px 1px alpha(var(--color-contrast-lower), 0),
+      0px 0px 0px 2px var(--color-error), var(--shadow-sm);
+  }
+}
+
+.form-legend {
+}
+.form-label {
+}
+
+// --------------------------------
+
+// (END) Global editor code
+
+// --------------------------------

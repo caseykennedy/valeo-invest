@@ -21,22 +21,31 @@ export default defineNuxtConfig({
       'composables/**',
     ],
   },
-  components: [{ path: '~/components', pathPrefix: false }],
+  components: [{ path: '~/components', pathPrefix: false }, { path: '~/components/icons', pathPrefix: false }],
 
   // uncomment to disable SSR. This will basically make the app a SPA, like a normal Vue app, but with all the Nuxt goodies
   // ssr: false,
 
   // global CSS files
   css: [
-    '@unocss/reset/antfu.css',
+    '~/styles/index.scss',
   ],
+  vite: {
+    css: {
+      devSourcemap: true,
+      preprocessorOptions: {
+        scss: {
+          additionalData: ' @import "~/styles/_variables.scss"; ',
+        },
+      },
+    },
+  },
 
   // plugin configurations
   modules: [
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
     '@vue-macros/nuxt',
-    '@unocss/nuxt',
     '@nuxtjs/critters',
     '@nuxtjs/color-mode',
     '@nuxt/image-edge',
@@ -58,7 +67,7 @@ export default defineNuxtConfig({
   },
   colorMode: {
     preference: 'system',
-    fallback: 'light',
+    fallback: 'dark',
     classPrefix: '',
     classSuffix: '',
     storageKey: 'color-scheme',

@@ -1,0 +1,39 @@
+@use "../base" as *;
+
+:root {
+  --icon-base-size: 20px;
+
+  --icon-xxxs: 10px;
+  --icon-xxs: 16px;
+  --icon-xs: 18px;
+  --icon-sm: 24px;
+  --icon-md: 32px;
+  --icon-lg: 48px;
+  --icon-xl: 64px;
+  --icon-xxl: 90px;
+  --icon-xxxl: 128px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // font-family: "fontName";
+  height: var(--icon-sm);
+  width: var(--icon-sm);
+
+  &--md {
+    height: var(--icon-md);
+    width: var(--icon-md);
+  }
+
+  &--sm {
+    height: var(--icon-sm);
+    width: var(--icon-sm);
+  }
+
+  &--xxs {
+    height: var(--icon-xxs);
+    width: var(--icon-xxs);
+  }
+}
