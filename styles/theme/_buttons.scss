@@ -70,8 +70,16 @@ button {
   }
 
   .icon {
+    // transition: transform var(--transition);
+    
     &--right {
-      margin-left: var(--space-md);
+      margin-left: var(--btn-padding-x);
+    }
+  }
+
+  &:hover {
+    .icon {
+      transform: translateX(var(--space-xxxxs));
     }
   }
 }

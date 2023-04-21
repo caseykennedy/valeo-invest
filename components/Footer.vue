@@ -6,16 +6,16 @@ const routes = [
   },
   {
     title: 'ecosystem',
-    path: 'about',
+    path: 'ecosystem',
   },
-  {
-    title: 'market',
-    path: 'blog',
-  },
-  {
-    title: 'opportunity',
-    path: 'blog',
-  },
+  // {
+  //   title: 'market',
+  //   path: 'blog',
+  // },
+  // {
+  //   title: 'opportunity',
+  //   path: 'blog',
+  // },
 ]
 
 function scrollTop(e: Event) {
@@ -55,7 +55,7 @@ function scrollTop(e: Event) {
         <Button href="mailto:info@valeo.money" class="btn btn--outline" rel="noopener noreferrer">
           Contact
           <span class="icon icon--right">
-            <Download />
+            <ArrowRight />
           </span>
         </Button>
       </div>
