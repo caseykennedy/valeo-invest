@@ -18,14 +18,14 @@ useHead({
       <h1 class="page-title__title">
         Ꝟ <span class="text-arial">Valeo</span>
         <br>
-        <div class="text-muted">
+        <span class="text-muted">
           Money for the 21st century
-        </div>
+        </span>
       </h1>
     </Section>
 
-    <Section class="value-system">
-      <div class="value-system__title">
+    <Section class="ecosystem-page__section">
+      <div class="ecosystem-page__section__title">
         <h2>Meet the six components that together create a healthy circulatory system for value:</h2>
       </div>
 
@@ -216,7 +216,7 @@ useHead({
     }
   }
 
-  .value-system {
+  &__section {
     padding-top: var(--space-xxxl);
     padding-bottom: var(--space-xxxl);
 

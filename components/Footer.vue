@@ -2,16 +2,16 @@
 const routes = [
   {
     title: 'introduction',
-    path: '',
+    path: '/',
   },
   {
     title: 'ecosystem',
-    path: 'ecosystem',
+    path: '/ecosystem',
   },
-  // {
-  //   title: 'market',
-  //   path: 'blog',
-  // },
+  {
+    title: 'market',
+    path: '/market',
+  },
   // {
   //   title: 'opportunity',
   //   path: 'blog',
@@ -44,7 +44,7 @@ function scrollTop(e: Event) {
 
       <div class="footer__nav">
         <nav>
-          <NuxtLink v-for="{ title, path } in routes" v-slot="{ href, navigate }" :key="path" :to="`/${path}`" custom>
+          <NuxtLink v-for="{ title, path } in routes" v-slot="{ href, navigate }" :key="path" :to="path" custom>
             <a :href="href" @click="navigate">
               {{ title }}
             </a>
@@ -52,12 +52,12 @@ function scrollTop(e: Event) {
         </nav>
       </div>
       <div class="footer__contact">
-        <Button href="mailto:info@valeo.money" class="btn btn--outline" rel="noopener noreferrer">
+        <button href="mailto:info@valeo.money" class="btn btn--outline" rel="noopener noreferrer">
           Contact
           <span class="icon icon--right">
             <ArrowRight />
           </span>
-        </Button>
+        </button>
       </div>
     </div>
 

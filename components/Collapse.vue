@@ -1,19 +1,6 @@
 <script>
 export default {
   name: 'CollapseToggle',
-  components: {},
-  props: {
-    toggle: {
-      type: String,
-      default: 'Question',
-      required: true,
-    },
-    content: {
-      type: String,
-      default: 'Answer',
-      required: true,
-    },
-  },
   data() {
     return {
       show: false,

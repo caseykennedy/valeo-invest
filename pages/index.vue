@@ -77,12 +77,12 @@ useHead({
 
       <div class="footnote__action">
         <div class="footnote__action__row">
-          <Button href="https://valeo.network" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
+          <button href="https://valeo.network" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
             Executive Summary
             <span class="icon icon--sm icon--right">
               <Pdf width="24" />
             </span>
-          </Button>
+          </button>
           <div class="footnote__action__meta">
             Presentation <span>Q2, 2023</span>
           </div>
@@ -196,8 +196,10 @@ useHead({
 
         aspect-ratio: 1 / 1;
         border: var(--border);
+        border-color: var(--color-border);
         border-width: 2px;
         border-radius: var(--radius-full);
+        color: var(--color-text-light);
         padding: var(--space-xxxxl);
         width: 100%;
       }

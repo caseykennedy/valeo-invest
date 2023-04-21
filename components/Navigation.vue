@@ -1,23 +1,17 @@
 <script lang="ts" setup>
-defineNuxtLink({
-  componentName: 'NuxtLink',
-  activeClass: 'active',
-  exactActiveClass: 'exact-active',
-})
-
 const routes = [
   {
     title: 'introduction',
-    path: '',
+    path: '/',
   },
   {
     title: 'ecosystem',
-    path: 'ecosystem',
+    path: '/ecosystem',
   },
-  // {
-  //   title: 'market',
-  //   path: 'blog',
-  // },
+  {
+    title: 'market',
+    path: '/market',
+  },
   // {
   //   title: 'opportunity',
   //   path: 'blog',
@@ -29,10 +23,7 @@ const routes = [
   <div class="navigation">
     <div class="navigation__row">
       <nav>
-        <NuxtLink
-          v-for="{ title, path } in routes" v-slot="{ href, navigate, isActive }" :key="path" :to="`/${path}`"
-          custom
-        >
+        <NuxtLink v-for="{ title, path } in routes" v-slot="{ href, navigate, isActive }" :key="path" :to="path" custom>
           <a :href="href" :class="`${isActive && 'active'}`" @click="navigate">
             {{ title }}
           </a>

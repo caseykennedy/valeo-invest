@@ -61,6 +61,7 @@ watch(theme, () => {
 
   background: var(--theme-toggler-color-bg);
   border-radius: var(--radius);
+  cursor: pointer;
 
   &>* {
     flex: 1;

@@ -194,7 +194,7 @@ small {
 }
 
 strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 s {
@@ -243,6 +243,17 @@ mark {
     font-size: var(--text-sm);
     color: var(--color-contrast-low);
   }
+}
+
+ul {
+  margin-bottom: var(--gutter);
+  list-style: circle;
+  list-style-position: inside;
+
+  color: var(--color-text-light);
+  font-size: calc(var(--text-base-size) * 1.15);
+
+  li {}
 }
 
 // .article {
