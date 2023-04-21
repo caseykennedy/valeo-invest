@@ -1,4 +1,10 @@
 <script lang="ts" setup>
+defineNuxtLink({
+  componentName: 'NuxtLink',
+  activeClass: 'active',
+  exactActiveClass: 'exact-active',
+})
+
 const routes = [
   {
     title: 'introduction',
@@ -23,8 +29,11 @@ const routes = [
   <div class="navigation">
     <div class="navigation__row">
       <nav>
-        <NuxtLink v-for="{ title, path } in routes" v-slot="{ href, navigate }" :key="path" :to="`/${path}`" custom>
-          <a :href="href" @click="navigate">
+        <NuxtLink
+          v-for="{ title, path } in routes" v-slot="{ href, navigate, isActive }" :key="path" :to="`/${path}`"
+          custom
+        >
+          <a :href="href" :class="`${isActive && 'active'}`" @click="navigate">
             {{ title }}
           </a>
         </NuxtLink>
@@ -79,14 +88,11 @@ const routes = [
       padding: var(--space-xs);
       padding-top: calc(var(--space-xs) + var(--nav-link-border-width));
 
-      &:hover {
+      &:hover,
+      &:focus,
+      &.active {
         /* background: alpha(var(--color-primary), 0.15); */
         border-color: var(--color-border);
-      }
-
-      &:focus,
-      &--active {
-        color: var(--color-text);
       }
     }
   }

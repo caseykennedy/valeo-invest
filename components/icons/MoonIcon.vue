@@ -1,8 +1,12 @@
 <script setup lang="ts">
-defineProps<{
-  fill: string
-  width: number | string
-}>()
+withDefaults(defineProps<{
+  fill?: string
+  width?: number | string
+}>(), {
+  // here we have default values
+  fill: '--color-text-muted',
+  width: 18,
+})
 </script>
 
 <template>
