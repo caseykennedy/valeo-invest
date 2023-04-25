@@ -12,29 +12,27 @@ const routes = [
     title: 'market',
     path: '/market',
   },
-  // {
-  //   title: 'opportunity',
-  //   path: 'blog',
-  // },
+  {
+    title: 'opportunity',
+    path: '/opportunity',
+  },
 ]
 </script>
 
 <template>
-  <div class="navigation">
-    <div class="navigation__row">
-      <nav>
-        <NuxtLink v-for="{ title, path } in routes" v-slot="{ href, navigate, isActive }" :key="path" :to="path" custom>
-          <a :href="href" :class="`${isActive && 'active'}`" @click="navigate">
-            {{ title }}
-          </a>
-        </NuxtLink>
-      </nav>
+  <nav class="nav">
+    <div class="nav__layout">
+      <NuxtLink v-for="{ title, path } in routes" v-slot="{ href, navigate, isActive }" :key="path" :to="path" custom>
+        <a :href="href" :class="`${isActive && 'active'}`" @click="navigate">
+          {{ title }}
+        </a>
+      </NuxtLink>
     </div>
-  </div>
+  </nav>
 </template>
 
 <style lang="scss" scoped>
-.navigation {
+.nav {
   border-top: var(--border);
   border-bottom: var(--border);
   position: sticky;
@@ -42,22 +40,14 @@ const routes = [
   width: 100%;
   z-index: var(--z-index-header);
 
-  &__row {
-    display: flex;
-
-    margin: 0 auto;
-
-    /* max-width: var(--site-width-max); */
-    width: 100%;
-  }
-
-  nav {
+  &__layout {
     --nav-link-border-width: 2px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1px;
+    margin: 0 auto;
     width: 100%;
 
     background: var(--color-border);

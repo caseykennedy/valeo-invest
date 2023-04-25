@@ -26,7 +26,7 @@
   // primary
   @include defineColorHSL(--color-primary-darker, 214, 66%, 3%);
   @include defineColorHSL(--color-primary-dark, 214, 66%, 5%);
-  @include defineColorHSL(--color-primary, 214, 66%, 7%);
+  @include defineColorHSL(--color-primary, 214, 66%, 8%);
   @include defineColorHSL(--color-primary-light, 214, 66%, 12%);
   @include defineColorHSL(--color-primary-lighter, 214, 66%, 18%);
 
@@ -79,7 +79,7 @@
   --color-bg-light: var(--color-primary-light);
   --color-bg-lighter: var(--color-primary-lighter);
 
-  --color-bg-highlight: hsla(214, 60%, 10%, 1);
+  --color-bg-highlight: var(--color-primary-lighter);
 
   // typography
   --color-text: var(--color-white);

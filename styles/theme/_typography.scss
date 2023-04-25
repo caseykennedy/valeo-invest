@@ -129,7 +129,11 @@ h5 {
 }
 
 h1 {
-  font-size: var(--text-xxl);
+  font-size: var(--text-xl);
+
+  @include breakpoint(md) {
+    font-size: var(--text-xxl);
+  }
 }
 
 h2 {
@@ -139,7 +143,7 @@ h2 {
 
 h3 {
   font-size: var(--text-md);
-  font-weight: 600;
+  // font-weight: 600;
 }
 
 h4 {
@@ -246,12 +250,10 @@ mark {
 }
 
 ul {
-  margin-bottom: var(--gutter);
-  list-style: circle;
-  list-style-position: inside;
-
   color: var(--color-text-light);
   font-size: calc(var(--text-base-size) * 1.15);
+  list-style: circle;
+  // list-style-position: inside;
 
   li {}
 }

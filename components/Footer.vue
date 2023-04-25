@@ -12,10 +12,10 @@ const routes = [
     title: 'market',
     path: '/market',
   },
-  // {
-  //   title: 'opportunity',
-  //   path: 'blog',
-  // },
+  {
+    title: 'opportunity',
+    path: '/opportunity',
+  },
 ]
 
 function scrollTop(e: Event) {
@@ -28,6 +28,20 @@ function scrollTop(e: Event) {
 </script>
 
 <template>
+  <div class="footnote">
+    <div class="footnote__layout">
+      <button href="https://valeo.network" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
+        Executive Summary
+        <span class="icon icon--sm icon--right">
+          <Pdf width="24" />
+        </span>
+      </button>
+      <div class="footnote__meta">
+        Presentation <span>Q2, 2023</span>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="footer__row">
       <div class="footer__logo">
@@ -90,6 +104,35 @@ function scrollTop(e: Event) {
   padding-left: var(--gutter);
   max-width: var(--site-width-max);
   width: 100%;
+}
+
+.footnote {
+  border-top: var(--border);
+  border-color: var(--color-border-light);
+  /* background: var(--color-primary-light); */
+  /* color: var(--color-bg); */
+  padding: var(--gutter-sm) 0;
+  width: 100%;
+
+  &__layout {
+    @include rowLayout;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gutter);
+
+    @include breakpoint(xs) {
+      flex-flow: row nowrap;
+    }
+  }
+
+  &__meta {
+    span {
+      margin-left: var(--space-lg);
+    }
+  }
 }
 
 .footer {

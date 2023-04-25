@@ -6,7 +6,7 @@ useHead({
 
 <template>
   <main class="market-page">
-    <Section class="page-title">
+    <Section :border-bottom="true" class="page-title">
       <h1 class="page-title__title">
         Market
         <br>
@@ -16,46 +16,83 @@ useHead({
       </h1>
     </Section>
 
-    <Section class="market-page__intro">
-      <div class="market-page__intro__title">
-        <h2>Stablecoin Market</h2>
-      </div>
-      <div class="market-page__intro__content">
-        <p>
-          Because Valeo goes beyond stability and serves as a constant, the most immediately addressable market for our
-          currency is the stablecoin market.
-        </p>
-        <p><strong>Current stablecoin users:</strong></p>
-        <ul>
-          <li>Are losing 1 percent per month to inflation, and they know it</li>
-          <li>Are unsure of the future of the US dollar (which has been on a losing streak for 100 years)</li>
-          <li>Mistrust stablecoins that are not transparent</li>
-          <li>Are increasingly risk-averse, and move around in markets accordingly</li>
-          <li>Are not brand loyal to any particular digital currency</li>
-        </ul>
+    <Section>
+      <h2>Stablecoin Market</h2>
+      <p>
+        Because Valeo goes beyond stability and serves as a constant, the most immediately addressable market for our
+        currency is the stablecoin market.
+      </p>
+      <p><strong>Current stablecoin users:</strong></p>
+      <ul>
+        <li>Are losing 1 percent per month to inflation, and they know it</li>
+        <li>Are unsure of the future of the US dollar (which has been on a losing streak for 100 years)</li>
+        <li>Mistrust stablecoins that are not transparent</li>
+        <li>Are increasingly risk-averse, and move around in markets accordingly</li>
+        <li>Are not brand loyal to any particular digital currency</li>
+      </ul>
+    </Section>
 
-        <p class="text-md">
-          <strong>$150B — The total current stablecoin market.</strong>
-        </p>
-        <p class="text-md">
-          <strong>That’s up from just $6B at the start of 2020. Up 25x in 3 years.</strong>
-        </p>
+    <SectionHighlight>
+      <template #figure>
+        <div class="highlight__stat">
+          <p class="text-xxl">
+            $150B
+          </p>
+          <p class="text-md">
+            Total Current Stablecoin Market
+          </p>
+        </div>
+      </template>
+      <template #content>
+        <h2>
+          That’s up from just $6B at the start of 2020. Up 25x in 3 years.
+        </h2>
         <p>
-          Frax, a recent competitor, has achieved a market cap of nearly $3B, or 2 percent market penetration in the same
+          Frax, a recent competitor, has achieved a market cap of nearly $3B, or 2 percent market penetration in the
+          same
           time period. We anticipate we could achieve a similar initial market share—a $3B market cap—in 12 to 24 months
           following our launch.
         </p>
-      </div>
-    </Section>
+      </template>
+    </SectionHighlight>
 
-    <Section class="market-page__section">
-      <div class="market-page__section__row">
-        <div class="market-page__section__title">
+    <!-- <Section bg="--color-bg-highlight">
+      <div class="highlight">
+        <div>
+          <div class="highlight__stat">
+            <p class="text-xxl">
+              $150B
+            </p>
+            <p class="text-md">
+              Total Current Stablecoin Market
+            </p>
+          </div>
+        </div>
+        <div class="highlight__content">
+          <h2>
+            That’s up from just $6B at the start of 2020. Up 25x in 3 years.
+          </h2>
+          <p>
+            Frax, a recent competitor, has achieved a market cap of nearly $3B, or 2 percent market penetration in the
+            same
+            time period. We anticipate we could achieve a similar initial market share—a $3B market cap—in 12 to 24 months
+            following our launch.
+          </p>
+        </div>
+      </div>
+    </Section> -->
+
+    <Section class="feature">
+      <div class="feature__row">
+        <div class="feature__title">
           <h2 class="text-md">
             Cross-Border Remittance Market
           </h2>
         </div>
-        <div class="market-page__section__content">
+        <div class="feature__content">
+          <div class="feature__content__figure">
+            <ArtRemitMarket />
+          </div>
           <p>
             Having the most reliable currency positions us well for the cross-border remittance market: families working
             abroad who need a safe, speedy, and affordable way to send currency internationally. The remittance market is
@@ -65,14 +102,17 @@ useHead({
       </div>
     </Section>
 
-    <Section class="market-page__section">
-      <div class="market-page__section__row">
-        <div class="market-page__section__title">
+    <Section class="feature">
+      <div class="feature__row">
+        <div class="feature__title">
           <h2 class="text-md">
             Retail Commerce Market
           </h2>
         </div>
-        <div class="market-page__section__content">
+        <div class="feature__content">
+          <div class="feature__content__figure">
+            <ArtTag />
+          </div>
           <p>
             For retail, we’ll establish strategic partnerships in the payments space: Apple Pay, Google Pay, Square,
             Strike, Coinpayments, Bitpay, PayPal, Stripe and potentially Telegram and Twitter. We’ll focus on design to
@@ -92,14 +132,17 @@ useHead({
       </div>
     </Section>
 
-    <Section class="market-page__section">
-      <div class="market-page__section__row">
-        <div class="market-page__section__title">
+    <Section class="feature">
+      <div class="feature__row">
+        <div class="feature__title">
           <h2 class="text-md">
             Adoption Curve
           </h2>
         </div>
-        <div class="market-page__section__content">
+        <div class="feature__content">
+          <div class="feature__content__figure">
+            <ArtAdoptionCurve />
+          </div>
           <p>
             For digital currency systems, we’re past the early adopters and well into the early majority phase, with
             forecasts predicting half the world on mobile wallets by 2024.
@@ -108,14 +151,17 @@ useHead({
       </div>
     </Section>
 
-    <Section class="market-page__section">
-      <div class="market-page__section__row">
-        <div class="market-page__section__title">
+    <Section class="feature">
+      <div class="feature__row">
+        <div class="feature__title">
           <h2 class="text-md">
             Competition
           </h2>
         </div>
-        <div class="market-page__section__content">
+        <div class="feature__content">
+          <div class="feature__content__figure">
+            <ArtGraph />
+          </div>
           <p>
             The primary function of Valeo is to preserve value while circulating value through different systems. In a
             global economy, people need the ability to move fluidly among different digital currencies and between digital
@@ -162,10 +208,9 @@ useHead({
   </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .market-page {
   .page-title {
-    border-bottom: var(--border);
     padding-top: calc(var(--space-xxxl) * 2);
 
     &__title {
@@ -175,21 +220,19 @@ useHead({
     }
   }
 
-  &__intro {
+  .intro {
     &__title {}
   }
 
-  &__section {
-    padding-top: 0;
-
+  .feature {
     &__row {
       display: flex;
       flex-flow: column nowrap;
       gap: var(--gutter);
-      padding-top: calc(var(--space-xxxl));
+      padding-bottom: calc(var(--space-xxxl));
 
-      border-top: var(--border);
-      border-color: var(--color-border-light);
+      /* border-bottom: var(--border);
+      border-color: var(--color-border-light); */
 
       @include breakpoint(sm) {
         flex-flow: row nowrap;
@@ -209,6 +252,19 @@ useHead({
 
       @include breakpoint(md) {
         flex: 1;
+      }
+
+      &__figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: var(--gutter);
+        padding: var(--space-xxxxl) var(--gutter);
+
+        border: var(--border);
+        border-color: var(--color-border-light);
+        border-radius: var(--radius-xs);
       }
     }
   }

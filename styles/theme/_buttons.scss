@@ -13,7 +13,7 @@
   --btn-font-size: var(--text-base-size);
   --btn-padding-x: var(--space-sm);
   --btn-padding-y: var(--space-xs);
-  --btn-radius: var(--radius-lg);
+  --btn-radius: var(--radius-xs);
 
   @include breakpoint(xs) {
     // --btn-height: 48px;
@@ -40,11 +40,12 @@ button {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
+  
+  height: var(--btn-height);
 
   background: var(--color-gray);
   border: 1px solid transparent;
-  border-radius: 0;
-  height: var(--btn-height);
+  border-radius: var(--btn-radius);
 
   @include fontSmooth;
   font-size: var(--btn-font-size);
@@ -54,7 +55,6 @@ button {
 
   cursor: pointer;
   transition: var(--transition-all);
-  will-change: transform;
 
   // &:focus {
   //   box-shadow: var(--shadow-inset-xs);

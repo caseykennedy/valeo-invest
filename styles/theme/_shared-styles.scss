@@ -6,9 +6,9 @@
   --border: 1px solid var(--color-border);
 
   // radius
-  --radius: 1.25rem; // border radius base size
+  --radius: 0.5rem; // border radius base size
 
-  --radius-xs: calc(var(--radius) / 3);
+  --radius-xs: calc(var(--radius) / 3.25);
   --radius-sm: calc(var(--radius) / 2);
   --radius-md: calc(var(--radius-sm) + 2px);
   --radius-lg: calc(var(--radius) * 4);

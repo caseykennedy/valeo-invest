@@ -14,7 +14,7 @@ useHead({
 
 <template>
   <main class="ecosystem-page">
-    <Section class="page-title">
+    <Section :border-bottom="true" class="page-title">
       <h1 class="page-title__title">
         Ꝟ <span class="text-arial">Valeo</span>
         <br>
@@ -206,7 +206,6 @@ useHead({
 <style lang="scss">
 .ecosystem-page {
   .page-title {
-    border-bottom: var(--border);
     padding-top: calc(var(--space-xxxl) * 2);
 
     &__title {

@@ -6,7 +6,7 @@ useHead({
 
 <template>
   <main class="home-page">
-    <Section class="hero">
+    <Section :border-bottom="true" class="hero">
       <h1 class="hero__title">
         Ꝟ <span class="text-arial">Valeo</span>
         <br>
@@ -14,17 +14,19 @@ useHead({
           Equilibrium for a new economy
         </div>
       </h1>
+    </Section>
 
-      <div class="hero__intro">
+    <Section>
+      <div class="media__intro">
         <div>
           <p>1. Watch the intro</p>
-          <div class="hero__intro__media">
+          <div class="media__intro__block">
             video
           </div>
         </div>
         <div>
           <p>2. Listen to the presentation</p>
-          <div class="hero__intro__media">
+          <div class="media__intro__block">
             audio
           </div>
         </div>
@@ -68,27 +70,11 @@ useHead({
       </div>
     </Section>
 
-    <section class="footnote">
-      <div class="footnote__call">
-        <div class="footnote__call__row">
-          <p>Safe passage to calmer waters.</p>
-        </div>
-      </div>
-
-      <div class="footnote__action">
-        <div class="footnote__action__row">
-          <button href="https://valeo.network" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
-            Executive Summary
-            <span class="icon icon--sm icon--right">
-              <Pdf width="24" />
-            </span>
-          </button>
-          <div class="footnote__action__meta">
-            Presentation <span>Q2, 2023</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Section class="footnote">
+      <p class="text-xl">
+        Safe passage to calmer waters.
+      </p>
+    </Section>
   </main>
 </template>
 
@@ -110,15 +96,13 @@ useHead({
         color: var(--color-text-muted);
       }
     }
+  }
 
+  .media {
     &__intro {
       display: flex;
       flex-flow: column nowrap;
       gap: var(--gutter);
-
-      border-top: var(--border);
-      margin-top: var(--gutter);
-      padding-top: var(--gutter);
 
       @include breakpoint(sm) {
         flex-flow: row nowrap;
@@ -130,13 +114,14 @@ useHead({
         flex-flow: column nowrap;
       }
 
-      &__media {
+      &__block {
         flex: 1;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: var(--color-bg-dark);
-        border-radius: var(--border-radius);
+
+        border: var(--border);
+        border-radius: var(--radius-xs);
         padding: var(--space-xxxxl) 0;
       }
     }
@@ -207,48 +192,7 @@ useHead({
   }
 
   .footnote {
-
-    &__call {
-      padding: var(--text-xxxl) 0;
-      /* text-align: center; */
-
-      &__row {
-        @include rowLayout;
-      }
-
-      p {
-        font-size: var(--text-xl);
-        font-weight: var(--font-weight-bold);
-      }
-    }
-
-    &__action {
-      border-top: var(--border);
-      border-color: var(--color-border-light);
-      /* background: var(--color-primary-light); */
-      /* color: var(--color-bg); */
-      padding: var(--gutter-sm) 0;
-
-      &__row {
-        @include rowLayout;
-
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: var(--gutter);
-
-        @include breakpoint(xs) {
-          flex-flow: row nowrap;
-        }
-      }
-
-      &__meta {
-        span {
-          margin-left: var(--space-lg);
-        }
-      }
-    }
+    padding: var(--text-xxxl) 0;
   }
 }
 </style>

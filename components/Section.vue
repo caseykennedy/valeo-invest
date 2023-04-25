@@ -3,10 +3,12 @@ import { computed, defineProps, withDefaults } from 'vue'
 
 const props = withDefaults(defineProps<{
   bg?: string
-  border?: boolean
+  borderTop?: boolean
+  borderBottom?: boolean
 }>(), {
   bg: '--color-bg',
-  border: false,
+  borderTop: false,
+  borderBottom: false,
 })
 
 const cssVars = computed(() => {
@@ -17,7 +19,8 @@ const cssVars = computed(() => {
 
 const cssClasses = computed(() => {
   return {
-    'section--border': props.border,
+    'section--border-top': props.borderTop,
+    'section--border-bottom': props.borderBottom,
   }
 })
 </script>
@@ -33,22 +36,27 @@ const cssClasses = computed(() => {
 <style lang="scss">
 .section {
   background: var(--section-bg);
-  /* border-radius: var(--radius); */
+  border-radius: var(--radius-xs);
   padding-top: var(--gutter-y);
   padding-bottom: var(--gutter-y);
   position: relative;
   width: 100%;
 
-  &--border {
+  &--border-top {
     border-top: var(--border);
-    border-color: alpha(var(--color-text-muted), 0.25);
+    border-color: var(--color-border-light);
+  }
+
+  &--border-bottom {
+    border-bottom: var(--border);
+    border-color: var(--color-border-light);
   }
 
   &__inner {
     margin: 0 auto;
     padding-right: var(--gutter);
     padding-left: var(--gutter);
-    max-width: var(--site-width-max);
+    /* max-width: var(--site-width-max); */
     width: 100%;
   }
 }

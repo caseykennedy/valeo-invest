@@ -3,7 +3,7 @@
 
 <template>
   <header class="header">
-    <div class="header__row">
+    <div class="header__layout">
       <div class="header__logo">
         <!-- {{ isDark ? t('theme.dark') : t('theme.light') }} -->
         <NuxtLink to="/">
@@ -31,7 +31,7 @@
   width: 100%;
   z-index: var(--z-index-header);
 
-  &__row {
+  &__layout {
     display: flex;
     align-items: center;
     justify-content: space-between;
