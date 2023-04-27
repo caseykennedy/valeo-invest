@@ -94,7 +94,7 @@ const teamData = [
       </template>
     </SectionHighlight>
 
-    <Section>
+    <Section :border-bottom="true">
       <div class="roadmap">
         <h2>
           Roadmap
@@ -152,7 +152,7 @@ const teamData = [
           </h2>
         </div>
         <div class="section__content">
-          <p>
+          <p class="text-md">
             Our financial model builds both company asset value and cashflow steadily over 5 years, creating a solid and
             lasting company with a large, high-value network.
           </p>
@@ -168,24 +168,24 @@ const teamData = [
           </h3>
         </div>
         <div class="section__content">
-          <div class="margin-bottom-xxl">
-            <p class="text-md">
-              <strong>The first is sales of Valeo.</strong>
-            </p>
-            <p>
-              Proceeds from sales of the currency create immediate and expanding asset value, which we'll hold in the form
-              of protocol-owned liquidity, ensuring both a fully-collateralized currency and a large asset base.
-            </p>
-          </div>
-          <div>
-            <p class="text-md">
-              <strong>The second is network effects.</strong>
-            </p>
-            <p>
-              Our business model is based on creating a large network of Valeo customers, which becomes a significant—and
-              perhaps the most important—company asset.
-            </p>
-          </div>
+          <ol>
+            <li>
+              The first is sales of Valeo.
+              <p class="margin-top-sm">
+                Proceeds from sales of the currency create immediate and expanding asset value, which we'll hold in the
+                form
+                of protocol-owned liquidity, ensuring both a fully-collateralized currency and a large asset base.
+              </p>
+            </li>
+            <li>
+              The second is network effects.
+              <p class="margin-top-sm">
+                Our business model is based on creating a large network of Valeo customers, which becomes a
+                significant—and
+                perhaps the most important—company asset.
+              </p>
+            </li>
+          </ol>
         </div>
       </div>
     </Section>
@@ -220,7 +220,7 @@ const teamData = [
           </h3>
         </div>
         <div class="section__content">
-          <p>
+          <p class="text-md">
             Not tomorrow, but soon, there will come a day when the holders of dollar-pegged stablecoins will realize that
             pegging to the dollar is losing money.
           </p>
@@ -268,14 +268,18 @@ const teamData = [
           <h2>
             Team
           </h2>
-          <p>
+        </div>
+        <div class="section__content">
+          <p class="text-md">
             The success of any project is the team. Our global team is outstanding; a complementary mix of vision, drive,
             tech skills and business acumen. The team is ideally suited for this project and we've already built a lot of
             of it together. In doing so, we've also nurtured and developed a unique and compelling company culture.
           </p>
-          <p>This team is a family of professionals from around the globe—committed, eager, and highly qualified to deliver this solution.</p>
+          <p>
+            This team is a family of professionals from around the globe—committed, eager, and highly qualified to
+            deliver this solution.
+          </p>
         </div>
-        <div class="section__content" />
       </div>
 
       <div class="team">
@@ -376,8 +380,12 @@ const teamData = [
         li {
           border-bottom: var(--border);
           border-color: var(--color-border-light);
-          padding: var(--space-md) 0;
-          /* margin-bottom: var(--space-sm); */
+          font-size: var(--text-base-size);
+          padding-bottom: var(--space-lg);
+
+          &:not(:first-child) {
+            padding-top: var(--space-lg);
+          }
         }
       }
     }
@@ -432,9 +440,10 @@ const teamData = [
     grid-template-columns: repeat(1, 1fr);
     /* grid-template-rows: repeat(2, 1fr); */
     gap: var(--gutter-y);
-    margin-top: var(--gutter-y);
+    margin-top: var(--space-xxxxl);
+    padding-top: var(--space-xxxxl);
 
-    @include breakpoint(sm) {
+    @include breakpoint(xs) {
       grid-template-columns: repeat(2, 1fr);
     }
 

@@ -17,19 +17,27 @@ useHead({
     </Section>
 
     <Section>
-      <h2>Stablecoin Market</h2>
-      <p>
-        Because Valeo goes beyond stability and serves as a constant, the most immediately addressable market for our
-        currency is the stablecoin market.
-      </p>
-      <p><strong>Current stablecoin users:</strong></p>
-      <ul>
-        <li>Are losing 1 percent per month to inflation, and they know it</li>
-        <li>Are unsure of the future of the US dollar (which has been on a losing streak for 100 years)</li>
-        <li>Mistrust stablecoins that are not transparent</li>
-        <li>Are increasingly risk-averse, and move around in markets accordingly</li>
-        <li>Are not brand loyal to any particular digital currency</li>
-      </ul>
+      <div class="section__layout">
+        <div class="section__title">
+          <h2>
+            Stablecoin Market
+          </h2>
+        </div>
+        <div class="section__content">
+          <p class="text-md padding-bottom-xl">
+            Because Valeo goes beyond stability and serves as a constant, the most immediately addressable market for our
+            currency is the stablecoin market.
+          </p>
+          <p><strong>Current stablecoin users:</strong></p>
+          <ul>
+            <li>Are losing 1 percent per month to inflation, and they know it</li>
+            <li>Are unsure of the future of the US dollar (which has been on a losing streak for 100 years)</li>
+            <li>Mistrust stablecoins that are not transparent</li>
+            <li>Are increasingly risk-averse, and move around in markets accordingly</li>
+            <li>Are not brand loyal to any particular digital currency</li>
+          </ul>
+        </div>
+      </div>
     </Section>
 
     <SectionHighlight>
@@ -222,6 +230,50 @@ useHead({
 
   .intro {
     &__title {}
+  }
+
+  .section {
+    &__layout {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: var(--gutter);
+
+      @include breakpoint(sm) {
+        flex-flow: row nowrap;
+      }
+    }
+
+    &__title {
+      flex: 1;
+    }
+
+    &__content {
+      flex: 1;
+
+      @include breakpoint(sm) {
+        flex: 1.5;
+      }
+
+      @include breakpoint(md) {
+        flex: 1;
+      }
+
+      ul {
+        list-style: none;
+        list-style-position: inside;
+
+        li {
+          border-bottom: var(--border);
+          border-color: var(--color-border-light);
+          font-size: var(--text-base-size);
+          padding-bottom: var(--space-lg);
+
+          &:not(:first-child) {
+            padding-top: var(--space-lg);
+          }
+        }
+      }
+    }
   }
 
   .feature {
