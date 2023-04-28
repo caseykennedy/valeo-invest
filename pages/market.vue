@@ -262,15 +262,15 @@ useHead({
         list-style: none;
         list-style-position: inside;
 
+        border-top: var(--border);
+          border-color: var(--color-border-light);
+
         li {
           border-bottom: var(--border);
           border-color: var(--color-border-light);
           font-size: var(--text-base-size);
+          padding-top: var(--space-lg);
           padding-bottom: var(--space-lg);
-
-          &:not(:first-child) {
-            padding-top: var(--space-lg);
-          }
         }
       }
     }

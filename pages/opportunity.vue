@@ -475,6 +475,7 @@ const teamData = [
 
       &__meta {
         &__bio {
+          color: var(--color-text-muted);
         }
       }
     }

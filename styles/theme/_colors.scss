@@ -15,7 +15,7 @@
 
   // typography
   --color-text: var(--color-primary);
-  --color-text-light: hsla(220, 16.8%, 24%, 1);
+  --color-text-light: hsla(220, 16.8%, 20%, 1);
   --color-text-lighter: hsla(220, 16.8%, 45%, 1);
   @include defineColorHSL(--color-text-muted, 220, 16.8%, 45%);
 

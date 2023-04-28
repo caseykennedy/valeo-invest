@@ -41,7 +41,9 @@ export default {
       </div>
       <div class="collapse__toggle__title">
         <h3>
-          <slot name="title" />
+          <strong>
+            <slot name="title" />
+          </strong>
         </h3>
         <p>
           <slot name="sub-title" />
