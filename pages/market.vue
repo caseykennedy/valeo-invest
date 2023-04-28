@@ -5,7 +5,7 @@ useHead({
 </script>
 
 <template>
-  <main class="market-page">
+  <div class="market-page">
     <Section :border-bottom="true" class="page-title">
       <h1 class="page-title__title">
         Market
@@ -213,7 +213,7 @@ useHead({
         </div>
       </div>
     </Section>
-  </main>
+  </div>
 </template>
 
 <style lang="scss" scoped>

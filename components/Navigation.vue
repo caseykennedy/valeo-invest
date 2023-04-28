@@ -58,6 +58,9 @@ const routes = [
       align-items: center;
       justify-content: center;
 
+      padding: var(--space-xs);
+      padding-top: calc(var(--space-xs) + var(--nav-link-border-width));
+
       background: var(--color-bg);
       border-bottom: solid var(--nav-link-border-width);
       border-color: var(--color-bg);
@@ -66,8 +69,6 @@ const routes = [
       font-weight: 500;
       color: var(--color-text);
       text-transform: capitalize;
-      padding: var(--space-xs);
-      padding-top: calc(var(--space-xs) + var(--nav-link-border-width));
 
       &:hover,
       &:focus,

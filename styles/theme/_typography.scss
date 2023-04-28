@@ -210,8 +210,10 @@ u {
 }
 
 mark {
-  background-color: var(--color-warning-light);
-  color: inherit;
+  background-color: var(--color-success-darker);
+  color: var(--color-white);
+  display: inline-block;
+  padding: var(--space-sm) var(--space-md);
 }
 
 .text-arial {

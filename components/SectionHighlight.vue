@@ -1,9 +1,22 @@
-<script lang="ts">
+<script lang="ts" setup>
+import { computed, defineProps, withDefaults } from 'vue'
+
+const props = withDefaults(defineProps<{
+  reverse?: boolean
+}>(), {
+  reverse: false,
+})
+
+const cssVars = computed(() => {
+  return {
+    '--highlight-flow': props.reverse ? 'row-reverse nowrap' : 'row nowrap',
+  }
+})
 </script>
 
 <template>
   <Section bg="--color-bg-highlight">
-    <div class="highlight">
+    <div class="highlight" :style="cssVars">
       <div class="highlight__figure">
         <slot name="figure" />
       </div>
@@ -22,7 +35,7 @@
   justify-content: center;
 
   @include breakpoint(md) {
-    flex-flow: row nowrap;
+    flex-flow: var(--highlight-flow);
     /* gap: var(--space-xxxxl); */
   }
 
@@ -54,7 +67,12 @@
     text-align: center;
   }
 
-  &__figure {}
+  &__figure {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
 
   &__content {
     flex: 1;

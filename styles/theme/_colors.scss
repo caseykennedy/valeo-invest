@@ -10,12 +10,12 @@
 
   // background
   --color-bg-dark: var(--color-bg-highlight);
-  --color-bg: hsla(220, 16.8%, 94%, 1);
+  --color-bg: hsla(220, 16.8%, 96%, 1);
   --color-bg-highlight: hsla(220, 16.8%, 90%, 1);
 
   // typography
   --color-text: var(--color-primary);
-  --color-text-light: hsla(220, 16.8%, 30%, 1);
+  --color-text-light: hsla(220, 16.8%, 24%, 1);
   --color-text-lighter: hsla(220, 16.8%, 45%, 1);
   @include defineColorHSL(--color-text-muted, 220, 16.8%, 45%);
 
@@ -26,7 +26,7 @@
   // primary
   @include defineColorHSL(--color-primary-darker, 214, 66%, 3%);
   @include defineColorHSL(--color-primary-dark, 214, 66%, 5%);
-  @include defineColorHSL(--color-primary, 214, 66%, 8%);
+  @include defineColorHSL(--color-primary, 214, 66%, 7%);
   @include defineColorHSL(--color-primary-light, 214, 66%, 12%);
   @include defineColorHSL(--color-primary-lighter, 214, 66%, 18%);
 
@@ -38,7 +38,7 @@
   @include defineColorHSL(--color-accent-lighter, 216.4, 67.3%, 93%);
 
   // success
-  @include defineColorHSL(--color-success-darker, 131.1, 51.7%, 16%);
+  @include defineColorHSL(--color-success-darker, 131.1, 51.7%, 28%);
   @include defineColorHSL(--color-success-dark, 131.1, 51.7%, 40%);
   @include defineColorHSL(--color-success, 131.1, 51.7%, 47.1%);
   @include defineColorHSL(--color-success-light, 131.1, 51.7%, 69%);

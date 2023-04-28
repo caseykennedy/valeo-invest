@@ -13,7 +13,7 @@ useHead({
 </script>
 
 <template>
-  <main class="ecosystem-page">
+  <div class="ecosystem-page">
     <Section :border-bottom="true" class="page-title">
       <h1 class="page-title__title">
         Ꝟ <span class="text-arial">Valeo</span>
@@ -200,7 +200,7 @@ useHead({
         </template>
       </Collapse>
     </Section>
-  </main>
+  </div>
 </template>
 
 <style lang="scss">

@@ -38,7 +38,7 @@ const teamData = [
 </script>
 
 <template>
-  <main class="market-page">
+  <div class="market-page">
     <Section class="page-title">
       <h1 class="page-title__title">
         Opportunity
@@ -245,12 +245,12 @@ const teamData = [
       </div>
     </Section>
 
-    <SectionHighlight>
+    <SectionHighlight :reverse="true">
       <template #figure>
         fig
       </template>
       <template #content>
-        <h2 class="text-md">
+        <h2 class="margin-bottom-xxxl">
           Mission
         </h2>
         <p class="text-lg">
@@ -258,7 +258,9 @@ const teamData = [
           what Facebook was to Web 2,<br>
           it's time to build for Web 3.
         </p>
-        <p><mark>Real and lasting wealth for us all.</mark></p>
+        <p class="margin-top-xxxxl">
+          <mark>Real and lasting wealth for us all.</mark>
+        </p>
       </template>
     </SectionHighlight>
 
@@ -300,7 +302,7 @@ const teamData = [
         </div>
       </div>
     </Section>
-  </main>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -473,7 +475,6 @@ const teamData = [
 
       &__meta {
         &__bio {
-          color: var(--color-text-muted);
         }
       }
     }

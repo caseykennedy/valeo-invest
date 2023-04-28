@@ -2,9 +2,11 @@
   <div class="app">
     <Header />
     <Navigation />
-    <div class="content">
-      <slot />
-    </div>
+    <main>
+      <div class="main__layout">
+        <slot />
+      </div>
+    </main>
     <Footer />
   </div>
 </template>
@@ -20,15 +22,26 @@
   width: 100%;
 }
 
-.content {
+main {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
   flex-wrap: nowrap;
   width: 100%;
+
+  .main__layout {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: var(--site-width-max);
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
 }
 
-main {
+/* main {
   display: flex;
   flex-flow: column nowrap;
   margin: 0 auto;
@@ -37,5 +50,5 @@ main {
   width: 100%;
   position: relative;
   z-index: 1;
-}
+} */
 </style>

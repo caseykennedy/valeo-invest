@@ -5,7 +5,7 @@ useHead({
 </script>
 
 <template>
-  <main class="home-page">
+  <div class="home-page">
     <Section :border-bottom="true" class="hero">
       <h1 class="hero__title">
         Ꝟ <span class="text-arial">Valeo</span>
@@ -56,11 +56,18 @@ useHead({
             That’s where Valeo comes in.
           </p>
 
-          <p>
-            Thank you for your attention.
-            <br>
-            —Christian Goodell
-          </p>
+          <div class="note__signature">
+            <div>
+              <p>
+                Thank you for your attention.
+                <br>
+                —Christian Goodell
+              </p>
+            </div>
+            <div>
+              <ArtSignature />
+            </div>
+          </div>
         </div>
         <div class="note__logo">
           <div class="note__logo__badge">
@@ -75,7 +82,7 @@ useHead({
         Safe passage to calmer waters.
       </p>
     </Section>
-  </main>
+  </div>
 </template>
 
 <style lang="scss">
@@ -166,12 +173,21 @@ useHead({
       }
     }
 
+    &__signature {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      /* gap: var(--space-sm); */
+      width: 100%;
+    }
+
     &__logo {
       flex: 1;
       font-size: var(--text-xxxxl);
 
       @include breakpoint(md) {
-        flex: 1.25;
+        flex: 1;
       }
 
       &__badge {
@@ -184,8 +200,8 @@ useHead({
         border-color: var(--color-border);
         border-width: 2px;
         border-radius: var(--radius-full);
-        color: var(--color-text-light);
-        padding: var(--space-xxxxl);
+        color: var(--color-text);
+        /* padding: var(--space-xl); */
         width: 100%;
       }
     }

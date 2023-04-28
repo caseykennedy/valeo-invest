@@ -1,13 +1,8 @@
 <script lang="ts" setup>
-import { onMounted, reactive, ref, watch } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 
 const { isDark, toggle } = useDark()
-
 const theme = ref(isDark)
-
-const themeState = reactive({
-  isDark: theme.value ? 'dark' : 'light',
-})
 
 onMounted(() => {
   const localTheme = localStorage.getItem('color-scheme')
@@ -18,19 +13,11 @@ watch(theme, () => {
   const dataTheme = theme.value ? 'dark' : 'light'
   document.documentElement.setAttribute('data-theme', dataTheme)
 })
-
-watch(theme, () => {
-  if (theme.value === true)
-    themeState.isDark = 'dark'
-
-  else
-    themeState.isDark = 'light'
-})
 </script>
 
 <template>
   <button class="theme-toggler" aria-label="Toggle themes" @click="toggle()">
-    <div class="theme-toggler__toggle" :class="`theme-toggler__toggle--${themeState.isDark}`" />
+    <div class="theme-toggler__toggle" />
     <div class="icon icon--xxs">
       <Sunshine fill="--color-text-muted" />
     </div>
@@ -44,23 +31,25 @@ watch(theme, () => {
 :root {
   --theme-toggler-height: 22px;
   --theme-toggler-color-bg: var(--color-bg-dark);
+  --theme-toggler-position: calc(100% - var(--theme-toggler-height));
 }
 
 [data-theme="dark"] {
   --theme-toggler-color-bg: var(--color-bg-lighter);
+  --theme-toggler-position: 0;
 }
 
 .theme-toggler {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-xxxs);
+  gap: var(--space-xs);
 
   height: var(--theme-toggler-height);
   position: relative;
 
   background: var(--theme-toggler-color-bg);
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   cursor: pointer;
 
   &>* {
@@ -77,15 +66,8 @@ watch(theme, () => {
     height: 100%;
     position: absolute;
     top: 0;
+    left: var(--theme-toggler-position);
     transition: var(--transition-all);
-
-    &--light {
-      left: 50%;
-    }
-
-    &--dark {
-      left: 0;
-    }
   }
 }
 </style>
