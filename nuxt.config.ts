@@ -41,6 +41,8 @@ export default defineNuxtConfig({
     },
   },
 
+  image: {},
+
   // plugin configurations
   modules: [
     '@nuxtjs/i18n',

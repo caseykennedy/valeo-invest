@@ -36,18 +36,20 @@ export default {
 <template>
   <div class="collapse" :class="toggleClasses">
     <div class="collapse__toggle" @click.prevent="toggleDropdown">
-      <div class="collapse__toggle__icon">
-        <slot name="icon" />
-      </div>
-      <div class="collapse__toggle__title">
-        <h3>
-          <strong>
-            <slot name="title" />
-          </strong>
-        </h3>
-        <p>
-          <slot name="sub-title" />
-        </p>
+      <div class="collapse__toggle__layout">
+        <div class="collapse__toggle__icon">
+          <slot name="icon" />
+        </div>
+        <div class="collapse__toggle__title">
+          <h3>
+            <strong>
+              <slot name="title" />
+            </strong>
+          </h3>
+          <p>
+            <slot name="sub-title" />
+          </p>
+        </div>
       </div>
       <div class="collapse__carat">
         <Chevron />
@@ -69,7 +71,11 @@ export default {
 
 <style lang="scss">
 .collapse {
-  --toggle-icon-size: 125px;
+  --toggle-icon-size: 30px;
+
+  @include breakpoint(sm) {
+    --toggle-icon-size: 100px;
+  }
 
   display: flex;
   flex-flow: column nowrap;
@@ -81,40 +87,42 @@ export default {
     margin-top: var(--space-md);
   } */
 
-  &:hover {
-    background: var(--color-bg-highlight);
-  }
-
   &__toggle {
     display: flex;
     align-items: center;
-    padding: var(--space-md) 0;
+    justify-content: space-between;
+    gap: var(--gutter);
+    padding: var(--space-lg) 0;
     cursor: pointer;
+
+    &__layout {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      gap: var(--gutter);
+      flex: 1;
+
+      @include breakpoint(sm) {
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 0;
+      }
+    }
 
     &__icon {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       height: var(--toggle-icon-size);
       width: var(--toggle-icon-size);
+
+      @include breakpoint(sm) {
+        justify-content: center;
+      }
     }
 
     &__title {
       flex: 1;
-    }
-  }
-
-  &__content {
-    padding-right: var(--toggle-icon-size);
-    padding-left: var(--toggle-icon-size);
-    transition: 150ms ease-out;
-
-    /* border-top: var(--border); */
-    /* border-color: var(--color-border-light); */
-
-    div {
-      padding: 0 0 var(--gutter);
-      /* padding: var(--gutter) 0; */
     }
   }
 
@@ -123,12 +131,26 @@ export default {
     align-items: center;
     justify-content: center;
 
-    height: var(--toggle-icon-size);
-    width: var(--toggle-icon-size);
-
     svg {
       transform: rotate(-90deg);
       transition: transform var(--transition);
+    }
+  }
+
+  &__content {
+    transition: 150ms ease-out;
+
+    /* border-top: var(--border); */
+    /* border-color: var(--color-border-light); */
+
+    @include breakpoint(sm) {
+      padding-right: var(--toggle-icon-size);
+      padding-left: var(--toggle-icon-size);
+    }
+
+    div {
+      padding: 0 0 var(--gutter);
+      /* padding: var(--gutter) 0; */
     }
   }
 

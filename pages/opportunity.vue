@@ -63,7 +63,7 @@ const teamData = [
           </div>
         </div>
         <div class="intro__figure">
-          <ArtEqual />
+          <ArtEqual fill="--color-success-darker" />
         </div>
       </div>
     </Section>

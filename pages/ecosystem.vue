@@ -65,35 +65,48 @@ useHead({
           greed).
         </template>
         <template #content>
-          <p>
-            It’s high time for a bulletproof exchange, one that’s impervious to the many pitfalls that plague the exchange
-            space. Our decentralized exchange operates on a set of hard rules, rather than on governance or in-house
-            decision making.
-          </p>
+          <div class="ecosystem-page__collapse__split">
+            <div>
+              <p>
+                It’s high time for a bulletproof exchange, one that’s impervious to the many pitfalls that plague the
+                exchange
+                space. Our decentralized exchange operates on a set of hard rules, rather than on governance or in-house
+                decision making.
+              </p>
 
-          <p>
-            Rule number one is that all of our protocol-owned liquidity stays on the exchange in the liquidity pools and
-            cannot be removed or reinvested. Our hard rules are well-defined, transparent operational parameters that
-            account for and eliminate the hazards of external market conditions as well as the potential for internal
-            misuse, misappropriation, or obfuscation of funds.
-          </p>
+              <p>
+                Rule number one is that all of our protocol-owned liquidity stays on the exchange in the liquidity pools
+                and
+                cannot be removed or reinvested. Our hard rules are well-defined, transparent operational parameters that
+                account for and eliminate the hazards of external market conditions as well as the potential for internal
+                misuse, misappropriation, or obfuscation of funds.
+              </p>
 
-          <p>
-            It is possible to create a perfectly healthy, trustworthy, reliable currency system. The Valeo Exchange is a
-            key part of how we do it.
-          </p>
+              <p>
+                It is possible to create a perfectly healthy, trustworthy, reliable currency system. The Valeo Exchange is
+                a
+                key part of how we do it.
+              </p>
 
-          <p>
-            Our DEX has single-sided liquidity. Valeo provides the liquidity for each currency we select to include in
-            the DEX, and stakers of those currencies provide matching liquidity for Valeo. At the same time, this backing
-            from stakers overcollateralizes the currency.
-          </p>
+              <p>
+                Our DEX has single-sided liquidity. Valeo provides the liquidity for each currency we select to include in
+                the DEX, and stakers of those currencies provide matching liquidity for Valeo. At the same time, this
+                backing
+                from stakers overcollateralizes the currency.
+              </p>
 
-          <p>
-            Full collateralization by our protocol-owned liquidity means that we maintain the ability to assure the peg,
-            as we automatically buy back any amount of Valeo required to do so. And the status of our collateral holdings
-            is transparent on the exchange in real time.
-          </p>
+              <p>
+                Full collateralization by our protocol-owned liquidity means that we maintain the ability to assure the
+                peg,
+                as we automatically buy back any amount of Valeo required to do so. And the status of our collateral
+                holdings
+                is transparent on the exchange in real time.
+              </p>
+            </div>
+            <div>
+              <img src="~/assets/images/fig__dex.png" alt="alt">
+            </div>
+          </div>
         </template>
       </Collapse>
 
@@ -158,16 +171,25 @@ useHead({
           spending the currency.
         </template>
         <template #content>
-          <p>
-            At the center of the Valeo ecosystem is the Valeo App—a seamless, intuitive, easy-to-use system of integrated
-            purchase, exchange, merchant services and point of sale (POS) services.
-          </p>
+          <div class="ecosystem-page__collapse__split">
+            <div>
+              <p>
+                At the center of the Valeo ecosystem is the Valeo App—a seamless, intuitive, easy-to-use system of
+                integrated
+                purchase, exchange, merchant services and point of sale (POS) services.
+              </p>
 
-          <p>
-            For launch, we’ll partner with money service business and POS partners, and we’re securing anchors for the
-            marketplace who will accept Valeo from day one. As we grow, we’ll evaluate where to add partnerships and/or
-            build our own solutions.
-          </p>
+              <p>
+                For launch, we’ll partner with money service business and POS partners, and we’re securing anchors for the
+                marketplace who will accept Valeo from day one. As we grow, we’ll evaluate where to add partnerships
+                and/or
+                build our own solutions.
+              </p>
+            </div>
+            <div>
+              <img src="~/assets/images/fig__app.png" alt="mobile app">
+            </div>
+          </div>
         </template>
       </Collapse>
 
@@ -183,20 +205,29 @@ useHead({
           our merchants, affiliates, developers, and investors.
         </template>
         <template #content>
-          <p>
-            Ease of use has proven to be a challenge for digital currency thus far, and this is an area of keen focus
-            throughout the Valeo ecosystem.
-          </p>
+          <div class="ecosystem-page__collapse__split">
+            <div>
+              <p>
+                <strong>Ease of use has proven to be a challenge for digital currency thus far, and this is an area of
+                  keen focus
+                  throughout the Valeo ecosystem.</strong>
+              </p>
 
-          <p>
-            We’re on a mission to make the user experience for our customers —and our industry—seamless. Digital
-            transactions are still clunky. It’s time to simplify. In an AI world, proof-of-human goes both ways; we want
-            to know there’s a human being on the other side of the interface who actually cares about us.
-          </p>
+              <p>
+                We’re on a mission to make the user experience for our customers —and our industry—seamless. Digital
+                transactions are still clunky. It’s time to simplify. In an AI world, proof-of-human goes both ways; we
+                want
+                to know there’s a human being on the other side of the interface who actually cares about us.
+              </p>
 
-          <p>
-            Valeo’s customer support team is 24/7/365, skilled, patient, and responsive.
-          </p>
+              <p>
+                Valeo’s customer support team is 24/7/365, skilled, patient, and responsive.
+              </p>
+            </div>
+            <div>
+              <img src="~/assets/images/fig__simplicity.png" alt="alt">
+            </div>
+          </div>
         </template>
       </Collapse>
     </Section>
@@ -211,6 +242,24 @@ useHead({
     &__title {
       &--muted {
         color: var(--color-text-muted);
+      }
+    }
+  }
+
+  &__collapse {
+    &__split {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--gutter);
+
+      @include breakpoint(lg) {
+        flex-flow: row nowrap;
+      }
+
+      &>* {
+        flex: 1;
       }
     }
   }
