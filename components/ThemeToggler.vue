@@ -45,6 +45,8 @@ watch(theme, () => {
   align-items: center;
   justify-content: space-between;
 
+  margin: 0;
+  padding: 0;
   height: var(--theme-toggler-height);
   width: var(--theme-toggler-width);
 
@@ -57,6 +59,7 @@ watch(theme, () => {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 4px;
     height: 16px;
     width: 16px;
   }

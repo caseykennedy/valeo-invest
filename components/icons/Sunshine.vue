@@ -5,7 +5,7 @@ withDefaults(defineProps<{
 }>(), {
   // here we have default values
   fill: '--color-text',
-  width: 18,
+  width: 16,
 })
 </script>
 
