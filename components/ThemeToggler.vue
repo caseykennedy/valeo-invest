@@ -47,14 +47,18 @@ watch(theme, () => {
 
   height: var(--theme-toggler-height);
   width: var(--theme-toggler-width);
-  position: relative;
 
   background: var(--theme-toggler-color-bg);
   border-radius: var(--radius-lg);
   cursor: pointer;
+  position: relative;
 
   &__icon {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
   }
 
   &__toggle {
