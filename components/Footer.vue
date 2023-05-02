@@ -66,12 +66,15 @@ function scrollTop(e: Event) {
         </nav>
       </div>
       <div class="footer__contact">
-        <button href="mailto:info@valeo.money" class="btn btn--outline" rel="noopener noreferrer">
+        <NuxtLink
+          href="mailto:hello@valeo.money?subject=Connect with Valeo" class="btn btn--outline"
+          rel="noopener noreferrer" target="_blank"
+        >
           Contact
           <span class="icon icon--right">
             <ArrowRight />
           </span>
-        </button>
+        </NuxtLink>
       </div>
     </div>
 

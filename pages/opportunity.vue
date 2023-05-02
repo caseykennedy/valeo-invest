@@ -247,15 +247,15 @@ const teamData = [
 
     <SectionHighlight :reverse="true">
       <template #figure>
-        fig
+        <img src="~/assets/images/fig__app-mock.png" alt="mobile app mockup">
       </template>
       <template #content>
         <h2 class="margin-bottom-xxxl">
           Mission
         </h2>
-        <p class="text-lg">
-          What AOL was to Web 1,<br>
-          what Facebook was to Web 2,<br>
+        <p class="text-xl">
+          What AOL was to Web 1,
+          what Facebook was to Web 2,
           it's time to build for Web 3.
         </p>
         <p class="margin-top-xxxxl">
@@ -299,6 +299,24 @@ const teamData = [
               {{ bio }}
             </p>
           </div>
+        </div>
+      </div>
+    </Section>
+
+    <Section bg="--color-bg-dark">
+      <div class="connect">
+        <div class="connect__heading">
+          <h2>
+            Let's connect
+          </h2>
+          <div class="connect__icon icon icon--md">
+            <ArrowRight width="24px" />
+          </div>
+        </div>
+        <div>
+          <NuxtLink to="mailto:hello@valeo.money?subject=Connect with Valeo" target="_blank" rel="nofollow noreferrer">
+            hello@valeo.money
+          </NuxtLink>
         </div>
       </div>
     </Section>
@@ -477,6 +495,39 @@ const teamData = [
         &__bio {
           color: var(--color-text-muted);
         }
+      }
+    }
+  }
+
+  .connect {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gutter);
+    padding: var(--space-xxxxl) 0;
+
+    @include breakpoint(sm) {
+      flex-flow: row nowrap;
+    }
+
+    &__heading {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+
+      h2 {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: var(--color-text);
+      font-size: var(--text-md);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
       }
     }
   }
