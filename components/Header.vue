@@ -26,9 +26,9 @@
 <style lang="scss" scoped>
 .header {
   background: var(--color-bg);
-  backdrop-filter: blur(7px);
   padding: var(--space-sm) 0;
   width: 100%;
+  position: relative;
   z-index: var(--z-index-header);
 
   &__layout {

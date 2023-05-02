@@ -89,8 +89,8 @@ function scrollTop(e: Event) {
             <NuxtLink to="/">
               Legal
             </NuxtLink>
-            <button @click="scrollTop">
-              Top
+            <button class="footer__top-btn" @click="scrollTop">
+              <ArrowRight />
             </button>
           </nav>
         </div>
@@ -214,7 +214,7 @@ function scrollTop(e: Event) {
     padding-top: var(--space-xxxl);
     width: 100%;
 
-    color: var(--color-text-muted);
+    color: var(--color-text-lighter);
     font-size: calc(var(--text-base-size) * 0.9);
 
     /* @include breakpoint(xs) {
@@ -223,10 +223,11 @@ function scrollTop(e: Event) {
 
     nav {
       display: flex;
+      align-items: center;
       gap: var(--space-md);
 
       a {
-        color: var(--color-text-muted);
+        color: var(--color-text-lighter);
 
         &:hover {
           text-decoration: underline;
@@ -234,6 +235,22 @@ function scrollTop(e: Event) {
       }
     }
 
+  }
+
+  &__top-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    aspect-ratio: 1;
+    background: var(--color-border-light);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    padding: var(--space-xxs);
+
+    svg {
+      transform: rotate(-90deg);
+    }
   }
 }
 </style>

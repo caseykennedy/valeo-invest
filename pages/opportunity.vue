@@ -253,7 +253,7 @@ const teamData = [
         <h2 class="margin-bottom-xxxl">
           Mission
         </h2>
-        <p class="text-xl">
+        <p class="text-xl" style="max-width: 30ch;">
           What AOL was to Web 1,
           what Facebook was to Web 2,
           it's time to build for Web 3.

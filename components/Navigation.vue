@@ -43,14 +43,18 @@ const routes = [
   &__layout {
     --nav-link-border-width: 2px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
     gap: 1px;
     margin: 0 auto;
     width: 100%;
 
     background: var(--color-border);
+
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(4, 1fr);
+    }
 
     a {
       flex: 1;

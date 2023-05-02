@@ -43,10 +43,10 @@ useHead({
     <SectionHighlight>
       <template #figure>
         <div class="highlight__stat">
-          <p class="text-xxl">
+          <p class="text-xxxl">
             $150B
           </p>
-          <p class="text-md">
+          <p>
             Total Current Stablecoin Market
           </p>
         </div>
@@ -281,7 +281,7 @@ useHead({
       display: flex;
       flex-flow: column nowrap;
       gap: var(--gutter);
-      padding-bottom: calc(var(--space-xxxl));
+      /* padding-bottom: calc(var(--space-xxxl)); */
 
       /* border-bottom: var(--border);
       border-color: var(--color-border-light); */
