@@ -8,7 +8,7 @@
         <!-- {{ isDark ? t('theme.dark') : t('theme.light') }} -->
         <NuxtLink to="/">
           <span class="header__logo__symbol">
-            Ꝟ
+            &#42846;
           </span>
           <span class="header__logo__wordmark">
             Valeo

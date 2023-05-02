@@ -8,7 +8,7 @@ useHead({
   <div class="home-page">
     <Section :border-bottom="true" class="hero">
       <h1 class="hero__title">
-        Ꝟ <span class="text-arial">Valeo</span>
+        &#42846; <span class="text-arial">Valeo</span>
         <br>
         <div class="hero__title--muted">
           Equilibrium for a new economy
@@ -71,7 +71,7 @@ useHead({
         </div>
         <div class="note__logo">
           <div class="note__logo__badge">
-            Ꝟ
+            <ValeoSymbol width="100px" />
           </div>
         </div>
       </div>
