@@ -111,9 +111,6 @@ function scrollTop(e: Event) {
 
 .footnote {
   border-top: var(--border);
-  border-color: var(--color-border-light);
-  /* background: var(--color-primary-light); */
-  /* color: var(--color-bg); */
   padding: var(--gutter-sm) 0;
   width: 100%;
 
@@ -146,7 +143,6 @@ function scrollTop(e: Event) {
 
   background: var(--color-bg);
   border-top: var(--border);
-  border-color: var(--color-border-light);
 
   &__row {
     @include rowLayout;
@@ -243,10 +239,10 @@ function scrollTop(e: Event) {
     justify-content: center;
 
     aspect-ratio: 1;
-    background: var(--color-border-light);
+    background: var(--color-bg-dark);
     border-radius: var(--radius-full);
     cursor: pointer;
-    padding: var(--space-xxs);
+    padding: var(--space-xs);
 
     svg {
       transform: rotate(-90deg);

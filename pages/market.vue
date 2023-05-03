@@ -223,7 +223,7 @@ useHead({
 
     &__title {
       &--muted {
-        color: var(--color-text-muted);
+        color: var(--color-text-lighter);
       }
     }
   }
@@ -263,11 +263,9 @@ useHead({
         list-style-position: inside;
 
         border-top: var(--border);
-          border-color: var(--color-border-light);
 
         li {
           border-bottom: var(--border);
-          border-color: var(--color-border-light);
           font-size: var(--text-base-size);
           padding-top: var(--space-lg);
           padding-bottom: var(--space-lg);
@@ -281,10 +279,6 @@ useHead({
       display: flex;
       flex-flow: column nowrap;
       gap: var(--gutter);
-      /* padding-bottom: calc(var(--space-xxxl)); */
-
-      /* border-bottom: var(--border);
-      border-color: var(--color-border-light); */
 
       @include breakpoint(sm) {
         flex-flow: row nowrap;
@@ -315,7 +309,6 @@ useHead({
         padding: var(--space-xxxxl) var(--gutter);
 
         border: var(--border);
-        border-color: var(--color-border-light);
         border-radius: var(--radius-xs);
       }
     }

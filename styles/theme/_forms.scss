@@ -24,7 +24,7 @@
 
   &::placeholder {
     opacity: 1;
-    color: alpha(var(--color-text-muted), 75%);
+    color: alpha(var(--color-text-lighter), 75%);
   }
 
   &:focus,

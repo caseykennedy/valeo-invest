@@ -80,7 +80,6 @@ export default {
   display: flex;
   flex-flow: column nowrap;
   border-bottom: var(--border);
-  border-color: var(--color-border-light);
   transition: background-color var(--transition);
 
   /* &:not(:first-child) {
@@ -139,9 +138,6 @@ export default {
 
   &__content {
     transition: 150ms ease-out;
-
-    /* border-top: var(--border); */
-    /* border-color: var(--color-border-light); */
 
     @include breakpoint(sm) {
       padding-right: var(--toggle-icon-size);

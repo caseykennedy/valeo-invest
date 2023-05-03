@@ -187,7 +187,7 @@ useHead({
               </p>
             </div>
             <div>
-              <img src="~/assets/images/fig__app.png" alt="mobile app">
+              <img src="~/assets/images/fig__app-mock.png" alt="mobile app mockup">
             </div>
           </div>
         </template>
@@ -241,7 +241,7 @@ useHead({
 
     &__title {
       &--muted {
-        color: var(--color-text-muted);
+        color: var(--color-text-lighter);
       }
     }
   }
@@ -250,7 +250,6 @@ useHead({
     &__split {
       display: flex;
       flex-flow: column nowrap;
-      align-items: center;
       justify-content: space-between;
       gap: var(--gutter);
 

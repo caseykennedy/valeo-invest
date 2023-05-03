@@ -44,12 +44,10 @@ const cssClasses = computed(() => {
 
   &--border-top {
     border-top: var(--border);
-    border-color: var(--color-border-light);
   }
 
   &--border-bottom {
     border-bottom: var(--border);
-    border-color: var(--color-border-light);
   }
 
   &__inner {

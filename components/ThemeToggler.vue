@@ -19,10 +19,10 @@ watch(theme, () => {
   <button class="theme-toggler" aria-label="Toggle themes" @click="toggle()">
     <div class="theme-toggler__toggle" />
     <div class="theme-toggler__icon">
-      <Sunshine fill="--color-text-muted" width="16px" />
+      <Sunshine fill="--color-text-lighter" width="16px" />
     </div>
     <div class="theme-toggler__icon">
-      <MoonIcon fill="--color-text-muted" width="14px" />
+      <MoonIcon fill="--color-text-lighter" width="14px" />
     </div>
   </button>
 </template>

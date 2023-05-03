@@ -103,7 +103,7 @@
 
 ::selection {
   color: var(--color-bg);
-  background-color: var(--color-text-muted);
+  background-color: var(--color-text-lighter);
 }
 
 body {
@@ -222,7 +222,7 @@ mark {
 }
 
 .text-muted {
-  color: var(--color-text-muted);
+  color: var(--color-text-lighter);
 }
 
 .text-component {

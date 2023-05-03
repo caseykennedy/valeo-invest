@@ -4,7 +4,7 @@ withDefaults(defineProps<{
   width?: number | string
 }>(), {
   // here we have default values
-  fill: '--color-text-muted',
+  fill: '--color-text-lighter',
   width: 14,
 })
 </script>

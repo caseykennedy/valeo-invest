@@ -59,7 +59,6 @@ const cssVars = computed(() => {
 
     aspect-ratio: 1 / 1;
     border: var(--border);
-    border-color: var(--color-border-light);
     border-width: 2px;
     border-radius: var(--radius-full);
 

@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import LiteYouTubeEmbed from 'vue-lite-youtube-embed'
+import 'vue-lite-youtube-embed/style.css'
+
 useHead({
   title: 'Valeo',
 })
@@ -17,17 +20,17 @@ useHead({
     </Section>
 
     <Section>
-      <div class="media__intro">
+      <div class="media">
         <div>
           <p>1. Watch the intro</p>
-          <div class="media__intro__block">
-            video
+          <div class="media__video">
+            <LiteYouTubeEmbed id="IsmzMnmrv8s" title="Valeo Intro" />
           </div>
         </div>
         <div>
           <p>2. Listen to the presentation</p>
-          <div class="media__intro__block">
-            audio
+          <div class="media__audio">
+            <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&light=1&hide_artwork=1&feed=%2FOriginTrustFoundation%2Fvaleo-deck-narration-audio%2F" frameborder="0" />
           </div>
         </div>
       </div>
@@ -100,37 +103,37 @@ useHead({
 
     &__title {
       &--muted {
-        color: var(--color-text-muted);
+        color: var(--color-text-lighter);
       }
     }
   }
 
   .media {
-    &__intro {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--gutter);
+
+    @include breakpoint(sm) {
+      flex-flow: row nowrap;
+    }
+
+    &>* {
+      flex: 1;
       display: flex;
       flex-flow: column nowrap;
-      gap: var(--gutter);
+    }
 
-      @include breakpoint(sm) {
-        flex-flow: row nowrap;
-      }
+    &__video {
 
-      &>* {
-        flex: 1;
-        display: flex;
-        flex-flow: column nowrap;
-      }
+    }
 
-      &__block {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        border: var(--border);
-        border-radius: var(--radius-xs);
-        padding: var(--space-xxxxl) 0;
-      }
+    &__audio {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      border: var(--border);
+      padding: var(--gutter-sm);
     }
   }
 

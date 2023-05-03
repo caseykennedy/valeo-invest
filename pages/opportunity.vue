@@ -331,7 +331,7 @@ const teamData = [
 
     &__title {
       &--muted {
-        color: var(--color-text-muted);
+        color: var(--color-text-lighter);
       }
     }
   }
@@ -399,7 +399,6 @@ const teamData = [
 
         li {
           border-bottom: var(--border);
-          border-color: var(--color-border-light);
           font-size: var(--text-base-size);
           padding-bottom: var(--space-lg);
 
@@ -430,7 +429,6 @@ const teamData = [
       &__heading {
         background: var(--color-primary-lighter);
         border: var(--border);
-        border-color: var(--color-border-light);
         border-radius: var(--radius-xs);
         color: var(--color-white);
         margin-bottom: var(--space-sm);
@@ -443,7 +441,6 @@ const teamData = [
         li {
           border: var(--border);
           border-left-width: 4px;
-          border-color: var(--color-border-light);
           border-radius: var(--radius-xs);
           padding: var(--space-sm);
 
@@ -483,7 +480,6 @@ const teamData = [
 
         aspect-ratio: 1 / 1;
         border: var(--border);
-        border-color: var(--color-border-light);
         border-width: 2px;
         border-radius: var(--radius-full);
 
@@ -493,7 +489,7 @@ const teamData = [
 
       &__meta {
         &__bio {
-          color: var(--color-text-muted);
+          color: var(--color-text-lighter);
         }
       }
     }

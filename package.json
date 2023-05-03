@@ -32,5 +32,8 @@
     "pinia": "^2.0.33",
     "sass": "^1.60.0",
     "taze": "^0.9.1"
+  },
+  "dependencies": {
+    "vue-lite-youtube-embed": "^1.2.0"
   }
 }

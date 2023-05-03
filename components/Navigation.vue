@@ -69,7 +69,7 @@ const routes = [
       border-bottom: solid var(--nav-link-border-width);
       border-color: var(--color-bg);
 
-      font-size: var(--text-base-size);
+      font-size: calc(var(--text-base-size) / 1.15);
       font-weight: 500;
       color: var(--color-text);
       text-transform: capitalize;
