@@ -7,9 +7,7 @@
       <div class="header__logo">
         <!-- {{ isDark ? t('theme.dark') : t('theme.light') }} -->
         <NuxtLink to="/">
-          <span class="header__logo__symbol">
-            &#42846;
-          </span>
+          <span class="header__logo__symbol" />
           <span class="header__logo__wordmark">
             Valeo
           </span>
@@ -65,6 +63,9 @@
     }
 
     &__symbol {
+      &::after {
+        content: '\A75E';
+      }
     }
   }
 
