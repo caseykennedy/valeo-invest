@@ -37,7 +37,7 @@ function scrollTop(e: Event) {
         </span>
       </button>
       <div class="footnote__meta">
-        Presentation <span>Q2, 2023</span>
+        <span>Presentation</span> Q2, 2023
       </div>
     </div>
   </div>
@@ -118,19 +118,21 @@ function scrollTop(e: Event) {
     @include rowLayout;
 
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
     gap: var(--gutter);
-
-    @include breakpoint(xs) {
-      flex-flow: row nowrap;
-    }
   }
 
   &__meta {
     span {
-      margin-left: var(--space-lg);
+      display: none;
+      margin-right: var(--space-lg);
+
+      @include breakpoint(xs) {
+        display: initial;
+        flex-flow: row nowrap;
+      }
     }
   }
 }
@@ -188,6 +190,7 @@ function scrollTop(e: Event) {
 
       a {
         color: var(--color-text);
+        font-size: calc(var(--text-base-size) / 1.15);
 
         &:hover {
           text-decoration: underline;
@@ -211,7 +214,7 @@ function scrollTop(e: Event) {
     width: 100%;
 
     color: var(--color-text-lighter);
-    font-size: calc(var(--text-base-size) * 0.9);
+    font-size: calc(var(--text-base-size) / 1.25);
 
     /* @include breakpoint(xs) {
       justify-content: flex-end;

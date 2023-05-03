@@ -31,21 +31,16 @@ const cssVars = computed(() => {
 .highlight {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
+  gap: var(--gutter);
 
   @include breakpoint(md) {
     flex-flow: var(--highlight-flow);
-    /* gap: var(--space-xxxxl); */
+    align-items: center;
   }
 
   &>* {
     flex: 1;
-    padding: var(--gutter) 0;
-
-    @include breakpoint(sm) {
-      padding: var(--gutter-sm) var(--space-xxxl);
-    }
+    padding: var(--gutter);
   }
 
   &__stat {
@@ -55,9 +50,11 @@ const cssVars = computed(() => {
     justify-content: center;
 
     /* padding: var(--space-xxxxl); */
+    margin: 0 auto;
+    max-width: 500px;
     width: 100%;
 
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1;
     border: var(--border);
     border-width: 2px;
     border-radius: var(--radius-full);
@@ -69,16 +66,10 @@ const cssVars = computed(() => {
   &__figure {
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
     justify-content: center;
   }
 
   &__content {
-    flex: 1;
-
-    @include breakpoint(sm) {
-      flex: 1.25;
-    }
   }
 }
 </style>
