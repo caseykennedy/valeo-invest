@@ -47,6 +47,7 @@ const routes = [
     grid-template-columns: repeat(2, 1fr);
     /* grid-template-rows: repeat(2, 1fr); */
     gap: 1px;
+
     margin: 0 auto;
     width: 100%;
 

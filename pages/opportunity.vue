@@ -43,7 +43,7 @@ const teamData = [
       <h1 class="page-title__title">
         Opportunity
         <br>
-        <span class="text-muted">
+        <span class="page-title__title--muted">
           How we get there
         </span>
       </h1>
@@ -323,7 +323,7 @@ const teamData = [
 
     &__title {
       &--muted {
-        color: var(--color-text-lighter);
+        color: var(--color-success-darker);
       }
     }
   }
