@@ -16,7 +16,7 @@
   // typography
   --color-text: var(--color-primary);
   --color-text-light: hsla(220, 16.8%, 20%, 1);
-  --color-text-lighter: hsla(220, 16.8%, 36%, 1);
+  --color-text-lighter: hsla(220, 12.8%, 45%, 1);
 
   // borders
   --color-border: hsla(220, 16.8%, 45%, 0.75);
@@ -83,8 +83,7 @@
   // typography
   --color-text: var(--color-white);
   --color-text-light: hsla(220, 16.8%, 78%, 1);
-  --color-text-lighter: hsla(220, 16.8%, 40%, 1);
-  @include defineColorHSL(--color-text-lighter, 220, 16.8%, 68%);
+  --color-text-lighter: hsla(220, 12.8%, 68%, 1);
 
   // borders
   --color-border: hsla(220, 16.8%, 45%, 0.5);

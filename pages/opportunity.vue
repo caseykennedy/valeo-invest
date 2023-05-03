@@ -57,8 +57,9 @@ const teamData = [
           </div>
           <div class="intro__content">
             <p>
-              Realizing lorem ipsum dolor sit amet consectetur. In mi cras netus magna. Adipiscing sagittis venenatis
-              quisque montes nulla turpis condimentum. Ultricies bibendum sed dui bibendum et natoque.
+              Valeo aims to transform the stablecoin market with a secure, transparent, and user-friendly currency that
+              maintains purchasing power. Following our roadmap, Valeo will gradually develop a decentralized exchange,
+              marketplace, and app, positioning itself as a leading global currency.
             </p>
           </div>
         </div>
