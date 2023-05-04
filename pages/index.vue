@@ -110,8 +110,6 @@ useHead({
 
 .home-page {
   .hero {
-    padding-top: var(--space-xxxl);
-
     @include breakpoint(md) {
       padding-top: calc(var(--space-xxxl) * 2);
     }

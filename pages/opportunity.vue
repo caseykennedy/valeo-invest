@@ -329,7 +329,6 @@ const teamData = [
 .opportunity-page {
   .page-title {
     border-bottom: var(--border);
-    padding-top: var(--space-xxxl);
 
     @include breakpoint(md) {
       padding-top: calc(var(--space-xxxl) * 2);

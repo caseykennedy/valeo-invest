@@ -239,8 +239,6 @@ useHead({
 <style lang="scss">
 .ecosystem-page {
   .page-title {
-    padding-top: var(--space-xxxl);
-
     @include breakpoint(md) {
       padding-top: calc(var(--space-xxxl) * 2);
     }
