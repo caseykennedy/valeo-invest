@@ -16,7 +16,9 @@ useHead({
   <div class="ecosystem-page">
     <Section :border-bottom="true" class="page-title">
       <h1 class="page-title__title">
-        Ꝟ <span class="text-arial">Valeo</span>
+        <span class="page-title__symbol">
+          <ValeoSymbol />
+        </span> <span class="text-arial">Valeo</span>
         <br>
         <span class="text-muted">
           Money for the 21st century
@@ -237,11 +239,25 @@ useHead({
 <style lang="scss">
 .ecosystem-page {
   .page-title {
-    padding-top: calc(var(--space-xxxl) * 2);
+    padding-top: var(--space-xxxl);
+
+    @include breakpoint(md) {
+      padding-top: calc(var(--space-xxxl) * 2);
+    }
 
     &__title {
       &--muted {
         color: var(--color-text-lighter);
+      }
+    }
+
+    &__symbol {
+      svg {
+        width: 23px;
+
+        @include breakpoint(md) {
+          width: 34px;
+        }
       }
     }
   }

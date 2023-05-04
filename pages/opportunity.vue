@@ -320,7 +320,11 @@ const teamData = [
 .market-page {
   .page-title {
     border-bottom: var(--border);
-    padding-top: calc(var(--space-xxxl) * 2);
+    padding-top: var(--space-xxxl);
+
+    @include breakpoint(md) {
+      padding-top: calc(var(--space-xxxl) * 2);
+    }
 
     &__title {
       &--muted {

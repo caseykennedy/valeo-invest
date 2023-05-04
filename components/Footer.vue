@@ -159,6 +159,7 @@ function scrollTop(e: Event) {
   &__logo {
     font-size: var(--text-md);
     margin-right: var(--gutter);
+    margin-bottom: var(--gutter);
     width: initial;
 
     a {

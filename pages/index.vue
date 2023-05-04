@@ -11,7 +11,9 @@ useHead({
   <div class="home-page">
     <Section :border-bottom="true" class="hero">
       <h1 class="hero__title">
-        &#42846; <span class="text-arial">Valeo</span>
+        <span class="hero__title__symbol">
+          <ValeoSymbol />
+        </span> <span class="text-arial">Valeo</span>
         <br>
         <div class="hero__title--muted">
           Equilibrium for a new economy
@@ -108,11 +110,25 @@ useHead({
 
 .home-page {
   .hero {
-    padding-top: calc(var(--space-xxxl) * 2);
+    padding-top: var(--space-xxxl);
+
+    @include breakpoint(md) {
+      padding-top: calc(var(--space-xxxl) * 2);
+    }
 
     &__title {
       &--muted {
         color: var(--color-text-lighter);
+      }
+
+      &__symbol {
+        svg {
+          width: 23px;
+
+          @include breakpoint(md) {
+            width: 34px;
+          }
+        }
       }
     }
   }
