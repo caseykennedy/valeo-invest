@@ -7,7 +7,9 @@
       <div class="header__logo">
         <!-- {{ isDark ? t('theme.dark') : t('theme.light') }} -->
         <NuxtLink to="/">
-          <span class="header__logo__symbol" />
+          <span class="header__logo__symbol">
+            <ValeoSymbol />
+          </span>
           <span class="header__logo__wordmark">
             Valeo
           </span>
@@ -43,12 +45,13 @@
   }
 
   &__logo {
-    display: flex;
     font-size: var(--text-md);
     margin-right: var(--gutter);
     width: initial;
 
     a {
+      display: flex;
+      align-items: center;
       color: var(--color-text);
     }
 
@@ -63,8 +66,16 @@
     }
 
     &__symbol {
-      &::after {
-        content: '\A75E';
+      display: flex;
+      align-items: center;
+      margin-right: var(--space-xxs);
+
+      svg {
+        width: 14px;
+
+        @include breakpoint(md) {
+          width: 15px;
+        }
       }
     }
   }
