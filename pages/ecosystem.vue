@@ -269,12 +269,16 @@ useHead({
       justify-content: space-between;
       gap: var(--gutter);
 
-      @include breakpoint(lg) {
+      @include breakpoint(md) {
         flex-flow: row nowrap;
       }
 
       &>* {
         flex: 1;
+
+        &:first-child {
+          flex: 1.5;
+        }
       }
     }
   }

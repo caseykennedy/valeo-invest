@@ -61,7 +61,7 @@ export default {
       @before-enter="beforeEnter" @enter="enter" @before-leave="beforeLeave" @leave="leave"
     >
       <div v-show="show" class="collapse__content">
-        <div>
+        <div class="collapse__content__layout">
           <slot name="content" />
         </div>
       </div>
@@ -71,10 +71,10 @@ export default {
 
 <style lang="scss">
 .collapse {
-  --toggle-icon-size: 30px;
+  --toggle-icon-size: 44px;
 
   @include breakpoint(sm) {
-    --toggle-icon-size: 100px;
+    --toggle-icon-size: 125px;
   }
 
   display: flex;
@@ -122,6 +122,10 @@ export default {
 
     &__title {
       flex: 1;
+
+      h3 {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -131,8 +135,16 @@ export default {
     justify-content: center;
 
     svg {
-      transform: rotate(-90deg);
+      transform: rotate(0deg);
       transition: transform var(--transition);
+    }
+  }
+
+  &--open {
+    .collapse__carat {
+      svg {
+        transform: rotate(180deg);
+      }
     }
   }
 
@@ -144,17 +156,9 @@ export default {
       padding-left: var(--toggle-icon-size);
     }
 
-    div {
+    &__layout {
       padding: 0 0 var(--gutter);
       /* padding: var(--gutter) 0; */
-    }
-  }
-
-  &--open {
-    .collapse__carat {
-      svg {
-        transform: rotate(0deg);
-      }
     }
   }
 

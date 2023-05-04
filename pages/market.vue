@@ -64,63 +64,33 @@ useHead({
       </template>
     </SectionHighlight>
 
-    <!-- <Section bg="--color-bg-highlight">
-      <div class="highlight">
-        <div>
-          <div class="highlight__stat">
-            <p class="text-xxl">
-              $150B
-            </p>
-            <p class="text-md">
-              Total Current Stablecoin Market
-            </p>
-          </div>
-        </div>
-        <div class="highlight__content">
-          <h2>
-            That’s up from just $6B at the start of 2020. Up 25x in 3 years.
-          </h2>
-          <p>
-            Frax, a recent competitor, has achieved a market cap of nearly $3B, or 2 percent market penetration in the
-            same
-            time period. We anticipate we could achieve a similar initial market share—a $3B market cap—in 12 to 24 months
-            following our launch.
-          </p>
-        </div>
-      </div>
-    </Section> -->
-
-    <Section class="feature">
-      <div class="feature__row">
-        <div class="feature__title">
-          <h2 class="text-md">
-            Cross-Border Remittance Market
-          </h2>
-        </div>
-        <div class="feature__content">
-          <div class="feature__content__figure">
-            <ArtRemitMarket />
-          </div>
+    <Section>
+      <Collapse>
+        <template #icon>
+          <ArtRemitMarket width="56" />
+        </template>
+        <template #title>
+          Cross-Border Remittance Market
+        </template>
+        <template #sub-title />
+        <template #content>
           <p>
             Having the most reliable currency positions us well for the cross-border remittance market: families working
             abroad who need a safe, speedy, and affordable way to send currency internationally. The remittance market is
             approximately $600B currently, and expected to double by 2030.
           </p>
-        </div>
-      </div>
-    </Section>
+        </template>
+      </Collapse>
 
-    <Section class="feature">
-      <div class="feature__row">
-        <div class="feature__title">
-          <h2 class="text-md">
-            Retail Commerce Market
-          </h2>
-        </div>
-        <div class="feature__content">
-          <div class="feature__content__figure">
-            <ArtTag />
-          </div>
+      <Collapse>
+        <template #icon>
+          <ArtTag width="56" />
+        </template>
+        <template #title>
+          Retail Commerce Market
+        </template>
+        <template #sub-title />
+        <template #content>
           <p>
             For retail, we’ll establish strategic partnerships in the payments space: Apple Pay, Google Pay, Square,
             Strike, Coinpayments, Bitpay, PayPal, Stripe and potentially Telegram and Twitter. We’ll focus on design to
@@ -136,40 +106,34 @@ useHead({
           <p>
             Once the rails are in place for small businesses to accept Valeo, the network effects will compound adoption.
           </p>
-        </div>
-      </div>
-    </Section>
+        </template>
+      </Collapse>
 
-    <Section class="feature">
-      <div class="feature__row">
-        <div class="feature__title">
-          <h2 class="text-md">
-            Adoption Curve
-          </h2>
-        </div>
-        <div class="feature__content">
-          <div class="feature__content__figure">
-            <ArtAdoptionCurve />
-          </div>
+      <Collapse>
+        <template #icon>
+          <ArtAdoptionCurve width="56" />
+        </template>
+        <template #title>
+          Adoption Curve
+        </template>
+        <template #sub-title />
+        <template #content>
           <p>
             For digital currency systems, we’re past the early adopters and well into the early majority phase, with
             forecasts predicting half the world on mobile wallets by 2024.
           </p>
-        </div>
-      </div>
-    </Section>
+        </template>
+      </Collapse>
 
-    <Section class="feature">
-      <div class="feature__row">
-        <div class="feature__title">
-          <h2 class="text-md">
-            Competition
-          </h2>
-        </div>
-        <div class="feature__content">
-          <div class="feature__content__figure">
-            <ArtGraph />
-          </div>
+      <Collapse>
+        <template #icon>
+          <ArtGraph width="56" />
+        </template>
+        <template #title>
+          Competition
+        </template>
+        <template #sub-title />
+        <template #content>
           <p>
             The primary function of Valeo is to preserve value while circulating value through different systems. In a
             global economy, people need the ability to move fluidly among different digital currencies and between digital
@@ -210,8 +174,8 @@ useHead({
             to own the whole market, and they have decades of traction, we see a clear space to fill. We are to Amazon
             what Wild Oats (now Whole Foods) once was to the big grocery chains—the conscious, healthy market.
           </p>
-        </div>
-      </div>
+        </template>
+      </Collapse>
     </Section>
   </div>
 </template>

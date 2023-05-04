@@ -226,7 +226,7 @@ const teamData = [
             pegging to the dollar is losing money.
           </p>
 
-          <p>They'll switch to Valeo. This is our trigger point. </p>
+          <p>They'll switch to Valeo. <strong>This is our trigger point.</strong> </p>
 
           <p>
             If we're to be successful in our ultimate goal of exponential growth to a ubiquitously useful global
