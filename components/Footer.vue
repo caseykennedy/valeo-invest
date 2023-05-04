@@ -86,9 +86,9 @@ function scrollTop(e: Event) {
 
         <div class="footer__legal__nav">
           <nav>
-            <NuxtLink to="/">
+            <!-- <NuxtLink to="/">
               Legal
-            </NuxtLink>
+            </NuxtLink> -->
             <button class="footer__top-btn" @click="scrollTop">
               <ArrowRight />
             </button>
@@ -205,6 +205,7 @@ function scrollTop(e: Event) {
       a {
         color: var(--color-text);
         font-size: calc(var(--text-base-size) / 1.15);
+        text-transform: capitalize;
 
         &:hover {
           text-decoration: underline;

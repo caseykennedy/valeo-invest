@@ -227,7 +227,7 @@ useHead({
               </p>
             </div>
             <div>
-              <img src="~/assets/images/fig__simplicity.png" alt="alt">
+              <ArtBeforeAfter />
             </div>
           </div>
         </template>

@@ -38,7 +38,7 @@ const teamData = [
 </script>
 
 <template>
-  <div class="market-page">
+  <div class="opportunity-page">
     <Section class="page-title">
       <h1 class="page-title__title">
         Opportunity
@@ -72,7 +72,7 @@ const teamData = [
     <SectionHighlight>
       <template #figure>
         <p>
-          <span class="text-md">
+          <span class="text-md color-white">
             Mobile wallet global users
           </span>
           <br>
@@ -246,7 +246,7 @@ const teamData = [
       </div>
     </Section>
 
-    <SectionHighlight :reverse="true">
+    <SectionHighlight :reverse="true" class="opportunity-page__mission">
       <template #figure>
         <div style="margin-left: auto">
           <ArtCirculate />
@@ -317,7 +317,7 @@ const teamData = [
 </template>
 
 <style lang="scss" scoped>
-.market-page {
+.opportunity-page {
   .page-title {
     border-bottom: var(--border);
     padding-top: var(--space-xxxl);
@@ -329,6 +329,16 @@ const teamData = [
     &__title {
       &--muted {
         color: var(--color-success-darker);
+      }
+    }
+  }
+
+  &__mission {
+    svg {
+      max-width: 175px;
+
+      @include breakpoint(md) {
+        max-width: 275px;
       }
     }
   }
@@ -480,10 +490,11 @@ const teamData = [
         align-items: center;
         justify-content: center;
 
-        margin: 0 var(--space-xxxxl) var(--gutter);
+        margin: 0 0 var(--gutter);
+        max-width: 310px;
         /* width: 100%; */
 
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 1;
         border: var(--border);
         border-width: 2px;
         border-radius: var(--radius-full);

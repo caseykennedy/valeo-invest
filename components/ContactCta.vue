@@ -15,7 +15,7 @@ withDefaults(defineProps<{
         <slot name="heading" />
       </div>
       <div class="contact-cta__cta">
-        <div class="contact-cta__icon icon icon--md">
+        <div class="contact-cta__cta__icon icon icon--md">
           <ArrowRight width="24px" />
         </div>
         <NuxtLink to="mailto:hello@valeo.money?subject=Connect with Valeo" target="_blank" rel="nofollow noreferrer">
@@ -50,6 +50,21 @@ withDefaults(defineProps<{
     display: flex;
     align-items: center;
     gap: var(--space-md);
+
+    .icon {
+      svg {
+        transform: translateX(0);
+        /* transition: transform var(--transition); */
+      }
+    }
+
+    &:hover {
+      .icon {
+        svg {
+          transform: translateX(var(--space-xxs));
+        }
+      }
+    }
 
     a {
       color: var(--color-text);
