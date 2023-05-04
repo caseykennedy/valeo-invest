@@ -71,7 +71,7 @@
       margin-right: var(--space-xxs);
 
       svg {
-        width: 14px;
+        width: 13px;
 
         @include breakpoint(md) {
           width: 15px;
