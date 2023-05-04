@@ -69,7 +69,7 @@ const teamData = [
       </div>
     </Section>
 
-    <SectionHighlight>
+    <!-- <SectionHighlight>
       <template #figure>
         <p>
           <span class="text-md" style="color: var(--color-text)">
@@ -93,9 +93,9 @@ const teamData = [
         </p>
         <p>Implementing our solution, lorem ipsum dolor sit amet consectetur. Porta et aenean amet quis vitae.</p>
       </template>
-    </SectionHighlight>
+    </SectionHighlight> -->
 
-    <Section :border-bottom="true">
+    <Section bg="--color-bg-dark">
       <div class="roadmap">
         <h2>
           Roadmap
@@ -213,12 +213,12 @@ const teamData = [
       </div>
     </Section>
 
-    <Section>
+    <Section :border-top="true">
       <div class="section__layout">
         <div class="section__title">
-          <h3>
+          <h2>
             Trigger point
-          </h3>
+          </h2>
         </div>
         <div class="section__content">
           <p class="text-md">
@@ -276,14 +276,13 @@ const teamData = [
         </div>
         <div class="section__content">
           <p class="text-md">
-            The success of any project is the team. Our global team is outstanding; a complementary mix of vision, drive,
-            tech skills and business acumen. The team is ideally suited for this project and we've already built a lot of
-            of it together. In doing so, we've also nurtured and developed a unique and compelling company culture.
+            Our global team is outstanding; a complementary mix of vision, drive,
+            technical skill and business acumen. The team is ideal for this project and we've already built a lot together. In doing so, we've also nurtured and developed a unique and compelling company culture.
           </p>
-          <p>
+          <!-- <p>
             This team is a family of professionals from around the globe—committed, eager, and highly qualified to
             deliver this solution.
-          </p>
+          </p> -->
         </div>
       </div>
 
@@ -316,7 +315,17 @@ const teamData = [
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+:root {
+  --roadmap-heading-bg: var(--color-primary-lighter);
+  --roadmap-item-bg: var(--color-bg);
+}
+
+[data-theme="dark"] {
+  --roadmap-heading-bg: var(--color-bg);
+  --roadmap-item-bg: var(--color-bg-light);
+}
+
 .opportunity-page {
   .page-title {
     border-bottom: var(--border);
@@ -442,7 +451,7 @@ const teamData = [
       }
 
       &__heading {
-        background: var(--color-primary-lighter);
+        background: var(--roadmap-heading-bg);
         border: var(--border);
         border-radius: var(--radius-xs);
         color: var(--color-white);
@@ -454,6 +463,7 @@ const teamData = [
         list-style: none;
 
         li {
+        background: var(--roadmap-item-bg);
           border: var(--border);
           border-left-width: 4px;
           border-radius: var(--radius-xs);
