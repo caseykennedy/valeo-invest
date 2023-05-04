@@ -171,7 +171,7 @@ const teamData = [
         <div class="section__content">
           <ol>
             <li>
-              The first is sales of Valeo.
+              <strong>The first is sales of Valeo.</strong>
               <p class="margin-top-sm">
                 Proceeds from sales of the currency create immediate and expanding asset value, which we'll hold in the
                 form
@@ -179,7 +179,7 @@ const teamData = [
               </p>
             </li>
             <li>
-              The second is network effects.
+              <strong>The second is network effects.</strong>
               <p class="margin-top-sm">
                 Our business model is based on creating a large network of Valeo customers, which becomes a
                 significant—and
@@ -323,7 +323,7 @@ const teamData = [
 
 [data-theme="dark"] {
   --roadmap-heading-bg: var(--color-bg);
-  --roadmap-item-bg: var(--color-bg-light);
+  --roadmap-item-bg: var(--color-border);
 }
 
 .opportunity-page {
