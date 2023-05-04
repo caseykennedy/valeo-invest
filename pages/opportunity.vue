@@ -72,7 +72,7 @@ const teamData = [
     <SectionHighlight>
       <template #figure>
         <p>
-          <span class="text-md color-white">
+          <span class="text-md" style="color: var(--color-text)">
             Mobile wallet global users
           </span>
           <br>
