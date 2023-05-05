@@ -92,7 +92,13 @@ export default {
     justify-content: space-between;
     gap: var(--gutter);
     padding: var(--space-lg) 0;
+
+    border-radius: var(--radius-xs);
     cursor: pointer;
+
+    &:hover {
+      background: var(--color-bg-dark);
+    }
 
     &__layout {
       display: flex;
@@ -133,6 +139,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: var(--toggle-icon-size);
+    width: var(--toggle-icon-size);
 
     svg {
       transform: rotate(0deg);
@@ -141,6 +149,10 @@ export default {
   }
 
   &--open {
+    .collapse__toggle {
+        background: var(--color-bg-dark);
+    }
+
     .collapse__carat {
       svg {
         transform: rotate(180deg);
@@ -157,7 +169,7 @@ export default {
     }
 
     &__layout {
-      padding: 0 0 var(--gutter);
+      padding: var(--gutter) 0;
       /* padding: var(--gutter) 0; */
     }
   }
