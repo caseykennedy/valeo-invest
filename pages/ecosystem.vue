@@ -36,7 +36,7 @@ useHead({
           <ValeoSymbol />
         </template>
         <template #title>
-          A Digital Currency
+          A digital currency
         </template>
         <template #sub-title>
           Valeo offers a steadfast, reliable, functional currency for a value- and values-based economy.
@@ -85,7 +85,11 @@ useHead({
               </p>
 
               <p>
-                It is possible to create a perfectly healthy, trustworthy, reliable currency system. The Valeo Exchange is
+                It
+                <span class="font-bold font-italic">
+                  is
+                </span> possible to create a perfectly healthy, trustworthy, reliable currency system. The Valeo Exchange
+                is
                 a
                 key part of how we do it.
               </p>
@@ -125,9 +129,9 @@ useHead({
         </template>
         <template #content>
           <p>
-            <strong>Ballast (noun):</strong> heavy material, such as gravel, sand, iron, or lead, placed low in a vessel
-            to improve its
-            stability.
+            <strong>Ballast (noun):</strong> <span class="font-italic">heavy material, such as gravel, sand, iron, or lead, placed low in a vessel
+              to improve its
+              stability.</span>
           </p>
 
           <p>

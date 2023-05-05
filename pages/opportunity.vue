@@ -7,7 +7,7 @@ const teamData = [
   {
     name: 'Christian Goodell ',
     title: 'Founder & CEO',
-    bio: 'Christian is an innovative, proven entrepreneur who has studied and taught commerce and (etc.)',
+    bio: 'Christian is an innovative, proven entrepreneur who has applied his business acumen to the transformation of commerce.',
   },
   {
     name: 'Roy Cammarano',
@@ -146,6 +146,125 @@ const teamData = [
     </Section>
 
     <Section>
+      <Collapse>
+        <template #icon>
+          <ArtRevenue />
+        </template>
+        <template #title>
+          Revenue
+        </template>
+        <template #sub-title>
+          Our financial model builds both company asset value and cashflow steadily over 5 years, creating a solid and
+          lasting company with a large, high-value network.
+        </template>
+        <template #content>
+          <div class="section__layout">
+            <div class="section__title">
+              <h3>
+                We build asset value two ways:
+              </h3>
+            </div>
+            <div class="section__content">
+              <ol>
+                <li>
+                  <strong>The first is sales of Valeo.</strong>
+                  <p class="margin-top-sm">
+                    Proceeds from sales of the currency create immediate and expanding asset value, which we'll hold in
+                    the
+                    form
+                    of protocol-owned liquidity, ensuring both a fully-collateralized currency and a large asset base.
+                  </p>
+                </li>
+                <li>
+                  <strong>The second is network effects.</strong>
+                  <p class="margin-top-sm">
+                    Our business model is based on creating a large network of Valeo customers, which becomes a
+                    significant—and
+                    perhaps the most important—company asset.
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="section__layout margin-top-xxxxl">
+            <div class="section__title">
+              <h3>
+                We create cash flow eight ways:
+              </h3>
+            </div>
+            <div class="section__content">
+              <ol>
+                <li>Swap fees</li>
+                <li>Transaction fees</li>
+                <li>POS revenue split</li>
+                <li>Retail store markup</li>
+                <li>Marketplace vendor fees</li>
+                <li>Affiliate revenue</li>
+                <li>Market gains from our protocol-owned liquidity</li>
+                <li>Ballast Fund portfolio income</li>
+              </ol>
+            </div>
+          </div>
+        </template>
+      </Collapse>
+
+      <Collapse>
+        <template #icon>
+          <Dex />
+        </template>
+        <template #title>
+          Trigger point
+        </template>
+        <template #sub-title>
+          This is how Valeo becomes money for everyone.
+        </template>
+        <template #content>
+          <p class="text-md">
+            Not tomorrow, but soon, there will come a day when the holders of dollar-pegged stablecoins will realize that
+            pegging to the dollar is losing money.
+          </p>
+
+          <p>They'll switch to Valeo. <strong>This is our trigger point.</strong> </p>
+
+          <p>
+            If we're to be successful in our ultimate goal of exponential growth to a ubiquitously useful global
+            currency, that will be when it happens, and we'll be ready.
+          </p>
+
+          <p>
+            As the dollar and other reserve currencies devalue faster and faster,
+            the mainstream will also wake up and switch to Valeo because it
+            maintains purchasing power, no matter what the markets bring.
+          </p>
+
+          <p>
+            This is how Valeo becomes money for everyone.
+          </p>
+        </template>
+      </Collapse>
+
+      <!-- <Collapse>
+        <template #icon>
+          <ArtCirculate />
+        </template>
+        <template #title>
+          Mission
+        </template>
+        <template #sub-title>
+          Real and lasting wealth for us all.
+        </template>
+        <template #content>
+          <p class="text-md">
+            What AOL was to Web 1,<br>
+            what Facebook was to Web 2,<br>
+            it's time to build for Web 3.<br>
+          </p>
+        </template>
+      </Collapse> -->
+    </Section>
+
+    <!-- <Section>
       <div class="section__layout">
         <div class="section__title">
           <h2>
@@ -211,9 +330,9 @@ const teamData = [
           </ol>
         </div>
       </div>
-    </Section>
+    </Section> -->
 
-    <Section :border-top="true">
+    <!-- <Section :border-top="true">
       <div class="section__layout">
         <div class="section__title">
           <h2>
@@ -244,7 +363,7 @@ const teamData = [
           </p>
         </div>
       </div>
-    </Section>
+    </Section> -->
 
     <SectionHighlight :reverse="true" class="opportunity-page__mission">
       <template #figure>
@@ -268,22 +387,15 @@ const teamData = [
     </SectionHighlight>
 
     <Section>
-      <div class="section__layout">
-        <div class="section__title">
-          <h2>
-            Team
-          </h2>
-        </div>
-        <div class="section__content">
-          <p class="text-md">
-            Our global team is outstanding; a complementary mix of vision, drive,
-            technical skill and business acumen. The team is ideal for this project and we've already built a lot together. In doing so, we've also nurtured and developed a unique and compelling company culture.
-          </p>
-          <!-- <p>
-            This team is a family of professionals from around the globe—committed, eager, and highly qualified to
-            deliver this solution.
-          </p> -->
-        </div>
+      <div class="">
+        <h2>
+          Team
+        </h2>
+        <p class="text-md">
+          Our global team is outstanding; a complementary mix of vision, drive,
+          technical skill and business acumen. The team is ideal for this project and we've already built a lot
+          together. In doing so, we've also nurtured and developed a unique and compelling company culture.
+        </p>
       </div>
 
       <div class="team">
@@ -438,7 +550,7 @@ const teamData = [
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       /* grid-template-rows: repeat(2, 1fr); */
-      gap: var(--gutter-y);
+      gap: var(--gutter-sm);
       margin-top: var(--gutter-y);
 
       @include breakpoint(sm) {
@@ -462,7 +574,7 @@ const teamData = [
         list-style: none;
 
         li {
-        background: var(--roadmap-item-bg);
+          background: var(--roadmap-item-bg);
           border: var(--border);
           border-left-width: 4px;
           border-radius: var(--radius-xs);
@@ -499,7 +611,7 @@ const teamData = [
         align-items: center;
         justify-content: center;
 
-        margin: 0 0 var(--gutter);
+        margin: 0 auto var(--gutter);
         max-width: 310px;
         /* width: 100%; */
 

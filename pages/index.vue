@@ -76,8 +76,11 @@ useHead({
               <div>
                 <p>
                   Thank you for your attention.
+                </p>
+                <p>
+                  Christian Goodell
                   <br>
-                  —Christian Goodell
+                  Founder &amp; CEO
                 </p>
               </div>
               <div>

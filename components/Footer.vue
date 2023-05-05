@@ -58,8 +58,8 @@ function scrollTop(e: Event) {
 
       <div class="footer__nav">
         <nav>
-          <NuxtLink v-for="{ title, path } in routes" v-slot="{ href, navigate }" :key="path" :to="path" custom>
-            <a :href="href" @click="navigate">
+          <NuxtLink v-for="{ title, path } in routes" v-slot="{ href, navigate, isActive }" :key="path" :to="path" custom>
+            <a :href="href" :class="`${isActive && 'active'}`" @click="navigate">
               {{ title }}
             </a>
           </NuxtLink>
@@ -207,8 +207,10 @@ function scrollTop(e: Event) {
         font-size: calc(var(--text-base-size) / 1.15);
         text-transform: capitalize;
 
-        &:hover {
-          text-decoration: underline;
+        &:hover,
+        &:focus,
+        &.active {
+          text-decoration: underline
         }
       }
     }

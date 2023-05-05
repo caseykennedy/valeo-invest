@@ -67,7 +67,7 @@ const routes = [
       padding-top: calc(var(--space-xs) + var(--nav-link-border-width));
 
       background: var(--color-bg);
-      border-bottom: solid var(--nav-link-border-width);
+      /* border-bottom: solid var(--nav-link-border-width); */
       border-color: var(--color-bg);
 
       font-size: calc(var(--text-base-size) / 1.15);
@@ -78,7 +78,7 @@ const routes = [
       &:hover,
       &:focus,
       &.active {
-        /* background: alpha(var(--color-primary), 0.15); */
+        background: var(--color-bg-dark);
         border-color: var(--color-border);
       }
     }
