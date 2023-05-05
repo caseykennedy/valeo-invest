@@ -96,8 +96,10 @@ export default {
     border-radius: var(--radius-xs);
     cursor: pointer;
 
-    &:hover {
-      background: var(--color-bg-dark);
+    @include breakpoint(md) {
+      &:hover {
+        background: var(--color-bg-dark);
+      }
     }
 
     &__layout {
@@ -149,8 +151,10 @@ export default {
   }
 
   &--open {
-    .collapse__toggle {
+    @include breakpoint(md) {
+      .collapse__toggle {
         background: var(--color-bg-dark);
+      }
     }
 
     .collapse__carat {
