@@ -5,7 +5,7 @@ useHead({
 
 const teamData = [
   {
-    name: 'Christian Goodell ',
+    name: 'Christian Goodell',
     title: 'Founder & CEO',
     bio: 'Christian is an innovative, proven entrepreneur who has applied his business acumen to the transformation of commerce.',
   },
@@ -243,127 +243,7 @@ const teamData = [
           </p>
         </template>
       </Collapse>
-
-      <!-- <Collapse>
-        <template #icon>
-          <ArtCirculate />
-        </template>
-        <template #title>
-          Mission
-        </template>
-        <template #sub-title>
-          Real and lasting wealth for us all.
-        </template>
-        <template #content>
-          <p class="text-md">
-            What AOL was to Web 1,<br>
-            what Facebook was to Web 2,<br>
-            it's time to build for Web 3.<br>
-          </p>
-        </template>
-      </Collapse> -->
     </Section>
-
-    <!-- <Section>
-      <div class="section__layout">
-        <div class="section__title">
-          <h2>
-            Revenue
-          </h2>
-        </div>
-        <div class="section__content">
-          <p class="text-md">
-            Our financial model builds both company asset value and cashflow steadily over 5 years, creating a solid and
-            lasting company with a large, high-value network.
-          </p>
-        </div>
-      </div>
-    </Section>
-
-    <Section>
-      <div class="section__layout">
-        <div class="section__title">
-          <h3>
-            We build asset value two ways:
-          </h3>
-        </div>
-        <div class="section__content">
-          <ol>
-            <li>
-              <strong>The first is sales of Valeo.</strong>
-              <p class="margin-top-sm">
-                Proceeds from sales of the currency create immediate and expanding asset value, which we'll hold in the
-                form
-                of protocol-owned liquidity, ensuring both a fully-collateralized currency and a large asset base.
-              </p>
-            </li>
-            <li>
-              <strong>The second is network effects.</strong>
-              <p class="margin-top-sm">
-                Our business model is based on creating a large network of Valeo customers, which becomes a
-                significant—and
-                perhaps the most important—company asset.
-              </p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </Section>
-
-    <Section>
-      <div class="section__layout">
-        <div class="section__title">
-          <h3>
-            We create cash flow eight ways:
-          </h3>
-        </div>
-        <div class="section__content">
-          <ol>
-            <li>Swap fees</li>
-            <li>Transaction fees</li>
-            <li>POS revenue split</li>
-            <li>Retail store markup</li>
-            <li>Marketplace vendor fees</li>
-            <li>Affiliate revenue</li>
-            <li>Market gains from our protocol-owned liquidity</li>
-            <li>Ballast Fund portfolio income</li>
-          </ol>
-        </div>
-      </div>
-    </Section> -->
-
-    <!-- <Section :border-top="true">
-      <div class="section__layout">
-        <div class="section__title">
-          <h2>
-            Trigger point
-          </h2>
-        </div>
-        <div class="section__content">
-          <p class="text-md">
-            Not tomorrow, but soon, there will come a day when the holders of dollar-pegged stablecoins will realize that
-            pegging to the dollar is losing money.
-          </p>
-
-          <p>They'll switch to Valeo. <strong>This is our trigger point.</strong> </p>
-
-          <p>
-            If we're to be successful in our ultimate goal of exponential growth to a ubiquitously useful global
-            currency, that will be when it happens, and we'll be ready.
-          </p>
-
-          <p>
-            As the dollar and other reserve currencies devalue faster and faster,
-            the mainstream will also wake up and switch to Valeo because it
-            maintains purchasing power, no matter what the markets bring.
-          </p>
-
-          <p>
-            This is how Valeo becomes money for everyone.
-          </p>
-        </div>
-      </div>
-    </Section> -->
 
     <SectionHighlight :reverse="true" class="opportunity-page__mission">
       <template #figure>
@@ -401,7 +281,7 @@ const teamData = [
       <div class="team">
         <div v-for="{ name, title, bio } in teamData" :key="name" class="team__person">
           <div class="team__person__avatar">
-            avatar
+            <img :src="`/images/team/${name.toLowerCase().replace(' ', '-')}.jpg`" :alt="name">
           </div>
           <div class="team__person__meta">
             <p class="team__person__meta__name">
@@ -441,9 +321,9 @@ const teamData = [
 }
 
 .opportunity-page {
-.roadmap-bg {
-background-color: var(--roadmap-bg);
-}
+  .roadmap-bg {
+    background-color: var(--roadmap-bg);
+  }
 
   .page-title {
     border-bottom: var(--border);
@@ -622,9 +502,9 @@ background-color: var(--roadmap-bg);
         /* width: 100%; */
 
         aspect-ratio: 1;
-        border: var(--border);
-        border-width: 2px;
         border-radius: var(--radius-full);
+        clip-path: circle(50%);
+        filter: grayscale(100%);
 
         color: var(--color-text-light);
         text-align: center;

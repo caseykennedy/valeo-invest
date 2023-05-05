@@ -41,8 +41,6 @@ export default defineNuxtConfig({
     },
   },
 
-  image: {},
-
   // plugin configurations
   modules: [
     '@nuxtjs/i18n',
@@ -53,6 +51,9 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
     '@pinia/nuxt',
   ],
+  image: {
+    dir: 'assets/images',
+  },
   vue: {
     compilerOptions: {
       nodeTransforms: [transformShortVmodel({ prefix: '::' })],
