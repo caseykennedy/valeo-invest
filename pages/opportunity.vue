@@ -95,7 +95,7 @@ const teamData = [
       </template>
     </SectionHighlight> -->
 
-    <Section bg="--color-bg-dark">
+    <Section class="roadmap-bg">
       <div class="roadmap">
         <h2>
           Roadmap
@@ -429,16 +429,22 @@ const teamData = [
 
 <style lang="scss">
 :root {
+  --roadmap-bg: var(--color-bg-dark);
   --roadmap-heading-bg: var(--color-primary-lighter);
   --roadmap-item-bg: var(--color-bg);
 }
 
 [data-theme="dark"] {
+  --roadmap-bg: var(--color-primary-light);
   --roadmap-heading-bg: var(--color-bg);
-  --roadmap-item-bg: var(--color-border);
+  --roadmap-item-bg: var(--color-primary-lighter);
 }
 
 .opportunity-page {
+.roadmap-bg {
+background-color: var(--roadmap-bg);
+}
+
   .page-title {
     border-bottom: var(--border);
 
