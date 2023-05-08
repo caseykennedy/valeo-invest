@@ -17,14 +17,45 @@ useHead({
     </Section>
 
     <Section>
-      <div class="section__layout">
-        <div class="section__title">
-          <h2>
-            Stablecoin Market
-          </h2>
-        </div>
-        <div class="section__content">
-          <p class="text-md padding-bottom-xl">
+      <div class="market-page__section__title">
+        <h2>Page overview message, need a sentence here to lead in to the collapsed content sections.</h2>
+      </div>
+
+      <Collapse>
+        <template #icon>
+          <ValeoSymbol />
+        </template>
+        <template #title>
+          Stablecoin market
+        </template>
+        <template #sub-title />
+        <template #content>
+          <SectionHighlight>
+            <template #figure>
+              <div class="highlight__stat">
+                <p class="text-xxl">
+                  $150B
+                </p>
+                <p>
+                  Total Current<br>Stablecoin Market
+                </p>
+              </div>
+            </template>
+            <template #content>
+              <h2>
+                That’s up from just $6B at the start of 2020. Up 25x in 3 years.
+              </h2>
+              <p>
+                Frax, a recent competitor, has achieved a market cap of nearly $3B, or 2 percent market penetration in the
+                same
+                time period. We anticipate we could achieve a similar initial market share—a $3B market cap—in 12 to 24
+                months
+                following our launch.
+              </p>
+            </template>
+          </SectionHighlight>
+
+          <p class="text-md margin-top-xl">
             Because Valeo goes beyond stability and serves as a constant, the most immediately addressable market for our
             currency is the stablecoin market.
           </p>
@@ -36,41 +67,15 @@ useHead({
             <li>Are increasingly risk-averse, and move around in markets accordingly</li>
             <li>Are not brand loyal to any particular digital currency</li>
           </ul>
-        </div>
-      </div>
-    </Section>
+        </template>
+      </Collapse>
 
-    <SectionHighlight>
-      <template #figure>
-        <div class="highlight__stat">
-          <p class="text-xxxl">
-            $150B
-          </p>
-          <p>
-            Total Current Stablecoin Market
-          </p>
-        </div>
-      </template>
-      <template #content>
-        <h2>
-          That’s up from just $6B at the start of 2020. Up 25x in 3 years.
-        </h2>
-        <p>
-          Frax, a recent competitor, has achieved a market cap of nearly $3B, or 2 percent market penetration in the
-          same
-          time period. We anticipate we could achieve a similar initial market share—a $3B market cap—in 12 to 24 months
-          following our launch.
-        </p>
-      </template>
-    </SectionHighlight>
-
-    <Section>
       <Collapse>
         <template #icon>
           <ArtRemitMarket width="56" />
         </template>
         <template #title>
-          Cross-Border Remittance Market
+          Cross-Border remittance market
         </template>
         <template #sub-title />
         <template #content>
@@ -87,7 +92,7 @@ useHead({
           <ArtTag width="56" />
         </template>
         <template #title>
-          Retail Commerce Market
+          Retail commerce market
         </template>
         <template #sub-title />
         <template #content>
@@ -114,7 +119,7 @@ useHead({
           <ArtAdoptionCurve width="56" />
         </template>
         <template #title>
-          Adoption Curve
+          Adoption curve
         </template>
         <template #sub-title />
         <template #content>
@@ -196,6 +201,16 @@ useHead({
 
   .intro {
     &__title {}
+  }
+
+  &__section {
+    padding-top: var(--space-xxxl);
+    padding-bottom: var(--space-xxxl);
+
+    &__title {
+      margin-bottom: var(--space-xxl);
+      max-width: 80ch;
+    }
   }
 
   .section {

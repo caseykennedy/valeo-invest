@@ -24,13 +24,13 @@ useHead({
     <Section>
       <div class="media">
         <div>
-          <p>1. Watch the intro</p>
+          <p>Our challenge</p>
           <div class="media__video">
             <LiteYouTubeEmbed id="IsmzMnmrv8s" title="Valeo Intro" />
           </div>
         </div>
         <div>
-          <p>2. Listen to the presentation</p>
+          <p>Our solution</p>
           <div class="media__audio">
             <iframe
               width="100%" height="120"
@@ -53,19 +53,18 @@ useHead({
           <div class="note__message">
             <p>
               <strong>How can we transition into a global society that puts what really matters in life—true value—front
-                and
-                center?
-                By
-                creating an economy that circulates—and is tied to, and based on, and strengthens—what creates real
-                wealth.</strong>
+                and center?</strong>
+            </p>
+
+            <p>
+              <strong>By creating an economy that circulates—and is tied to, and based on, and strengthens—what creates
+                real wealth.</strong>
             </p>
 
             <p>
               That’s an economy that works for all, restores our capacity to focus on what actually matters in life, and
               allows
-              us to care for our fellow inhabitants on this planet. As we’ve all recently been reminded, to preserve our
-              wealth,
-              we must not only grow; we must prevent loss.
+              us to care for our fellow inhabitants on this planet.
             </p>
 
             <p>
@@ -78,9 +77,7 @@ useHead({
                   Thank you for your attention.
                 </p>
                 <p>
-                  Christian Goodell
-                  <br>
-                  Founder &amp; CEO
+                  Christian Goodell, Founder &amp; CEO
                 </p>
               </div>
               <div>

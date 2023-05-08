@@ -121,7 +121,7 @@ useHead({
           <Balast />
         </template>
         <template #title>
-          A balast fund
+          A ballast fund
         </template>
         <template #sub-title>
           Our ballast fund assures invulnerability to financial panics and provides a buffer to ensure the Valeo ecosystem

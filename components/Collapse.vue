@@ -74,6 +74,10 @@ export default {
   --toggle-icon-size: 44px;
 
   @include breakpoint(sm) {
+    --toggle-icon-size: 90px;
+  }
+
+  @include breakpoint(lg) {
     --toggle-icon-size: 125px;
   }
 
@@ -96,7 +100,7 @@ export default {
     border-radius: var(--radius-xs);
     cursor: pointer;
 
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
       &:hover {
         background: var(--color-bg-dark);
       }
@@ -151,7 +155,7 @@ export default {
   }
 
   &--open {
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
       .collapse__toggle {
         background: var(--color-bg-dark);
       }

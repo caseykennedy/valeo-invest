@@ -8,31 +8,37 @@ const teamData = [
     name: 'Christian Goodell',
     title: 'Founder & CEO',
     bio: 'Christian is an innovative, proven entrepreneur who has applied his business acumen to the transformation of commerce.',
+    linkedin: 'https://www.linkedin.com/in/christian-goodell/',
   },
   {
     name: 'Roy Cammarano',
     title: 'President',
     bio: 'Roy is a seasoned career President and CEO who has served on the Board of Directors of 5 Inc. 500 companies.',
+    linkedin: '',
   },
   {
     name: 'Irene Katzela',
     title: 'CTO',
     bio: 'Irene is one of Canada\'s leading systems experts, and a phenomenal tech team builder and leader.',
+    linkedin: 'https://www.linkedin.com/in/irenekatzela/',
   },
   {
     name: 'Anouk Pinchetti',
     title: 'Currency Design Specialist',
     bio: 'Anouk is a well-recognized expert in currency design in Australia.',
+    linkedin: 'https://www.linkedin.com/in/anouk-pinchetti-076966/',
   },
   {
     name: 'Branden Spikes',
     title: 'IT and Security Systems Architect',
     bio: 'Branden built the IT and security systems for PayPal, Tesla and SpaceX.',
+    linkedin: 'https://www.linkedin.com/in/brandenspikes/',
   },
   {
     name: 'Matthew Walker',
     title: 'Olsen Law Firm Legal Team',
     bio: 'Olsen drafted the legislative frameworks for digital assets for the State of Wyoming.',
+    linkedin: 'https://www.linkedin.com/in/matthew-walker-wyo/',
   },
 ]
 </script>
@@ -95,7 +101,7 @@ const teamData = [
       </template>
     </SectionHighlight> -->
 
-    <Section class="roadmap-bg">
+    <!-- <Section class="roadmap-bg">
       <div class="roadmap">
         <h2>
           Roadmap
@@ -143,9 +149,67 @@ const teamData = [
           </div>
         </div>
       </div>
-    </Section>
+    </Section> -->
 
-    <Section>
+    <Section style="padding-top: 0">
+      <Collapse>
+        <template #icon>
+          <ValeoSymbol />
+        </template>
+        <template #title>
+          Roadmap
+        </template>
+        <template #sub-title>
+          Roadmap
+        </template>
+        <template #content>
+          <div class="roadmap">
+            <div class="roadmap__grid">
+              <div>
+                <p class="roadmap__grid__heading">
+                  <strong>Today</strong>
+                </p>
+                <ul>
+                  <li>Valeo/ETH Liquidity Pool (Anchor Pool of DEX)</li>
+                  <li>Ballast Fund</li>
+                  <li>Anchor Marketplace Vendor and/or POS Partner</li>
+                  <li>Launch Valeo Currency (ETH &amp; BTC for Valeo)</li>
+                </ul>
+              </div>
+              <div>
+                <p class="roadmap__grid__heading">
+                  <strong>6 months</strong>
+                </p>
+                <ul>
+                  <li>Valeo Marketplace Buildout</li>
+                  <li>Vendors</li>
+                  <li>POS Partners</li>
+                  <li>Affiliates</li>
+                </ul>
+              </div>
+              <div>
+                <p class="roadmap__grid__heading">
+                  <strong>12 months</strong>
+                </p>
+                <ul>
+                  <li>Brand Awareness Campaign</li>
+                  <li>Valeo Marketplace Expansion</li>
+                </ul>
+              </div>
+              <div>
+                <p class="roadmap__grid__heading">
+                  <strong>18 months</strong>
+                </p>
+                <ul>
+                  <li>Full DEX Launch</li>
+                  <li>Valeo Labs</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </template>
+      </Collapse>
+
       <Collapse>
         <template #icon>
           <ArtRevenue />
@@ -167,7 +231,7 @@ const teamData = [
             <div class="section__content">
               <ol>
                 <li>
-                  <strong>The first is sales of Valeo.</strong>
+                  <strong>The first is sales of Valeo</strong>
                   <p class="margin-top-sm">
                     Proceeds from sales of the currency create immediate and expanding asset value, which we'll hold in
                     the
@@ -176,7 +240,7 @@ const teamData = [
                   </p>
                 </li>
                 <li>
-                  <strong>The second is network effects.</strong>
+                  <strong>The second is network effects</strong>
                   <p class="margin-top-sm">
                     Our business model is based on creating a large network of Valeo customers, which becomes a
                     significant—and
@@ -211,7 +275,7 @@ const teamData = [
 
       <Collapse>
         <template #icon>
-          <Dex />
+          <ValeoSymbol />
         </template>
         <template #title>
           Trigger point
@@ -253,7 +317,7 @@ const teamData = [
       </template>
       <template #content>
         <h2 class="margin-bottom-xxxl">
-          Mission
+          Vision
         </h2>
         <p class="text-xl" style="max-width: 30ch;">
           What AOL was to Web 1,
@@ -279,7 +343,7 @@ const teamData = [
       </div>
 
       <div class="team">
-        <div v-for="{ name, title, bio } in teamData" :key="name" class="team__person">
+        <div v-for="{ name, title, bio, linkedin } in teamData" :key="name" class="team__person">
           <div class="team__person__avatar">
             <img :src="`/images/team/${name.toLowerCase().replace(' ', '-')}.jpg`" :alt="name">
           </div>
@@ -288,6 +352,10 @@ const teamData = [
               <strong>{{ name }}</strong>
               <br>
               {{ title }}
+              <br>
+              <NuxtLink :to="linkedin" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </NuxtLink>
             </p>
             <p class="team__person__meta__bio">
               {{ bio }}
@@ -437,7 +505,6 @@ const teamData = [
       grid-template-columns: repeat(1, 1fr);
       /* grid-template-rows: repeat(2, 1fr); */
       gap: var(--gutter-sm);
-      margin-top: var(--gutter-y);
 
       @include breakpoint(sm) {
         grid-template-columns: repeat(2, 1fr);
@@ -502,6 +569,7 @@ const teamData = [
         /* width: 100%; */
 
         aspect-ratio: 1;
+        background: var(--color-white);
         border-radius: var(--radius-full);
         clip-path: circle(50%);
         filter: grayscale(100%);
@@ -511,6 +579,17 @@ const teamData = [
       }
 
       &__meta {
+        &__name {
+          a {
+            color: var(--color-text-lighter);
+            text-decoration: underline;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+
         &__bio {
           color: var(--color-text-lighter);
         }
