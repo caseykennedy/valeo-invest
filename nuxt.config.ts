@@ -29,7 +29,9 @@ export default defineNuxtConfig({
   // global CSS files
   css: [
     '~/styles/index.scss',
+    'vuetify/lib/styles/main.css',
   ],
+  build: { transpile: ['vuetify'] },
   vite: {
     css: {
       devSourcemap: true,

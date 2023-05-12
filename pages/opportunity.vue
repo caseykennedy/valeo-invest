@@ -163,7 +163,133 @@ const teamData = [
           Roadmap
         </template>
         <template #content>
-          <div class="roadmap">
+          <v-timeline align="start">
+            <v-timeline-item dot-color="var(--color-success-dark)">
+              <p class="timeline-heading">
+                <strong>6 months</strong>
+              </p>
+              <br>
+            </v-timeline-item>
+
+            <v-timeline-item size="small" dot-color="var(--color-text-light)">
+              <div>
+                <p>Valeo/ETH Liquidity Pool (Anchor Pool of DEX)</p>
+                <br>
+              </div>
+            </v-timeline-item>
+
+            <v-timeline-item size="small" dot-color="var(--color-text-light)">
+              <div>
+                <p>
+                  Anchor Marketplace Vendor and/or POS Partner
+                </p>
+                <br>
+              </div>
+            </v-timeline-item>
+
+            <v-timeline-item size="small" dot-color="var(--color-text-light)">
+              <div>
+                <p>
+                  Ballast Fund
+                </p>
+                <br>
+              </div>
+            </v-timeline-item>
+
+            <v-timeline-item dot-color="var(--color-success-dark)">
+              <p class="timeline-heading">
+                <strong>12 months</strong>
+              </p>
+              <br>
+            </v-timeline-item>
+
+            <v-timeline-item size="small" dot-color="var(--color-text-light)">
+              <div>
+                <p>
+                  Valeo Marketplace Buildout
+                </p>
+                <br>
+              </div>
+            </v-timeline-item>
+
+            <v-timeline-item size="small" dot-color="var(--color-text-light)">
+              <div>
+                <p>
+                  Vendors
+                </p>
+                <br>
+              </div>
+            </v-timeline-item>
+
+            <v-timeline-item size="small" dot-color="var(--color-text-light)">
+              <div>
+                <p>
+                  POS Partners
+                </p>
+                <br>
+              </div>
+            </v-timeline-item>
+
+            <v-timeline-item size="small" dot-color="var(--color-text-light)">
+              <div>
+                <p>
+                  Affiliates
+                </p>
+                <br>
+              </div>
+            </v-timeline-item>
+
+            <v-timeline-item dot-color="var(--color-success-dark)">
+              <p class="timeline-heading">
+                <strong>18 months</strong>
+              </p>
+              <br>
+            </v-timeline-item>
+
+            <v-timeline-item size="small" dot-color="var(--color-text-light)">
+              <div>
+                <p>
+                  Brand Awareness Campaign
+                </p>
+                <br>
+              </div>
+            </v-timeline-item>
+
+            <v-timeline-item size="small" dot-color="var(--color-text-light)">
+              <div>
+                <p>
+                  Valeo Marketplace Expansion
+                </p>
+                <br>
+              </div>
+            </v-timeline-item>
+
+            <v-timeline-item dot-color="var(--color-success-dark)">
+              <p class="timeline-heading">
+                <strong>24 months</strong>
+              </p>
+              <br>
+            </v-timeline-item>
+
+            <v-timeline-item size="small" dot-color="var(--color-text-light)">
+              <div>
+                <p>
+                  Full DEX Launch
+                </p>
+                <br>
+              </div>
+            </v-timeline-item>
+
+            <v-timeline-item size="small" dot-color="var(--color-text-light)">
+              <div>
+                <p>
+                  Valeo Labs
+                </p>
+              </div>
+            </v-timeline-item>
+          </v-timeline>
+
+          <!-- <div class="roadmap">
             <div class="roadmap__grid">
               <div>
                 <p class="roadmap__grid__heading">
@@ -206,7 +332,7 @@ const teamData = [
                 </ul>
               </div>
             </div>
-          </div>
+          </div> -->
         </template>
       </Collapse>
 
@@ -389,6 +515,13 @@ const teamData = [
 }
 
 .opportunity-page {
+  .timeline-heading {
+    background: var(--color-bg-dark);
+    border-radius: var(--radius-xs);
+    padding: var(--space-sm);
+    display: inline-block;
+  }
+
   .roadmap-bg {
     background-color: var(--roadmap-bg);
   }
