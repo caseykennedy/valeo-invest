@@ -14,21 +14,18 @@ useHead({
 
 <template>
   <div class="ecosystem-page">
-    <Section :border-bottom="true" class="page-title">
-      <h1 class="page-title__title">
-        <span class="page-title__symbol">
-          <ValeoSymbol />
-        </span> <span class="text-arial">Valeo</span>
-        <br>
-        <span class="text-muted">
-          Money for the 21st century
-        </span>
-      </h1>
-    </Section>
+    <PageTitle>
+      <template #title>
+        Ecosystem
+      </template>
+      <template #tagline>
+        Money for the 21st century
+      </template>
+    </PageTitle>
 
     <Section class="ecosystem-page__section">
       <div class="ecosystem-page__section__title">
-        <h2>Meet the six components that together create a healthy circulatory system for value:</h2>
+        <h2>Six components together create a healthy circulatory system for value:</h2>
       </div>
 
       <Collapse>
@@ -242,28 +239,6 @@ useHead({
 
 <style lang="scss">
 .ecosystem-page {
-  .page-title {
-    @include breakpoint(md) {
-      padding-top: calc(var(--space-xxxl) * 2);
-    }
-
-    &__title {
-      &--muted {
-        color: var(--color-text-lighter);
-      }
-    }
-
-    &__symbol {
-      svg {
-        width: 23px;
-
-        @include breakpoint(md) {
-          width: 34px;
-        }
-      }
-    }
-  }
-
   &__collapse {
     &__split {
       display: flex;

@@ -81,7 +81,7 @@ function scrollTop(e: Event) {
     <div class="footer__row">
       <div class="footer__legal">
         <div>
-          &copy; 2023 Valeo, Inc.
+          &copy; 2023 Valeo Labs Inc.
         </div>
 
         <div class="footer__legal__nav">

@@ -6,19 +6,18 @@ useHead({
 
 <template>
   <div class="market-page">
-    <Section :border-bottom="true" class="page-title">
-      <h1 class="page-title__title">
+    <PageTitle>
+      <template #title>
         Market
-        <br>
-        <span class="text-muted">
-          Beyond stable
-        </span>
-      </h1>
-    </Section>
+      </template>
+      <template #tagline>
+        Beyond stable
+      </template>
+    </PageTitle>
 
     <Section>
       <div class="market-page__section__title">
-        <h2>Page overview message, need a sentence here to lead in to the collapsed content sections.</h2>
+        <h2>Valeo takes a deliberate phased-in approach to three main market sectors:</h2>
       </div>
 
       <Collapse>
@@ -30,6 +29,11 @@ useHead({
         </template>
         <template #sub-title />
         <template #content>
+          <p class="text-md margin-top-xl">
+            Because Valeo goes beyond stability and serves as a constant, the most immediately addressable market for our
+            currency is the stablecoin market.
+          </p>
+
           <SectionHighlight>
             <template #figure>
               <div class="highlight__stat">
@@ -43,7 +47,7 @@ useHead({
             </template>
             <template #content>
               <h2>
-                That’s up from just $6B at the start of 2020. Up 25x in 3 years.
+                The stablecoin market cap is up 25x in 3 years, from $6B at the start of 2020.
               </h2>
               <p>
                 Frax, a recent competitor, has achieved a market cap of nearly $3B, or 2 percent market penetration in the
@@ -55,10 +59,6 @@ useHead({
             </template>
           </SectionHighlight>
 
-          <p class="text-md margin-top-xl">
-            Because Valeo goes beyond stability and serves as a constant, the most immediately addressable market for our
-            currency is the stablecoin market.
-          </p>
           <p><strong>Current stablecoin users:</strong></p>
           <ul>
             <li>Are losing 1 percent per month to inflation, and they know it</li>
@@ -75,14 +75,15 @@ useHead({
           <ArtRemitMarket width="56" />
         </template>
         <template #title>
-          Cross-Border remittance market
+          Cross-border remittance market
         </template>
         <template #sub-title />
         <template #content>
           <p>
-            Having the most reliable currency positions us well for the cross-border remittance market: families working
-            abroad who need a safe, speedy, and affordable way to send currency internationally. The remittance market is
-            approximately $600B currently, and expected to double by 2030.
+            Families working abroad need a safe,
+            speedy, affordable way to send currency internationally. Having the most
+            reliable currency available positions us well to support them. The remittance
+            market generated $600B in 2022 and is expected to double by 2030.
           </p>
         </template>
       </Collapse>
@@ -127,6 +128,7 @@ useHead({
             For digital currency systems, we’re past the early adopters and well into the early majority phase, with
             forecasts predicting half the world on mobile wallets by 2024.
           </p>
+          <ArtAdoptionCurve />
         </template>
       </Collapse>
 
@@ -187,18 +189,6 @@ useHead({
 
 <style lang="scss" scoped>
 .market-page {
-  .page-title {
-    @include breakpoint(md) {
-      padding-top: calc(var(--space-xxxl) * 2);
-    }
-
-    &__title {
-      &--muted {
-        color: var(--color-text-lighter);
-      }
-    }
-  }
-
   .intro {
     &__title {}
   }

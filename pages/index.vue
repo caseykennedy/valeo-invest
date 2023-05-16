@@ -24,13 +24,13 @@ useHead({
     <Section>
       <div class="media">
         <div>
-          <p>Our challenge</p>
+          <h3>Our challenge</h3>
           <div class="media__video">
             <LiteYouTubeEmbed id="IsmzMnmrv8s" title="Valeo Intro" />
           </div>
         </div>
         <div>
-          <p>Our solution</p>
+          <h3>Our solution</h3>
           <div class="media__audio">
             <iframe
               width="100%" height="120"
@@ -77,7 +77,9 @@ useHead({
                   Thank you for your attention.
                 </p>
                 <p>
-                  Christian Goodell, Founder &amp; CEO
+                  Christian Goodell
+                  <br>
+                  Founder &amp; CEO
                 </p>
               </div>
               <div>

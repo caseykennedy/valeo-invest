@@ -14,7 +14,7 @@ const teamData = [
     name: 'Roy Cammarano',
     title: 'President',
     bio: 'Roy is a seasoned career President and CEO who has served on the Board of Directors of 5 Inc. 500 companies.',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/roy-cammarano-a441b7149/',
   },
   {
     name: 'Irene Katzela',
@@ -45,15 +45,14 @@ const teamData = [
 
 <template>
   <div class="opportunity-page">
-    <Section class="page-title">
-      <h1 class="page-title__title">
+    <PageTitle>
+      <template #title>
         Opportunity
-        <br>
-        <span class="page-title__title--muted">
-          How we get there
-        </span>
-      </h1>
-    </Section>
+      </template>
+      <template #tagline>
+        <span style="color: var(--color-success-darker)">How we get there</span>
+      </template>
+    </PageTitle>
 
     <Section class="intro">
       <div class="intro__layout">
@@ -61,95 +60,13 @@ const teamData = [
           <div class="intro__title">
             <h2>Decentralized, resilient currency.</h2>
           </div>
-          <div class="intro__content">
-            <p>
-              Valeo aims to transform the stablecoin market with a secure, transparent, and user-friendly currency that
-              maintains purchasing power. Following our roadmap, Valeo will gradually develop a decentralized exchange,
-              marketplace, and app, positioning itself as a leading global currency.
-            </p>
-          </div>
+          <div class="intro__content" />
         </div>
         <div class="intro__figure">
           <ArtEqual fill="--color-success-darker" />
         </div>
       </div>
     </Section>
-
-    <!-- <SectionHighlight>
-      <template #figure>
-        <p>
-          <span class="text-md" style="color: var(--color-text)">
-            Mobile wallet global users
-          </span>
-          <br>
-          Visualizing the Rise of Digital Payment Adoption
-        </p>
-        <ArtCircleGraph />
-        <p class="highlight__source">
-          Source: Juniper Research
-        </p>
-      </template>
-      <template #content>
-        <h2>
-          The future of currency rests on the rise of digital wallets. TBD
-        </h2>
-        <p>
-          As digital wallets go mainstream, transaction volumes are estimated to reach $9T annually. Online purchases
-          and digital commerce will drive this growth.
-        </p>
-        <p>Implementing our solution, lorem ipsum dolor sit amet consectetur. Porta et aenean amet quis vitae.</p>
-      </template>
-    </SectionHighlight> -->
-
-    <!-- <Section class="roadmap-bg">
-      <div class="roadmap">
-        <h2>
-          Roadmap
-        </h2>
-        <div class="roadmap__grid">
-          <div>
-            <p class="roadmap__grid__heading">
-              <strong>Today</strong>
-            </p>
-            <ul>
-              <li>Valeo/ETH Liquidity Pool (Anchor Pool of DEX)</li>
-              <li>Ballast Fund</li>
-              <li>Anchor Marketplace Vendor and/or POS Partner</li>
-              <li>Launch Valeo Currency (ETH &amp; BTC for Valeo)</li>
-            </ul>
-          </div>
-          <div>
-            <p class="roadmap__grid__heading">
-              <strong>6 months</strong>
-            </p>
-            <ul>
-              <li>Valeo Marketplace Buildout</li>
-              <li>Vendors</li>
-              <li>POS Partners</li>
-              <li>Affiliates</li>
-            </ul>
-          </div>
-          <div>
-            <p class="roadmap__grid__heading">
-              <strong>12 months</strong>
-            </p>
-            <ul>
-              <li>Brand Awareness Campaign</li>
-              <li>Valeo Marketplace Expansion</li>
-            </ul>
-          </div>
-          <div>
-            <p class="roadmap__grid__heading">
-              <strong>18 months</strong>
-            </p>
-            <ul>
-              <li>Full DEX Launch</li>
-              <li>Valeo Labs</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </Section> -->
 
     <Section style="padding-top: 0">
       <Collapse>
@@ -159,9 +76,7 @@ const teamData = [
         <template #title>
           Roadmap
         </template>
-        <template #sub-title>
-          Roadmap
-        </template>
+        <template #sub-title />
         <template #content>
           <v-timeline align="start">
             <v-timeline-item dot-color="var(--color-success-dark)">
@@ -288,51 +203,6 @@ const teamData = [
               </div>
             </v-timeline-item>
           </v-timeline>
-
-          <!-- <div class="roadmap">
-            <div class="roadmap__grid">
-              <div>
-                <p class="roadmap__grid__heading">
-                  <strong>Today</strong>
-                </p>
-                <ul>
-                  <li>Valeo/ETH Liquidity Pool (Anchor Pool of DEX)</li>
-                  <li>Ballast Fund</li>
-                  <li>Anchor Marketplace Vendor and/or POS Partner</li>
-                  <li>Launch Valeo Currency (ETH &amp; BTC for Valeo)</li>
-                </ul>
-              </div>
-              <div>
-                <p class="roadmap__grid__heading">
-                  <strong>6 months</strong>
-                </p>
-                <ul>
-                  <li>Valeo Marketplace Buildout</li>
-                  <li>Vendors</li>
-                  <li>POS Partners</li>
-                  <li>Affiliates</li>
-                </ul>
-              </div>
-              <div>
-                <p class="roadmap__grid__heading">
-                  <strong>12 months</strong>
-                </p>
-                <ul>
-                  <li>Brand Awareness Campaign</li>
-                  <li>Valeo Marketplace Expansion</li>
-                </ul>
-              </div>
-              <div>
-                <p class="roadmap__grid__heading">
-                  <strong>18 months</strong>
-                </p>
-                <ul>
-                  <li>Full DEX Launch</li>
-                  <li>Valeo Labs</li>
-                </ul>
-              </div>
-            </div>
-          </div> -->
         </template>
       </Collapse>
 
@@ -343,11 +213,12 @@ const teamData = [
         <template #title>
           Revenue
         </template>
-        <template #sub-title>
-          Our financial model builds both company asset value and cashflow steadily over 5 years, creating a solid and
-          lasting company with a large, high-value network.
-        </template>
+        <template #sub-title />
         <template #content>
+          <p class="padding-bottom-xxl">
+            Our financial model builds both company asset value and cashflow steadily over 5 years, creating a solid and
+            lasting company with a large, high-value network.
+          </p>
           <div class="section__layout">
             <div class="section__title">
               <h3>
@@ -406,16 +277,14 @@ const teamData = [
         <template #title>
           Trigger point
         </template>
-        <template #sub-title>
-          This is how Valeo becomes money for everyone.
-        </template>
+        <template #sub-title />
         <template #content>
-          <p class="text-md">
+          <p class="text-md text-white">
             Not tomorrow, but soon, there will come a day when the holders of dollar-pegged stablecoins will realize that
             pegging to the dollar is losing money.
           </p>
 
-          <p>They'll switch to Valeo. <strong>This is our trigger point.</strong> </p>
+          <p>They'll switch to Valeo. <strong class="text-white">This is our trigger point.</strong> </p>
 
           <p>
             If we're to be successful in our ultimate goal of exponential growth to a ubiquitously useful global
@@ -435,17 +304,14 @@ const teamData = [
       </Collapse>
     </Section>
 
-    <SectionHighlight :reverse="true" class="opportunity-page__mission">
+    <SectionHighlight :reverse="false" class="opportunity-page__mission">
       <template #figure>
-        <div style="margin-left: auto">
+        <div style="margin-right: auto">
           <ArtCirculate />
         </div>
       </template>
       <template #content>
-        <h2 class="margin-bottom-xxxl">
-          Vision
-        </h2>
-        <p class="text-xl" style="max-width: 30ch;">
+        <p class="text-lg" style="max-width: 30ch;">
           What AOL was to Web 1,
           what Facebook was to Web 2,
           it's time to build for Web 3.
@@ -478,14 +344,16 @@ const teamData = [
               <strong>{{ name }}</strong>
               <br>
               {{ title }}
-              <br>
-              <NuxtLink :to="linkedin" target="_blank" rel="noopener noreferrer">
-                LinkedIn
-              </NuxtLink>
             </p>
             <p class="team__person__meta__bio">
               {{ bio }}
             </p>
+            <NuxtLink :to="linkedin" target="_blank" rel="noopener noreferrer">
+              <span>
+                <ArrowRight width="14px" />
+              </span>
+              LinkedIn
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -524,20 +392,6 @@ const teamData = [
 
   .roadmap-bg {
     background-color: var(--roadmap-bg);
-  }
-
-  .page-title {
-    border-bottom: var(--border);
-
-    @include breakpoint(md) {
-      padding-top: calc(var(--space-xxxl) * 2);
-    }
-
-    &__title {
-      &--muted {
-        color: var(--color-success-darker);
-      }
-    }
   }
 
   &__mission {
@@ -713,13 +567,19 @@ const teamData = [
 
       &__meta {
         &__name {
-          a {
-            color: var(--color-text-lighter);
-            text-decoration: underline;
+          color: var(--color-text);
+        }
 
-            &:hover {
-              text-decoration: none;
-            }
+        a {
+          color: var(--color-text-lighter);
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          span {
+            margin-right: var(--space-sm);
           }
         }
 
