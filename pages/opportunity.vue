@@ -52,20 +52,13 @@ const teamData = [
       <template #tagline>
         <span style="color: var(--color-success-darker)">How we get there</span>
       </template>
+      <template #figure>
+        <ArtEqual fill="--color-success-darker" width="175px" />
+      </template>
     </PageTitle>
 
     <Section class="intro">
-      <div class="intro__layout">
-        <div>
-          <div class="intro__title">
-            <h2>Decentralized, resilient currency.</h2>
-          </div>
-          <div class="intro__content" />
-        </div>
-        <div class="intro__figure">
-          <ArtEqual fill="--color-success-darker" />
-        </div>
-      </div>
+      <h2>Decentralized, resilient currency.</h2>
     </Section>
 
     <Section style="padding-top: 0">
@@ -279,12 +272,12 @@ const teamData = [
         </template>
         <template #sub-title />
         <template #content>
-          <p class="text-md text-white">
+          <p class="text-md">
             Not tomorrow, but soon, there will come a day when the holders of dollar-pegged stablecoins will realize that
             pegging to the dollar is losing money.
           </p>
 
-          <p>They'll switch to Valeo. <strong class="text-white">This is our trigger point.</strong> </p>
+          <p>They'll switch to Valeo. <strong>This is our trigger point.</strong> </p>
 
           <p>
             If we're to be successful in our ultimate goal of exponential growth to a ubiquitously useful global
@@ -302,61 +295,52 @@ const teamData = [
           </p>
         </template>
       </Collapse>
-    </Section>
 
-    <SectionHighlight :reverse="false" class="opportunity-page__mission">
-      <template #figure>
-        <div style="margin-right: auto">
-          <ArtCirculate />
-        </div>
-      </template>
-      <template #content>
-        <p class="text-lg" style="max-width: 30ch;">
-          What AOL was to Web 1,
-          what Facebook was to Web 2,
-          it's time to build for Web 3.
-        </p>
-        <p class="margin-top-xxxxl">
-          <mark>Real and lasting wealth for us all.</mark>
-        </p>
-      </template>
-    </SectionHighlight>
-
-    <Section>
-      <div class="">
-        <h2>
+      <Collapse>
+        <template #icon>
+          <ValeoSymbol />
+        </template>
+        <template #title>
           Team
-        </h2>
-        <p class="text-md">
-          Our global team is outstanding; a complementary mix of vision, drive,
-          technical skill and business acumen. The team is ideal for this project and we've already built a lot
-          together. In doing so, we've also nurtured and developed a unique and compelling company culture.
-        </p>
-      </div>
+        </template>
+        <template #sub-title />
+        <template #content>
+          <div class="">
+            <h2>
+              Team
+            </h2>
+            <p class="text-md">
+              Our global team is outstanding; a complementary mix of vision, drive,
+              technical skill and business acumen. The team is ideal for this project and we've already built a lot
+              together. In doing so, we've also nurtured and developed a unique and compelling company culture.
+            </p>
+          </div>
 
-      <div class="team">
-        <div v-for="{ name, title, bio, linkedin } in teamData" :key="name" class="team__person">
-          <div class="team__person__avatar">
-            <img :src="`/images/team/${name.toLowerCase().replace(' ', '-')}.jpg`" :alt="name">
+          <div class="team">
+            <div v-for="{ name, title, bio, linkedin } in teamData" :key="name" class="team__person">
+              <div class="team__person__avatar">
+                <img :src="`/images/team/${name.toLowerCase().replace(' ', '-')}.jpg`" :alt="name">
+              </div>
+              <div class="team__person__meta">
+                <p class="team__person__meta__name">
+                  <strong>{{ name }}</strong>
+                  <br>
+                  {{ title }}
+                </p>
+                <p class="team__person__meta__bio">
+                  {{ bio }}
+                </p>
+                <NuxtLink :to="linkedin" target="_blank" rel="noopener noreferrer">
+                  <!-- <span>
+                    <ArrowRight width="14px" />
+                  </span> -->
+                  LinkedIn
+                </NuxtLink>
+              </div>
+            </div>
           </div>
-          <div class="team__person__meta">
-            <p class="team__person__meta__name">
-              <strong>{{ name }}</strong>
-              <br>
-              {{ title }}
-            </p>
-            <p class="team__person__meta__bio">
-              {{ bio }}
-            </p>
-            <NuxtLink :to="linkedin" target="_blank" rel="noopener noreferrer">
-              <span>
-                <ArrowRight width="14px" />
-              </span>
-              LinkedIn
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
+        </template>
+      </Collapse>
     </Section>
 
     <ContactCta bg="--color-bg-dark">
@@ -584,7 +568,7 @@ const teamData = [
         }
 
         &__bio {
-          color: var(--color-text-lighter);
+          color: var(--color-text-light);
         }
       }
     }
