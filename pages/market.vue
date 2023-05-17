@@ -34,7 +34,7 @@ useHead({
             currency is the stablecoin market.
           </p>
 
-          <SectionHighlight>
+          <SectionHighlight class="margin-top-xxl margin-bottom-xxl">
             <template #figure>
               <div class="highlight__stat">
                 <p class="text-xxl">
@@ -124,11 +124,19 @@ useHead({
         </template>
         <template #sub-title />
         <template #content>
-          <p>
-            For digital currency systems, we’re past the early adopters and well into the early majority phase, with
-            forecasts predicting half the world on mobile wallets by 2024.
-          </p>
-          <ArtAdoptionCurve />
+          <div class="ecosystem-page__collapse__split">
+            <div>
+              <p>
+                For digital currency systems, we’re past the early adopters and well into the early majority phase, with
+                forecasts predicting half the world on mobile wallets by 2024.
+              </p>
+            </div>
+            <div class="adoption-curve">
+              <div>
+                <ArtAdoptionCurve width="200px" />
+              </div>
+            </div>
+          </div>
         </template>
       </Collapse>
 
@@ -201,6 +209,12 @@ useHead({
       margin-bottom: var(--space-xxl);
       max-width: 80ch;
     }
+  }
+
+  .adoption-curve {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .section {

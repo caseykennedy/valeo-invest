@@ -37,8 +37,11 @@
   }
 
   &__title {
+    /* line-height: 0.85; */
+
     &--muted {
       color: var(--color-text-lighter);
+      /* font-size: var(--text-lg); */
     }
 
     &__symbol {
