@@ -19,7 +19,7 @@
   --color-text-lighter: hsla(220, 12.8%, 30%, 1);
 
   // borders
-  --color-border: hsla(220, 16.8%, 45%, 0.75);
+  --color-border: hsla(220, 16.8%, 55%, 1);
   // --color-border-light: hsla(220, 16.8%, 45%, 0.75);
 
   // primary
@@ -86,7 +86,7 @@
   --color-text-lighter: hsla(220, 12.8%, 50%, 1);
 
   // borders
-  --color-border: hsla(220, 16.8%, 45%, 0.5);
+  --color-border: hsla(220, 16.8%, 25%, 1);
 
   // primary
   // @include defineColorHSL(--color-primary, 0, 0%, 100%);

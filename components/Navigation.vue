@@ -35,8 +35,8 @@ const routes = [
 .nav {
   border-top: var(--border);
   border-bottom: var(--border);
-  position: sticky;
-  top: 0;
+  /* position: sticky; */
+  /* top: 0; */
   width: 100%;
   z-index: var(--z-index-header);
 

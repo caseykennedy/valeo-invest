@@ -41,7 +41,7 @@
 
     &--muted {
       color: var(--color-text-lighter);
-      /* font-size: var(--text-lg); */
+      font-size: var(--text-xxl);
     }
 
     &__symbol {

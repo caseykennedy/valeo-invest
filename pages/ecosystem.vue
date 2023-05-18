@@ -177,7 +177,7 @@ useHead({
           <div class="ecosystem-page__collapse__split">
             <div>
               <p>
-                At the center of the Valeo ecosystem is the Valeo App—a seamless, intuitive, easy-to-use system of
+                At the center of the Valeo ecosystem is the Valeo app—a seamless, intuitive, easy-to-use system of
                 integrated
                 purchase, exchange, merchant services and point of sale (POS) services.
               </p>
