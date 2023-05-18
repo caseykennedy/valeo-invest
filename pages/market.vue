@@ -207,7 +207,7 @@ useHead({
 
     &__title {
       margin-bottom: var(--space-xxl);
-      max-width: 80ch;
+      max-width: 60ch;
     }
   }
 
