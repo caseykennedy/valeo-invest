@@ -311,8 +311,9 @@ const teamData = [
             </h2>
             <p class="text-md">
               Our global team is outstanding; a complementary mix of vision, drive,
-              technical skill and business acumen. The team is ideal for this project and we've already built a lot
-              together. In doing so, we've also nurtured and developed a unique and compelling company culture.
+              technical skill and business acumen. The team is ideally suited for this project, and we’ve already
+              built a lot of this project together. In doing so, we've also nurtured and developed a unique and
+              compelling company culture.
             </p>
           </div>
 
