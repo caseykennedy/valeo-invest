@@ -9,17 +9,14 @@ useHead({
 
 <template>
   <div class="home-page">
-    <Section :border-bottom="true" class="hero">
-      <h1 class="hero__title">
-        <span class="hero__title__symbol">
-          <ValeoSymbol />
-        </span> <span class="text-arial">Valeo</span>
-        <br>
-        <div class="hero__title--muted">
-          Equilibrium for a new economy
-        </div>
-      </h1>
-    </Section>
+    <PageTitle>
+      <template #title>
+        Valeo
+      </template>
+      <template #tagline>
+        Equilibrium for a new economy
+      </template>
+    </PageTitle>
 
     <Section>
       <div class="media">

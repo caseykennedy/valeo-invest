@@ -64,7 +64,7 @@ const teamData = [
     <Section style="padding-top: 0">
       <Collapse>
         <template #icon>
-          <ValeoSymbol />
+          <ArtRoadmap />
         </template>
         <template #title>
           Roadmap
@@ -221,7 +221,7 @@ const teamData = [
             <div class="section__content">
               <ol>
                 <li>
-                  <strong>The first is sales of Valeo</strong>
+                  <strong>Sales of Valeo</strong>
                   <p class="margin-top-sm">
                     Proceeds from sales of the currency create immediate and expanding asset value, which we'll hold in
                     the
@@ -230,7 +230,7 @@ const teamData = [
                   </p>
                 </li>
                 <li>
-                  <strong>The second is network effects</strong>
+                  <strong>Network effects</strong>
                   <p class="margin-top-sm">
                     Our business model is based on creating a large network of Valeo customers, which becomes a
                     significant—and
@@ -265,7 +265,7 @@ const teamData = [
 
       <Collapse>
         <template #icon>
-          <ValeoSymbol />
+          <ArtApex />
         </template>
         <template #title>
           Trigger point
@@ -298,7 +298,7 @@ const teamData = [
 
       <Collapse>
         <template #icon>
-          <ValeoSymbol />
+          <ArtTeam />
         </template>
         <template #title>
           Team

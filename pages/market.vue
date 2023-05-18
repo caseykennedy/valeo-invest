@@ -22,7 +22,7 @@ useHead({
 
       <Collapse>
         <template #icon>
-          <ValeoSymbol />
+          <ArtStableCoin />
         </template>
         <template #title>
           Stablecoin market

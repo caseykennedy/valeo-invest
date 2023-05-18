@@ -54,7 +54,7 @@ const cssClasses = computed(() => {
     margin: 0 auto;
     padding-right: var(--gutter);
     padding-left: var(--gutter);
-    /* max-width: var(--site-width-max); */
+    max-width: var(--site-width-max);
     width: 100%;
   }
 }

@@ -34,7 +34,7 @@ main {
     flex-flow: column nowrap;
     margin: 0 auto;
     max-height: 100%;
-    max-width: var(--site-width-max);
+    /* max-width: var(--site-width-max); */
     width: 100%;
     position: relative;
     z-index: 1;

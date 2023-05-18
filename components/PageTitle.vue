@@ -33,7 +33,7 @@
   @include breakpoint(md) {
     flex-flow: row nowrap;
     align-items: center;
-    padding-top: calc(var(--space-xxxl) * 2);
+    padding-top: calc(var(--space-xxl) * 1);
   }
 
   &__title {
