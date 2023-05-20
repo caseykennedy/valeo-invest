@@ -84,3 +84,13 @@
     box-shadow: var(--shadow-md);
   }
 }
+
+.v-timeline-divider__before,
+.v-timeline-divider__after {
+  background: var(--color-border) !important;
+  width: 1px !important;
+}
+
+.v-timeline-divider__dot {
+  background: none !important;
+}

@@ -254,8 +254,8 @@ mark {
 
 ul {
   color: var(--color-text-light);
-  list-style: circle;
-  // list-style-position: inside;
+  list-style: disc;
+  list-style-position: inside;
 
   li {}
 }
