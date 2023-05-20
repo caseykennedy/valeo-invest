@@ -40,6 +40,7 @@
     /* line-height: 0.85; */
 
     &--muted {
+      /* font-size: var(--text-lg); */
       color: var(--color-text-lighter);
     }
 

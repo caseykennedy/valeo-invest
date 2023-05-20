@@ -171,9 +171,12 @@ useHead({
           </p>
 
           <p>
-            We see Circle’s stablecoin, USDC, as the likely de facto digital dollar. USDC is actually an interesting
+            As of this writing, we see Circle’s stablecoin, USDC, as the likely de facto digital dollar. USDC is actually
+            an
+            interesting
             forerunner for us in many ways; in the end, though, USDC is more of a proxy for us than a competitor, because
-            it’s pegged to the dollar. We’re more than happy to hang out behind Circle until the moment people realize
+            it’s pegged to the dollar. We’re more than happy to hang out behind Circle, or any fiat-backed stablecoin,
+            for that matter, until the moment people realize
             fiscal policies and/or market manipulations are forcing the dollar to fall, and we’ll be right there to
             welcome them to Valeo.
           </p>

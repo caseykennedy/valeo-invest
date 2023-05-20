@@ -36,7 +36,7 @@ watch(theme, () => {
 }
 
 [data-theme="dark"] {
-  --theme-toggler-color-bg: var(--color-bg-lighter);
+  --theme-toggler-color-bg: var(--color-border);
   --theme-toggler-position: 0;
 }
 

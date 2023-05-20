@@ -53,7 +53,7 @@ const teamData = [
         <span style="color: var(--color-success-darker)">How we get there</span>
       </template>
       <template #figure>
-        <ArtEqual fill="--color-success-darker" width="125px" />
+        <ArtEqual fill="--color-success-darker" class="fig__equal" />
       </template>
     </PageTitle>
 
@@ -226,7 +226,7 @@ const teamData = [
                     Proceeds from sales of the currency create immediate and expanding asset value, which we'll hold in
                     the
                     form
-                    of protocol-owned liquidity, ensuring both a fully-collateralized currency and a large asset base.
+                    of protocol-owned liquidity, ensuring both a fully-collateralized currency and a large asset base
                   </p>
                 </li>
                 <li>
@@ -234,7 +234,7 @@ const teamData = [
                   <p class="margin-top-sm">
                     Our business model is based on creating a large network of Valeo customers, which becomes a
                     significant—and
-                    perhaps the most important—company asset.
+                    perhaps the most important—company asset
                   </p>
                 </li>
               </ul>
@@ -368,6 +368,18 @@ const teamData = [
 }
 
 .opportunity-page {
+  .fig__equal {
+    width: 75px;
+
+    @include breakpoint(sm) {
+      width: 120px;
+    }
+
+    @include breakpoint(md) {
+      width: 150px;
+    }
+  }
+
   .timeline-heading {
     background: var(--color-bg-dark);
     border-radius: var(--radius-xs);
@@ -466,6 +478,14 @@ const teamData = [
           &:not(:first-child) {
             padding-top: var(--space-lg);
           }
+
+          &::before {
+            content: "\2022";
+            color: var(--color-success-darker);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+          }
         }
       }
     }
@@ -557,6 +577,7 @@ const teamData = [
 
         a {
           text-decoration: underline;
+          color: var(--color-text-lighter);
 
           &:hover {
             text-decoration: none;

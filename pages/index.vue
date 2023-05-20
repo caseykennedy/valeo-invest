@@ -64,10 +64,6 @@ useHead({
               us to care for our fellow inhabitants on this planet.
             </p>
 
-            <p>
-              That’s where Valeo comes in.
-            </p>
-
             <div class="note__signature">
               <div>
                 <p>

@@ -25,7 +25,10 @@ useHead({
 
     <Section class="ecosystem-page__section">
       <div class="ecosystem-page__section__title">
-        <h2>Six components together create a healthy circulatory system for value:</h2>
+        <h2>
+          Six integrated components create a healthy
+          circulatory system:
+        </h2>
       </div>
 
       <Collapse>
@@ -126,7 +129,8 @@ useHead({
         </template>
         <template #content>
           <p>
-            <strong>Ballast (noun):</strong> <span class="font-italic">heavy material, such as gravel, sand, iron, or lead, placed low in a vessel
+            <strong>Ballast (noun):</strong> <span class="font-italic">heavy material, such as gravel, sand, iron, or
+              lead, placed low in a vessel
               to improve its
               stability.</span>
           </p>

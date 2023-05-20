@@ -37,7 +37,7 @@ function scrollTop(e: Event) {
         </span>
       </button>
       <div class="footnote__meta">
-        <span>Presentation</span> Q2, 2023
+        <span>Presentation</span> Q3, 2023
       </div>
     </div>
   </div>
@@ -259,7 +259,7 @@ function scrollTop(e: Event) {
     justify-content: center;
 
     aspect-ratio: 1;
-    background: var(--color-bg-dark);
+    background: var(--color-border);
     border-radius: var(--radius-full);
     cursor: pointer;
     padding: var(--space-xs);
