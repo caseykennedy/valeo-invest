@@ -23,13 +23,23 @@
   </header>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+:root {
+  --header-height: 58px;
+}
+
 .header {
   background: var(--color-bg);
-  padding: var(--space-sm) 0;
+  /* padding: var(--space-sm) 0; */
+  height: var(--header-height);
   width: 100%;
   position: relative;
-  z-index: var(--z-index-header);
+  z-index: 99;
+
+  @include breakpoint(sm) {
+    position: sticky;
+    top: 0;
+  }
 
   &__layout {
     display: flex;
@@ -40,6 +50,7 @@
     padding-right: var(--gutter);
     padding-left: var(--gutter);
 
+    height: var(--header-height);
     max-width: var(--site-width-max);
     width: 100%;
   }

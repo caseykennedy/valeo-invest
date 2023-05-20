@@ -53,7 +53,7 @@ const teamData = [
         <span style="color: var(--color-success-darker)">How we get there</span>
       </template>
       <template #figure>
-        <ArtEqual fill="--color-success-darker" width="175px" />
+        <ArtEqual fill="--color-success-darker" width="125px" />
       </template>
     </PageTitle>
 
@@ -73,8 +73,8 @@ const teamData = [
         <template #content>
           <v-timeline align="start">
             <v-timeline-item dot-color="var(--color-success-dark)">
-              <p class="timeline-heading">
-                <strong>6 months</strong>
+              <p>
+                <strong>Now</strong>
               </p>
               <br>
             </v-timeline-item>
@@ -105,8 +105,8 @@ const teamData = [
             </v-timeline-item>
 
             <v-timeline-item dot-color="var(--color-success-dark)">
-              <p class="timeline-heading">
-                <strong>12 months</strong>
+              <p>
+                <strong>6 months</strong>
               </p>
               <br>
             </v-timeline-item>
@@ -148,8 +148,8 @@ const teamData = [
             </v-timeline-item>
 
             <v-timeline-item dot-color="var(--color-success-dark)">
-              <p class="timeline-heading">
-                <strong>18 months</strong>
+              <p>
+                <strong>12 months</strong>
               </p>
               <br>
             </v-timeline-item>
@@ -173,8 +173,8 @@ const teamData = [
             </v-timeline-item>
 
             <v-timeline-item dot-color="var(--color-success-dark)">
-              <p class="timeline-heading">
-                <strong>24 months</strong>
+              <p>
+                <strong>18 months</strong>
               </p>
               <br>
             </v-timeline-item>
@@ -219,7 +219,7 @@ const teamData = [
               </h3>
             </div>
             <div class="section__content">
-              <ol>
+              <ul>
                 <li>
                   <strong>Sales of Valeo</strong>
                   <p class="margin-top-sm">
@@ -237,7 +237,7 @@ const teamData = [
                     perhaps the most important—company asset.
                   </p>
                 </li>
-              </ol>
+              </ul>
             </div>
           </div>
 
@@ -248,7 +248,7 @@ const teamData = [
               </h3>
             </div>
             <div class="section__content">
-              <ol>
+              <ul>
                 <li>Swap fees</li>
                 <li>Transaction fees</li>
                 <li>POS revenue split</li>
@@ -257,7 +257,7 @@ const teamData = [
                 <li>Affiliate revenue</li>
                 <li>Market gains from our protocol-owned liquidity</li>
                 <li>Ballast Fund portfolio income</li>
-              </ol>
+              </ul>
             </div>
           </div>
         </template>
@@ -454,8 +454,8 @@ const teamData = [
         flex: 1;
       }
 
-      ol {
-        list-style: decimal;
+      ul {
+        list-style: none;
         list-style-position: inside;
 
         li {
@@ -556,7 +556,6 @@ const teamData = [
         }
 
         a {
-          color: var(--color-text-lighter);
           text-decoration: underline;
 
           &:hover {

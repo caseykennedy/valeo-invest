@@ -261,8 +261,8 @@ useHead({
   }
 
   &__section {
-    padding-top: var(--space-xxxl);
-    padding-bottom: var(--space-xxxl);
+    /* padding-top: var(--space-xxxl);
+    padding-bottom: var(--space-xxxl); */
 
     &__title {
       margin-bottom: var(--space-xxl);

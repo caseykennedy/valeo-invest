@@ -28,8 +28,6 @@
 
   @include breakpoint(lg) {
     --gutter: var(--space-xxl);
-    --gutter-y: var(--space-xxxl);
-    // --gutter-sm: var(--space-xxl);
   }
 }
 

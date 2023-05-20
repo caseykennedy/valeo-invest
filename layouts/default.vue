@@ -1,9 +1,7 @@
 <template>
   <div class="app">
-    <div class="sticky">
-      <Header />
-      <Navigation />
-    </div>
+    <Header />
+    <Navigation />
     <main>
       <div class="main__layout">
         <slot />
@@ -22,13 +20,6 @@
   position: relative;
   min-height: 100vh;
   width: 100%;
-}
-
-.sticky {
-  position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 999;
 }
 
 main {

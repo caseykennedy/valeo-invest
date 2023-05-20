@@ -21,13 +21,13 @@ useHead({
     <Section>
       <div class="media">
         <div>
-          <h3>Our challenge</h3>
+          <h2>Our challenge</h2>
           <div class="media__video">
             <LiteYouTubeEmbed id="IsmzMnmrv8s" title="Valeo Intro" />
           </div>
         </div>
         <div>
-          <h3>Our solution</h3>
+          <h2>Our solution</h2>
           <div class="media__audio">
             <iframe
               width="100%" height="120"
@@ -135,7 +135,7 @@ useHead({
     flex-flow: column nowrap;
     gap: var(--gutter);
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       flex-flow: row nowrap;
     }
 

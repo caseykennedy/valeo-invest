@@ -78,7 +78,7 @@ export default {
   }
 
   @include breakpoint(lg) {
-    --toggle-icon-size: 125px;
+    --toggle-icon-size: 115px;
   }
 
   display: flex;

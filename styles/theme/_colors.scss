@@ -11,7 +11,7 @@
   // background
   --color-bg-dark: var(--color-bg-highlight);
   --color-bg: hsla(220, 16.8%, 98%, 1);
-  --color-bg-highlight: hsla(220, 16.8%, 92%, 1);
+  --color-bg-highlight: hsla(220, 16.8%, 88%, 1);
 
   // typography
   --color-text: var(--color-primary);
@@ -23,11 +23,11 @@
   // --color-border-light: hsla(220, 16.8%, 45%, 0.75);
 
   // primary
-  @include defineColorHSL(--color-primary-darker, 214, 66%, 3%);
-  @include defineColorHSL(--color-primary-dark, 214, 66%, 5%);
-  @include defineColorHSL(--color-primary, 214, 66%, 7%);
-  @include defineColorHSL(--color-primary-light, 214, 66%, 12%);
-  @include defineColorHSL(--color-primary-lighter, 214, 66%, 18%);
+  @include defineColorHSL(--color-primary-darker, 214, 48%, 2%);
+  @include defineColorHSL(--color-primary-dark, 214, 48%, 3%);
+  @include defineColorHSL(--color-primary, 214, 48%, 6%);
+  @include defineColorHSL(--color-primary-light, 214, 48%, 12%);
+  @include defineColorHSL(--color-primary-lighter, 214, 48%, 18%);
 
   // accent
   @include defineColorHSL(--color-accent-darker, 216.4, 67.3%, 38%);
@@ -83,7 +83,7 @@
   // typography
   --color-text: var(--color-white);
   --color-text-light: hsla(220, 16.8%, 88%, 1);
-  --color-text-lighter: hsla(220, 12.8%, 50%, 1);
+  --color-text-lighter: hsla(220, 8.8%, 50%, 1);
 
   // borders
   --color-border: hsla(220, 16.8%, 25%, 1);

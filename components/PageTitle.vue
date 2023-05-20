@@ -17,7 +17,7 @@
           </span>
         </h1>
       </div>
-      <div class="page-title__figure">
+      <div v-if="$slots.figure" class="page-title__figure">
         <slot name="figure" />
       </div>
     </div>
@@ -33,7 +33,7 @@
   @include breakpoint(md) {
     flex-flow: row nowrap;
     align-items: center;
-    padding-top: calc(var(--space-xxl) * 1);
+    padding-top: var(--space-xxl);
   }
 
   &__title {
@@ -41,14 +41,13 @@
 
     &--muted {
       color: var(--color-text-lighter);
-      font-size: var(--text-xxl);
     }
 
     &__symbol {
       svg {
-        width: 30px;
+        width: 23px;
 
-        @include breakpoint(md) {
+        @include breakpoint(xs) {
           width: 34px;
         }
       }
