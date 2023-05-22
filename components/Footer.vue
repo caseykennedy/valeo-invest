@@ -74,7 +74,7 @@ function scrollTop(e: Event) {
           <form>
             <input type="text" placeholder="Email Address" class="form-control">
             <button class="btn btn--xs btn--primary" style="padding: 0">
-              <ArrowRight fill="--color-text-light" />
+              <ArrowRight fill="--color-white" />
             </button>
           </form>
         </div>
@@ -131,7 +131,7 @@ function scrollTop(e: Event) {
 }
 
 .footnote {
-  background: var(--footnote-bg);
+  /* background: var(--footnote-bg); */
   border-top: var(--border);
   padding: var(--gutter-sm) 0;
   width: 100%;
@@ -300,9 +300,11 @@ function scrollTop(e: Event) {
 
       a {
         color: var(--color-text-lighter);
+        text-decoration: underline;
 
         &:hover {
-          text-decoration: underline;
+          color: var(--color-text-light);
+          text-decoration: none;
         }
       }
     }
