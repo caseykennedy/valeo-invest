@@ -272,27 +272,33 @@ const teamData = [
         </template>
         <template #sub-title />
         <template #content>
-          <p class="text-md">
-            Not tomorrow, but soon, there will come a day when the holders of dollar-pegged stablecoins will realize that
-            pegging to the dollar is losing money.
-          </p>
+          <div class="section__layout">
+            <div class="section__title">
+              <h3>
+                Not tomorrow, but soon, there will come a day when the holders of dollar-pegged stablecoins will realize
+                that
+                pegging to the dollar is losing money.
+              </h3>
+            </div>
+            <div class="section__content">
+              <p>They'll switch to Valeo. <strong>This is our trigger point.</strong> </p>
 
-          <p>They'll switch to Valeo. <strong>This is our trigger point.</strong> </p>
+              <p>
+                If we're to be successful in our ultimate goal of exponential growth to a ubiquitously useful global
+                currency, that will be when it happens, and we'll be ready.
+              </p>
 
-          <p>
-            If we're to be successful in our ultimate goal of exponential growth to a ubiquitously useful global
-            currency, that will be when it happens, and we'll be ready.
-          </p>
+              <p>
+                As the dollar and other reserve currencies devalue faster and faster,
+                the mainstream will also wake up and switch to Valeo because it
+                maintains purchasing power, no matter what the markets bring.
+              </p>
 
-          <p>
-            As the dollar and other reserve currencies devalue faster and faster,
-            the mainstream will also wake up and switch to Valeo because it
-            maintains purchasing power, no matter what the markets bring.
-          </p>
-
-          <p>
-            This is how Valeo becomes money for everyone.
-          </p>
+              <p>
+                This is how Valeo becomes money for everyone.
+              </p>
+            </div>
+          </div>
         </template>
       </Collapse>
 

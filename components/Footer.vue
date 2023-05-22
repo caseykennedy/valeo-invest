@@ -133,7 +133,7 @@ function scrollTop(e: Event) {
 .footnote {
   /* background: var(--footnote-bg); */
   border-top: var(--border);
-  padding: var(--gutter-sm) 0;
+  padding: var(--gutter-y) 0;
   width: 100%;
 
   &__layout {

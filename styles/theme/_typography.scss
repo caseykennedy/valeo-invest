@@ -19,7 +19,7 @@
 
   // line-height
   --body-line-height: 1.75;
-  --heading-line-height: 1.222;
+  --heading-line-height: 1.5;
 
   // letter-spacing
   --heading-letter-spacing: 0em;
@@ -130,6 +130,7 @@ h5 {
 
 h1 {
   font-size: var(--text-xl);
+  line-height: 1.25;
 
   @include breakpoint(sm) {
     font-size: var(--text-xxl);
