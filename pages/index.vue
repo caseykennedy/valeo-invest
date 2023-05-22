@@ -146,19 +146,21 @@ const { isDark, toggle } = useDark()
 
     &__decorator {
       position: absolute;
-      top: -7%;
-      right: -28%;
-      width: 500px;
+      top: -1%;
+      right: -26%;
+      width: 440px;
       /* height: 100%; */
       pointer-events: none;
       z-index: -1;
 
       @include breakpoint(sm) {
-        right: 0;
-        width: 575px;
+        top: -7%;
+        right: -3%;
+        width: 620px;
       }
 
       @include breakpoint(lg) {
+        top: -14%;
         width: 780px;
       }
 

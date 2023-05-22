@@ -73,8 +73,8 @@ function scrollTop(e: Event) {
           </p>
           <form>
             <input type="text" placeholder="Email Address" class="form-control">
-            <button class="btn btn--xs btn--primary" style="padding: 0">
-              <ArrowRight fill="--color-white" />
+            <button class="btn btn--xs btn--outline" style="padding: 0">
+              <ArrowRight fill="--color-text-lighter" />
             </button>
           </form>
         </div>
@@ -147,7 +147,7 @@ function scrollTop(e: Event) {
   }
 
   &__meta {
-    /* color: var(--color-white); */
+    color: var(--color-text-lighter);
 
     span {
       display: none;
@@ -260,7 +260,7 @@ function scrollTop(e: Event) {
         display: flex;
         flex-flow: row nowrap;
         align-items: flex-end;
-        gap: var(--space-sm);
+        gap: var(--space-md);
 
         input {
           /* padding: 0; */

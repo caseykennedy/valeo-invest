@@ -39,6 +39,6 @@ withDefaults(defineProps<{
 }
 
 [data-theme="dark"] {
-  --art-grid-fill: var(--color-primary-lighter);
+  --art-grid-fill: var(--color-border);
 }
 </style>
