@@ -69,11 +69,11 @@ function scrollTop(e: Event) {
       <div class="footer__contact">
         <div class="footer__contact__capture">
           <p class="text">
-            Let us know who stopped by
+            Let us know you stopped by
           </p>
           <form>
             <input type="text" placeholder="Email Address" class="form-control">
-            <button class="btn btn--xs" style="padding: 0">
+            <button class="btn btn--xs btn--primary" style="padding: 0">
               <ArrowRight />
             </button>
           </form>
@@ -101,8 +101,8 @@ function scrollTop(e: Event) {
             <NuxtLink to="mailto:hello@valeo.money?subject=Connect with Valeo" target="_blank" rel="nofollow noreferrer">
               hello@valeo.money
             </NuxtLink>
-            <button class="footer__top-btn btn btn--xs" @click="scrollTop">
-              <ArrowRight />
+            <button class="footer__top-btn btn btn--xs btn--outline" @click="scrollTop">
+              <ArrowRight fill="--color-text-lighter" />
             </button>
           </nav>
         </div>
@@ -118,7 +118,7 @@ function scrollTop(e: Event) {
 }
 
 [data-theme="dark"] {
-  --footnote-bg: var(--color-bg-highlight);
+  --footnote-bg: var(--color-bg);
 }
 
 @mixin rowLayout {

@@ -40,11 +40,11 @@ button {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  
+
   height: var(--btn-height);
 
   background: var(--btn-primary-bg);
-  border: var(--border);
+  border: 1px solid transparent;
   border-radius: var(--btn-radius);
 
   @include fontSmooth;
@@ -71,7 +71,7 @@ button {
 
   .icon {
     // transition: transform var(--transition);
-    
+
     &--right {
       margin-left: var(--btn-padding-x);
     }
@@ -86,12 +86,12 @@ button {
 
 // themes
 .btn--primary {
-  background: var(--color-accent);
-  color: var(--color-white);
+  background: var(--color-border);
+  border-color: var(--color-border);
+  color: var(--color-text);
 
   &:hover {
-    background: var(--color-accent-dark);
-    color: var(--color-white);
+    background: var(--color-border);
   }
 
   &:focus {
