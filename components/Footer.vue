@@ -74,7 +74,7 @@ function scrollTop(e: Event) {
           <form>
             <input type="text" placeholder="Email Address" class="form-control">
             <button class="btn btn--xs btn--primary" style="padding: 0">
-              <ArrowRight />
+              <ArrowRight fill="--color-text-light" />
             </button>
           </form>
         </div>
