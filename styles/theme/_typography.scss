@@ -131,7 +131,7 @@ h5 {
 h1 {
   font-size: var(--text-xl);
 
-  @include breakpoint(xs) {
+  @include breakpoint(sm) {
     font-size: var(--text-xxl);
   }
 }

@@ -2,18 +2,19 @@
 
 :root {
   --form-control-font-size: var(--text-base-size);
-  --form-control-padding-x: var(--space-md);
-  --form-control-padding-y: var(--space-lg);
-  --form-control-radius: var(--radius-sm);
+  --form-control-padding-x: 0;
+  --form-control-padding-y: var(--space-xs);
+  --form-control-radius: 0;
 
   @include breakpoint(sm) {
-    --form-control-padding-y: var(--space-lg);
+    // --form-control-padding-x: var(--space-md);
+    --form-control-padding-y: var(--space-sm);
   }
 }
 
 .form-control {
   background: transparent;
-  border: var(--border);
+  border-bottom: var(--border);
   border-radius: var(--form-control-radius);
 
   color: var(--color-text);
@@ -23,14 +24,14 @@
   transition: var(--transition-all);
 
   &::placeholder {
-    opacity: 1;
-    color: alpha(var(--color-text-lighter), 75%);
+    opacity: 0.25;
+    color: var(--color-text);
   }
 
   &:focus,
   &:focus-within {
     background: var(--color-bg);
-    border-color: var(--color-primary-light);
+    border-color: var(--color-text-lighter);
     outline: none;
   }
 }

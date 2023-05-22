@@ -1,8 +1,8 @@
 @use "../base" as *;
 
 :root,
-[data-theme="default"] {
-  --btn-primary-bg: var(--color-primary);
+[data-theme="light"] {
+  --btn-primary-bg: var(--color-bg-highlight);
   --btn-primary-color: var(--color-white);
   --btn-accent-bg: var(--color-primary);
   --btn-accent-color: var(--color-white);
@@ -22,8 +22,8 @@
   }
 }
 
-[data-theme="darkMode"] {
-  --btn-primary-bg: var(--color-white);
+[data-theme="dark"] {
+  --btn-primary-bg: var(--color-border);
   --btn-primary-color: var(--color-text);
   --btn-accent-bg: var(--color-bg);
   --btn-accent-color: var(--color-white);
@@ -43,8 +43,8 @@ button {
   
   height: var(--btn-height);
 
-  background: var(--color-gray);
-  border: 1px solid transparent;
+  background: var(--btn-primary-bg);
+  border: var(--border);
   border-radius: var(--btn-radius);
 
   @include fontSmooth;
@@ -121,7 +121,7 @@ button {
   color: var(--color-text);
 
   &:hover {
-    background: var(--color-bg-dark);
+    background: var(--btn-primary-bg);
   }
 }
 

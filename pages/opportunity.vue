@@ -577,7 +577,7 @@ const teamData = [
 
         a {
           text-decoration: underline;
-          color: var(--color-text-lighter);
+          color: var(--color-text);
 
           &:hover {
             text-decoration: none;

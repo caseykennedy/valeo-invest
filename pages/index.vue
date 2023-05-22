@@ -9,14 +9,20 @@ useHead({
 
 <template>
   <div class="home-page">
-    <PageTitle>
-      <template #title>
-        Valeo
-      </template>
-      <template #tagline>
-        Equilibrium for a new economy
-      </template>
-    </PageTitle>
+    <Section :border-bottom="true" class="hero">
+      <h1 class="hero__title">
+        <span class="hero__title__symbol">
+          <ValeoSymbol />
+        </span> <span class="text-arial">Valeo</span>
+        <br>
+        <div class="hero__title--muted">
+          Equilibrium for a new economy
+        </div>
+      </h1>
+      <div class="hero__decorator">
+        <ArtHeroGrid />
+      </div>
+    </Section>
 
     <Section>
       <div class="media">
@@ -105,11 +111,22 @@ useHead({
 
 .home-page {
   .hero {
-    @include breakpoint(md) {
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    padding-top: calc(var(--space-xxxl) * 2);
+
+    @include breakpoint(sm) {
       padding-top: calc(var(--space-xxxl) * 2);
     }
 
+    @include breakpoint(lg) {
+      padding-top: calc(var(--space-xxxl) * 2.5);
+    }
+
     &__title {
+      max-width: 34ch;
+
       &--muted {
         color: var(--color-text-lighter);
       }
@@ -122,6 +139,29 @@ useHead({
             width: 34px;
           }
         }
+      }
+    }
+
+    &__decorator {
+      position: absolute;
+      top: -7%;
+      right: -28%;
+      width: 500px;
+      /* height: 100%; */
+      pointer-events: none;
+      z-index: -1;
+
+      @include breakpoint(sm) {
+        right: 0;
+        width: 575px;
+      }
+
+      @include breakpoint(lg) {
+        width: 780px;
+      }
+
+      svg {
+        /* width:; */
       }
     }
   }

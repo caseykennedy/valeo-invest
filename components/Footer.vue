@@ -28,7 +28,7 @@ function scrollTop(e: Event) {
 </script>
 
 <template>
-  <div class="footnote">
+  <section class="footnote">
     <div class="footnote__layout">
       <button href="https://valeo.network" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
         Executive Summary
@@ -40,7 +40,7 @@ function scrollTop(e: Event) {
         <span>Presentation</span> Q3, 2023
       </div>
     </div>
-  </div>
+  </section>
 
   <footer class="footer">
     <div class="footer__row">
@@ -65,8 +65,20 @@ function scrollTop(e: Event) {
           </NuxtLink>
         </nav>
       </div>
+
       <div class="footer__contact">
-        <NuxtLink
+        <div class="footer__contact__capture">
+          <p class="text">
+            Let us know who stopped by
+          </p>
+          <form>
+            <input type="text" placeholder="Email Address" class="form-control">
+            <button class="btn btn--xs" style="padding: 0">
+              <ArrowRight />
+            </button>
+          </form>
+        </div>
+        <!-- <NuxtLink
           href="mailto:hello@valeo.money?subject=Connect with Valeo" class="btn btn--outline"
           rel="noopener noreferrer" target="_blank"
         >
@@ -74,7 +86,7 @@ function scrollTop(e: Event) {
           <span class="icon icon--right">
             <ArrowRight />
           </span>
-        </NuxtLink>
+        </NuxtLink> -->
       </div>
     </div>
 
@@ -86,10 +98,10 @@ function scrollTop(e: Event) {
 
         <div class="footer__legal__nav">
           <nav>
-            <!-- <NuxtLink to="/">
-              Legal
-            </NuxtLink> -->
-            <button class="footer__top-btn" @click="scrollTop">
+            <NuxtLink to="mailto:hello@valeo.money?subject=Connect with Valeo" target="_blank" rel="nofollow noreferrer">
+              hello@valeo.money
+            </NuxtLink>
+            <button class="footer__top-btn btn btn--xs" @click="scrollTop">
               <ArrowRight />
             </button>
           </nav>
@@ -99,7 +111,16 @@ function scrollTop(e: Event) {
   </footer>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+:root,
+[data-theme="light"] {
+  --footnote-bg: var(--color-bg-highlight);
+}
+
+[data-theme="dark"] {
+  --footnote-bg: var(--color-bg-highlight);
+}
+
 @mixin rowLayout {
   display: flex;
   margin: 0 auto;
@@ -110,6 +131,7 @@ function scrollTop(e: Event) {
 }
 
 .footnote {
+  background: var(--footnote-bg);
   border-top: var(--border);
   padding: var(--gutter-sm) 0;
   width: 100%;
@@ -125,6 +147,8 @@ function scrollTop(e: Event) {
   }
 
   &__meta {
+    /* color: var(--color-white); */
+
     span {
       display: none;
       margin-right: var(--space-lg);
@@ -194,7 +218,7 @@ function scrollTop(e: Event) {
   }
 
   &__nav {
-    flex: 1;
+    flex: 1.25;
 
     nav {
       display: flex;
@@ -219,8 +243,40 @@ function scrollTop(e: Event) {
   }
 
   &__contact {
+    flex: 1;
     display: flex;
-    justify-content: flex-end;
+    flex-flow: column nowrap;
+
+    padding-top: var(--space-xxxl);
+
+    @include breakpoint(xs) {
+      padding-top: 0;
+    }
+
+    &__capture {
+      flex: 1;
+
+      form {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+
+        input {
+          /* padding: 0; */
+          width: 100%;
+        }
+
+        button,
+        .btn {
+          aspect-ratio: 1;
+          /* border-radius: 0; */
+
+          padding: 0;
+          position: relative;
+          /* bottom: 1px; */
+        }
+      }
+    }
   }
 
   &__legal {
@@ -259,10 +315,10 @@ function scrollTop(e: Event) {
     justify-content: center;
 
     aspect-ratio: 1;
-    background: var(--color-border);
-    border-radius: var(--radius-full);
+    /* background: var(--color-border); */
+    /* border-radius: var(--radius-full); */
     cursor: pointer;
-    padding: var(--space-xs);
+    padding: 0;
 
     svg {
       transform: rotate(-90deg);
