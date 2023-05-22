@@ -260,6 +260,7 @@ function scrollTop(e: Event) {
         display: flex;
         flex-flow: row nowrap;
         align-items: flex-end;
+        gap: var(--space-sm);
 
         input {
           /* padding: 0; */
