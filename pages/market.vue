@@ -11,7 +11,7 @@ useHead({
         Market
       </template>
       <template #tagline>
-        Beyond stablecoins
+        Beyond stability
       </template>
     </PageTitle>
 
