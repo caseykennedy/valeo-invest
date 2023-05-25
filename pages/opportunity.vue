@@ -193,7 +193,14 @@ const teamData = [
                 <p>
                   Valeo Labs
                 </p>
+                <br>
               </div>
+            </v-timeline-item>
+
+            <v-timeline-item dot-color="var(--color-success-dark)">
+              <p>
+                <strong>24 months</strong>
+              </p>
             </v-timeline-item>
           </v-timeline>
         </template>
@@ -295,7 +302,7 @@ const teamData = [
               </p>
 
               <p>
-                This is how Valeo becomes money for everyone.
+                <mark>This is how Valeo becomes money for everyone.</mark>
               </p>
             </div>
           </div>
@@ -358,6 +365,12 @@ const teamData = [
       </template>
     </ContactCta>
   </div>
+
+  <PrevNext prev-to="/market">
+    <template #prev>
+      Market
+    </template>
+  </PrevNext>
 </template>
 
 <style lang="scss">
@@ -579,6 +592,10 @@ const teamData = [
       &__meta {
         &__name {
           color: var(--color-text);
+
+          strong {
+            color: var(--color-success-dark);
+          }
         }
 
         a {

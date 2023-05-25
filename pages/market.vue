@@ -196,6 +196,14 @@ useHead({
       </Collapse>
     </Section>
   </div>
+
+  <PrevNext prev-to="/ecosystem" next-to="/opportunity">
+    <template #prev>
+      Ecosystem
+    </template><template #next>
+      Opportunity
+    </template>
+  </PrevNext>
 </template>
 
 <style lang="scss" scoped>

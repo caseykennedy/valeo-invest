@@ -39,7 +39,7 @@ useHead({
           A digital currency
         </template>
         <template #sub-title>
-          Valeo offers a steadfast, reliable, functional currency for a value- and values-based economy.
+          Valeo offers a steadfast, reliable, functional currency for a value- and values-based economy
         </template>
         <template #content>
           <p>
@@ -64,7 +64,7 @@ useHead({
         </template>
         <template #sub-title>
           Our fully transparent, over-collateralized DEX operates on a set of hard rules rather than human error (or
-          greed).
+          greed)
         </template>
         <template #content>
           <div class="ecosystem-page__collapse__split">
@@ -125,7 +125,7 @@ useHead({
         </template>
         <template #sub-title>
           Our ballast fund assures invulnerability to financial panics and provides a buffer to ensure the Valeo ecosystem
-          remains balanced and protected.
+          remains balanced and protected
         </template>
         <template #content>
           <p>
@@ -150,7 +150,7 @@ useHead({
           A marketplace
         </template>
         <template #sub-title>
-          Our ecosystem includes a marketplace where the Valeo currency can be spent on real-world goods and services.
+          Our ecosystem includes a marketplace where the Valeo currency can be spent on real-world goods and services
         </template>
         <template #content>
           <p>
@@ -161,7 +161,7 @@ useHead({
             The Valeo Store of Value is an online marketplace to do precisely that. Our carefully-curated selection of
             essentials initially includes billpay services, food, energy sources, and precious metals. It’s made up of our
             own store and select other stores. Over time, it will become an expanding community of small- and medium-sized
-            merchants, assuring that there will be many places circulating the Valeo currency.
+            merchants, assuring that there will be many places circulating the Valeo currency
           </p>
         </template>
       </Collapse>
@@ -175,7 +175,7 @@ useHead({
         </template>
         <template #sub-title>
           The Valeo app simplifies the circulation of value, namely: acquisition, exchange, sending, receiving and
-          spending the currency.
+          spending the currency
         </template>
         <template #content>
           <div class="ecosystem-page__collapse__split">
@@ -209,7 +209,7 @@ useHead({
         </template>
         <template #sub-title>
           Ease-of-use and human-to-human support are prioritized for all Valeo clients: savers and spenders, as well as
-          our merchants, affiliates, developers, and investors.
+          our merchants, affiliates, developers, and investors
         </template>
         <template #content>
           <div class="ecosystem-page__collapse__split">
@@ -239,6 +239,15 @@ useHead({
       </Collapse>
     </Section>
   </div>
+
+  <PrevNext prev-to="/" next-to="/market">
+    <template #prev>
+      Introduction
+    </template>
+    <template #next>
+      Market
+    </template>
+  </PrevNext>
 </template>
 
 <style lang="scss">

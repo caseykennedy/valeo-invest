@@ -28,20 +28,6 @@ function scrollTop(e: Event) {
 </script>
 
 <template>
-  <section class="footnote">
-    <div class="footnote__layout">
-      <button href="https://valeo.network" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
-        Executive Summary
-        <span class="icon icon--sm icon--right">
-          <Pdf width="24" />
-        </span>
-      </button>
-      <div class="footnote__meta">
-        <span>Presentation</span> Q3, 2023
-      </div>
-    </div>
-  </section>
-
   <footer class="footer">
     <div class="footer__row">
       <div class="footer__logo">
@@ -109,6 +95,20 @@ function scrollTop(e: Event) {
       </div>
     </div>
   </footer>
+
+  <section class="footnote">
+    <div class="footnote__layout">
+      <button href="https://valeo.network" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
+        Executive Summary
+        <span class="icon icon--sm icon--right">
+          <Pdf width="24" />
+        </span>
+      </button>
+      <div class="footnote__meta">
+        <span>Presentation</span> Q3, 2023
+      </div>
+    </div>
+  </section>
 </template>
 
 <style lang="scss">
@@ -133,7 +133,7 @@ function scrollTop(e: Event) {
 .footnote {
   /* background: var(--footnote-bg); */
   border-top: var(--border);
-  padding: var(--gutter-y) 0;
+  padding: var(--space-lg) 0;
   width: 100%;
 
   &__layout {
@@ -300,7 +300,7 @@ function scrollTop(e: Event) {
       gap: var(--space-md);
 
       a {
-        color: var(--color-text-lighter);
+        color: var(--color-text);
         text-decoration: underline;
 
         &:hover {

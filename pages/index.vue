@@ -21,9 +21,9 @@ const { isDark, toggle } = useDark()
           Equilibrium for a new economy
         </div>
       </h1>
-      <div class="hero__decorator">
+      <!-- <div class="hero__decorator">
         <ArtHeroGrid />
-      </div>
+      </div> -->
     </Section>
 
     <Section>
@@ -71,12 +71,12 @@ const { isDark, toggle } = useDark()
               allows
               us to care for our fellow inhabitants on this planet.
             </p>
+            <p>
+              Thank you for your attention.
+            </p>
 
             <div class="note__signature">
               <div>
-                <p>
-                  Thank you for your attention.
-                </p>
                 <p>
                   Christian Goodell
                   <br>
@@ -84,7 +84,7 @@ const { isDark, toggle } = useDark()
                 </p>
               </div>
               <div>
-                <img src="~/assets/images/fig__sig.png" style="max-width: 150px" alt="Christian Goodell Signature">
+                <img src="~/assets/images/fig__sig.png" style="max-width: 140px" alt="Christian Goodell Signature">
               </div>
             </div>
           </div>
@@ -100,6 +100,12 @@ const { isDark, toggle } = useDark()
       </template>
     </ContactCta>
   </div>
+
+  <PrevNext next-to="/ecosystem">
+    <template #next>
+      Ecosystem
+    </template>
+  </PrevNext>
 </template>
 
 <style lang="scss">

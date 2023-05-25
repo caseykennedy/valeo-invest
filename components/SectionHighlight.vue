@@ -40,7 +40,10 @@ const cssVars = computed(() => {
 
   &>* {
     flex: 1;
-    padding: var(--gutter);
+
+    @include breakpoint(sm) {
+      padding: var(--gutter);
+    }
   }
 
   &__stat {
@@ -69,7 +72,6 @@ const cssVars = computed(() => {
     justify-content: center;
   }
 
-  &__content {
-  }
+  &__content {}
 }
 </style>
