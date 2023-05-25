@@ -11,7 +11,16 @@ const { isDark, toggle } = useDark()
 
 <template>
   <div class="home-page">
-    <Section :border-bottom="true" class="hero">
+    <PageTitle>
+      <template #title>
+        Valeo
+      </template>
+      <template #tagline>
+        Equilibrium for a new economy
+      </template>
+    </PageTitle>
+
+    <!-- <Section :border-bottom="true" class="hero">
       <h1 class="hero__title">
         <span class="hero__title__symbol">
           <ValeoSymbol />
@@ -21,10 +30,10 @@ const { isDark, toggle } = useDark()
           Equilibrium for a new economy
         </div>
       </h1>
-      <!-- <div class="hero__decorator">
+      <div class="hero__decorator">
         <ArtHeroGrid />
-      </div> -->
-    </Section>
+      </div>
+    </Section> -->
 
     <Section>
       <div class="media">
