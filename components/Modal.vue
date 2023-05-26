@@ -22,8 +22,11 @@ function onEnter(e: Event) {
         <h3 class="text-lg">
           We appreciate knowing who’s visiting
         </h3>
-        <form name="email-capture-modal" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form name="email-capture-modal" method="post" action="/" data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="email-capture-modal">
+          <p hidden>
+            <label>Don’t fill this out: <input name="bot-field"></label>
+          </p>
           <input
             v-model="currentEmail" type="email" name="panelist" required placeholder="Email Address"
             class="form-control"
@@ -41,11 +44,11 @@ function onEnter(e: Event) {
       </button> -->
     </div>
   </v-dialog>
-  <form
-    name="email-capture-modal" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"
-    style="display: none"
-  >
+  <form name="email-capture-modal" method="post" action="/" data-netlify="true" data-netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="email-capture-modal">
+    <p hidden>
+      <label>Don’t fill this out: <input name="bot-field"></label>
+    </p>
     <input v-model="currentEmail" type="email" name="panelist" required placeholder="Email Address" class="form-control">
     <button class="btn btn--sm btn--primary" @click="onSubmit">
       View presentation
