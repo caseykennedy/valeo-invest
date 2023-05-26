@@ -23,7 +23,7 @@
 }
 
 [data-theme="dark"] {
-  --btn-primary-bg: var(--color-border);
+  --btn-primary-bg: var(--color-bg-highlight);
   --btn-primary-color: var(--color-text);
   --btn-accent-bg: var(--color-bg);
   --btn-accent-color: var(--color-white);
@@ -86,17 +86,16 @@ button {
 
 // themes
 .btn--primary {
-  background: var(--color-border);
-  border-color: var(--color-border);
+  background: var(--btn-primary-bg);
+  border-color: var(--btn-primary-bg);
   color: var(--color-text);
 
   &:hover {
-    background: var(--color-border);
+    // background: var(--color-border);
   }
 
   &:focus {
-    background: var(--color-accent-darker);
-    color: var(--color-white);
+    border-color: var(--btn-primary-bg);
   }
 }
 

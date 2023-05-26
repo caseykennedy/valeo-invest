@@ -9,6 +9,7 @@
     </main>
     <Footer />
   </div>
+  <Modal />
 </template>
 
 <style lang="scss">
@@ -39,6 +40,16 @@ main {
     position: relative;
     z-index: 1;
   }
+}
+
+/* hide the "scrim", it's pointless */
+.v-overlay--active .v-overlay__scrim {
+    display: none;
+}
+/* style the overlay container as required */
+.v-overlay--active {
+    backdrop-filter: blur(4px);
+    background: rgb(0 0 0 / 0.4);
 }
 
 /* main {
