@@ -68,7 +68,7 @@ function scrollTop(e: Event) {
               v-model="currentEmail" type="email" name="panelist" required placeholder="Email Address"
               class="form-control"
             >
-            <button class="btn btn--xs btn--outline" style="padding: 0">
+            <button class="btn btn--xs btn--outline" style="padding: 0" @click="e => (e.preventDefault)">
               <ArrowRight fill="--color-text-lighter" />
             </button>
           </form>
