@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+const currentEmail = ref('')
+
 const routes = [
   {
     title: 'introduction',
@@ -57,8 +59,15 @@ function scrollTop(e: Event) {
           <p class="text">
             Let us know you stopped by
           </p>
-          <form>
-            <input type="text" placeholder="Email Address" class="form-control">
+          <form name="email-capture-footer" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="email-capture-footer">
+            <p hidden>
+              <label>Don’t fill this out: <input name="bot-field"></label>
+            </p>
+            <input
+              v-model="currentEmail" type="email" name="panelist" required placeholder="Email Address"
+              class="form-control"
+            >
             <button class="btn btn--xs btn--outline" style="padding: 0">
               <ArrowRight fill="--color-text-lighter" />
             </button>
