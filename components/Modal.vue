@@ -33,9 +33,9 @@ function onEnter(e: Event) {
             View presentation
           </button>
         </form>
-        <p class="text-sm text-center text-underline text-grey" @click.prevent="onEnter">
-          enter email later
-        </p>
+        <div class="email-capture__bypass">
+          <a href="#" @click.prevent="onEnter">enter email later</a>
+        </div>
       </div>
       <!-- <button block class="btn btn--primary" @click="show = false">
         Close Dialog
@@ -59,13 +59,16 @@ function onEnter(e: Event) {
   display: flex;
   flex-grow: 1;
   flex-flow: column nowrap;
+
+  margin: 0 auto;
   padding: var(--gutter);
 
   background: var(--color-bg);
   border: var(--border);
   border-radius: var(--radius-md);
 
-  width: 500px;
+  max-width: 500px;
+  width: 98%;
 
   .email-capture {
     form {
@@ -85,6 +88,22 @@ function onEnter(e: Event) {
         /* position: relative; */
         /* bottom: 1px; */
 
+      }
+    }
+
+    &__bypass {
+      display: flex;
+      justify-content: center;
+
+      a {
+        text-align: center;
+        text-decoration: underline;
+        font-size: var(--text-sm);
+        color: var(--color-text-lighter);
+
+        &:hover {
+          color: var(--color-text);
+        }
       }
     }
   }
