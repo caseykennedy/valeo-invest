@@ -14,7 +14,7 @@ function onEnter(e: Event) {
 </script>
 
 <template>
-  <v-dialog v-model="show" width="auto">
+  <v-dialog v-model="show" width="auto" persistent>
     <div class="modal">
       <div class="email-capture">
         <h3 class="text-lg">

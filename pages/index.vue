@@ -56,7 +56,7 @@ const { isDark, toggle } = useDark()
           <div class="media__audio">
             <iframe
               width="100%" height="120"
-              :src="`https://www.mixcloud.com/widget/iframe/?hide_cover=1&${isDark ? 'dark' : 'light'}=1&hide_artwork=1&feed=%2FOriginTrustFoundation%2Fvaleo-deck-narration-audio%2F`"
+              :src="`https://www.mixcloud.com/widget/iframe/?hide_cover=1&${isDark ? 'dark' : 'light'}=1&hide_artwork=1&feed=%2FOriginTrustFoundation%2Fvaleo-solution%2F`"
               frameborder="0"
             />
           </div>
