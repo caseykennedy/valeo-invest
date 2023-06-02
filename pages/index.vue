@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import LiteYouTubeEmbed from 'vue-lite-youtube-embed'
 import 'vue-lite-youtube-embed/style.css'
 
 useHead({
@@ -40,7 +39,16 @@ const { isDark, toggle } = useDark()
         <div>
           <h2>Our challenge</h2>
           <div class="media__video">
-            <LiteYouTubeEmbed id="IsmzMnmrv8s" title="Valeo Intro" />
+            <!-- <LiteYouTubeEmbed id="IsmzMnmrv8s" title="Valeo Intro" /> -->
+            <ClientOnly>
+              <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe
+                  src="https://player.vimeo.com/video/832437053?h=934098037f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Valeo Intro"
+                />
+              </div>
+            </ClientOnly>
           </div>
         </div>
         <div>
