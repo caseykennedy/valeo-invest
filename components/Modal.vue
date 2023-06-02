@@ -29,7 +29,7 @@ function onEnter(e: Event) {
             v-model="currentEmail" type="email" name="panelist" required placeholder="Email Address"
             class="form-control"
           >
-          <button class="btn btn--sm btn--primary" :disabled="currentEmail === '' && true" @click="onSubmit">
+          <button class="btn btn--sm btn--primary" :disabled="currentEmail === '' && true" @click.prevent="onSubmit">
             View presentation
           </button>
         </form>

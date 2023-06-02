@@ -107,7 +107,7 @@ function scrollTop(e: Event) {
 
   <section class="footnote">
     <div class="footnote__layout">
-      <button href="https://valeo.network" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
+      <button href="/valeo-exec-summary.pdf" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
         Executive Summary
         <span class="icon icon--sm icon--right">
           <Pdf width="24" />
