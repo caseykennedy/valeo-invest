@@ -3,6 +3,14 @@ import 'vue-lite-youtube-embed/style.css'
 
 useHead({
   title: 'Valeo',
+  meta: [
+    { property: 'og:title', content: 'Valeo' },
+    { property: 'og:description', content: 'Money for the 21st century.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://valeo.money' },
+    { property: 'og:locale', content: 'en_US' },
+    { property: 'og:image', content: 'https://valeo.money/social.png' },
+  ],
 })
 
 const { isDark, toggle } = useDark()
