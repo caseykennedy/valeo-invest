@@ -4,12 +4,12 @@ import 'vue-lite-youtube-embed/style.css'
 useHead({
   title: 'Valeo',
   meta: [
-    { property: 'og:title', content: 'Valeo' },
-    { property: 'og:description', content: 'Money for the 21st century.' },
+    { property: 'og:title', content: 'Valeo | Money for the 21st century' },
+    { property: 'og:description', content: 'Unlike the majority of stablecoins, which are pegged to the dollar or other fiat currencies, Valeo is a digital valuation of commodities, pegged to real-world value: a basket of actual human needs. This mechanism solves the challenges posed by fiscal policy and market manipulation, because essential human needs rarely change, even if everything else does.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://valeo.money' },
     { property: 'og:locale', content: 'en_US' },
-    { property: 'og:image', content: 'https://valeo.money/social.png' },
+    { property: 'og:image', content: 'https://valeo.money/share.png' },
   ],
 })
 
